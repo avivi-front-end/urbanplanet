@@ -1,0 +1,232 @@
+html {
+    font-family: $bebasReg;
+    font-size: 18px;
+    line-height: 1.2;
+
+    &.hidden {
+        overflow: hidden;
+    }
+}
+
+.page-wrapper {
+    transition: transform 0.3s ease;
+
+    &.hidden {
+        overflow-y: scroll;
+    }
+
+    &.move-left {
+        transform: translateX(-300px);
+        transition: transform 0.3s ease;
+    }
+
+    &.move-right {
+        transform: translateX(300px);
+        transition: transform 0.3s ease;
+    }
+}
+
+.overlay {
+    position: fixed;
+    background: #cacaca;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+}
+
+.breadcrumbs {
+    border-bottom: 1px #e5e5e5 solid;
+    padding: 20px;
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 5px;
+
+            &:after {
+                content: '';
+                width: 6px;
+                height: 8px;
+                background: url("../img/breadcrumbsSep.png") no-repeat;
+                background-size: cover;
+                margin-left: 5px;
+                display: inline-block;
+            }
+        }
+
+        &:not(:first-child) {
+            .breadcrumbs__link {
+                color: #7f7f7f;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 11px;
+        font-family: $ptsans;
+        text-decoration: none;
+        color: #000;
+        transition: 0.3s ease;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #be9e56;
+            transition: 0.3s ease;
+        }
+    }
+}
+
+p {
+    font-family: $ptsans;
+    margin: 0 0 15px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #999;
+}
+
+.text {
+    padding-top: 30px;
+    border-top: 1px #e5e5e5 solid;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__img-wrapper {
+        width: 180px;
+        min-width: 180px;
+        @media (max-width: $screen-sm-max) {
+            display: none;
+        }
+    }
+
+    &__text-wrapper {
+        padding: 0 30px 30px;
+        @media (max-width: $screen-sm-max) {
+            padding: 0 0 30px;
+        }
+    }
+
+    h2,
+    h3 {
+        font-family: $bebasBold;
+        font-size: 26px;
+        font-weight: normal;
+        color: #999;
+        margin: 0 0 15px;
+    }
+
+    ul {
+        margin: 0 0 15px;
+        list-style-type: none;
+
+        li {
+            color: #999;
+            margin-bottom: 5px;
+            font-size: 12px;
+            line-height: 14px;
+            position: relative;
+            font-family: $ptsans;
+            padding-left: 15px;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: '-';
+                counter-increment: j;
+                width: 15px;
+            }
+        }
+    }
+}
+
+.scroll::-webkit-scrollbar {
+    width: 7px;
+    height: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #444;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #000;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background-color: #e3e5e4;
+}
+
+.price-range {
+    background: transparent;
+    height: 10px;
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 0;
+
+    &.ui-widget.ui-widget-content {
+        border: none;
+    }
+
+    .ui-slider-range {
+        background: #999;
+        border: none;
+    }
+
+    .ui-slider-handle {
+        outline: none!important;
+        width: 19px;
+        background: transparent url("../img/priceSliderHandle.png") 0 0 no-repeat;
+        background-size: 19px 14px;
+        border: 0;
+        border-radius: 0;
+        top: 0;
+        cursor: pointer;
+        margin-left: -9px !important;
+    }
+
+    &__wrapper {
+        background: #e5e5e5;
+        padding: 0 9px;
+    }
+}
+
+.price-inputs {
+    padding: 20px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+    &__input {
+        text-align: center;
+        font-size: 11px;
+        font-family: $ptsans;
+        padding: 7px;
+        background: #e5e5e5;
+        max-width: 60px;
+        border: none;
+        outline: none;
+    }
+
+    &__btn {
+        text-align: center;
+        font-size: 11px;
+        font-family: $ptsans;
+        padding: 7px;
+        background: #e5e5e5;
+        max-width: 60px;
+        border: none;
+        outline: none;
+        margin-left: 10px;
+    }
+}

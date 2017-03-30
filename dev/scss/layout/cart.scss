@@ -1,0 +1,177 @@
+.cart {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+    z-index: 9999999;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    display: none;
+
+    &.active{
+        transform: translateX(0);
+        transition: transform .3s ease;
+    }
+
+    &__head{
+        height: calc(100% - 190px);
+    }
+    &__bottom{
+        @include position(absolute, null 0 0 0);
+
+    }
+
+    &__close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: #fff url("../img/iconCross.png") 50% 50% no-repeat;
+        background-size: 15px 15px;
+    }
+
+    &__title {
+        display: block;
+        padding: 23px 10px 0 30px;
+        height: 60px;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-family: $bebasBold;
+    }
+
+    &__info {
+        display: block;
+        background: #e5e5e5;
+        padding: 10px;
+        // height: 30px;
+        text-align: center;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-family: $ptsans;
+    }
+
+    &__item-img {
+        display: block;
+        width: 60px;
+        height: 90px;
+        float: left;
+    }
+
+    &__list {
+        list-style-type: none;
+        overflow: auto;
+        height: calc(100% - 106px);
+    }
+
+    &__item {
+        padding: 20px 0;
+        border-bottom: 1px #e5e5e5 solid;
+        display: flex;
+
+        &:hover {
+            .cart__remove-wrap {
+                width: 15%;
+                transition: 0.3s ease;
+            }
+
+            .cart__remove-item {
+                background-position: 50% 50%;
+                transition: 0.3s ease;
+            }
+        }
+    }
+
+    &__remove-wrap {
+        width: 10%;
+        height: auto;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+
+    &__remove-item {
+        width: 100%;
+        height: 90px;
+        background-color: transparent;
+        background-position: -100% 50%;
+        background-repeat: no-repeat;
+        background-image: url("../img/iconCrossGrey.png");
+        background-size: 12px 12px;
+        opacity: 0.6;
+        display: block;
+        transition: 0.3s ease;
+    }
+
+    &__item-wrap {
+        width: 85%;
+        transition: 0.3s ease;
+    }
+
+    &__item-info {
+        float: left;
+        padding: 0 0 0 15px;
+        width: 180px;
+    }
+
+    &__item-title {
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-family: $ptsans;
+    }
+
+    &__item-attrs {
+        color: #808080;
+        text-transform: uppercase;
+        font-size: 10px;
+        margin: 0 0 5px;
+    }
+
+    &__item-price {
+        padding-top: 10px;
+        font-size: 18px;
+        font-family: $bebasBold;
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 10%;
+        align-items: center;
+    }
+
+    &__total-name {
+        font-size: 20px;
+        font-family: $ptsans;
+    }
+
+    &__total-price {
+        font-size: 24px;
+        font-family: $bebasBold;
+    }
+
+    &__btns {
+        padding: 0 10%;
+    }
+
+    &__btns-link {
+        font-family: $bebasBold;
+        display: block;
+        padding: 15px 10px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        background: #000;
+        margin-bottom: 10px;
+
+        &--gold {
+            background-color: #be9e56;
+        }
+    }
+}

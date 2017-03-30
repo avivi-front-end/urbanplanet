@@ -1,8 +1,11 @@
 //*********************************************
 @import 'bourbon';
 //*********************************************
+@import 'base/importcss';
 @import 'base/reset';
+@import 'base/fonts';
 //*********************************************
+@import 'abstracts/mixin';
 @import 'abstracts/variables';
 @import 'abstracts/clearfix';
 @import 'abstracts/breakpoints';
@@ -13,7 +16,12 @@
 //*********************************************
 @import 'abstracts/sprite';
 //*********************************************
+@import 'layout/main';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/cart';
+@import 'layout/menu';
 //*********************************************
 @import 'pages/index';
+@import 'pages/category'; //category + catalog
+@import 'pages/detail';

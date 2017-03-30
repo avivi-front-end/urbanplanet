@@ -1,1 +1,216 @@
-.container
+.banner
+    .banner__top-btns-wrapper
+        a(href="#" data-slider="slickPrev").banner__arrow.banner__arrow--left.js-arrows
+            +icon('left')
+        a(href="#" data-slider="slickNext").banner__arrow.banner__arrow--right.js-arrows
+            +icon('right')
+    .banner__slider-wrap.js-slider
+        .banner__slide
+            img(src="img/slider.jpg").banner__slide-img
+            .container
+                .banner__info
+                    .banner__info-title PERFORMANCE<br>  WITH PURPOSE
+                    .banner__info-text.
+                        Julian BCA Board Shorts
+                        showcase a pink hue to bring awareness to breast
+                        cancer – a disease affecting millions globally.
+                    .banner__btns.clearfix
+                        a(href="#").banner__link увIйти
+
+                        span.banner__btns-drop
+                            a(href="#").banner__btns-drop-link магазин
+                                +icon('right')
+                            ul.banner__drop-list
+                                li.banner__drop-item
+                                    a(href="#").banner__drop-link увIйти
+                                li.banner__drop-item
+                                    a(href="#").banner__drop-link купити
+        .banner__slide.video
+            .banner__video-wrap
+                video(preload="true" muted="true").banner__video
+                    source(src="video/72451143001_5199892203001_5199870557001.mp4") 
+            .container    
+                .banner__info
+                    .banner__info-title PERFORMANCE<br>  WITH PURPOSE
+                    .banner__info-text.
+                        Julian BCA Board Shorts
+                        showcase a pink hue to bring awareness to breast
+                        cancer – a disease affecting millions globally.
+                    .banner__btns.clearfix
+                        a(href="#").banner__link увIйти
+
+                        span.banner__btns-drop
+                            a(href="#").banner__btns-drop-link Меню
+                                +icon('right')
+                            ul.banner__drop-list
+                                li.banner__drop-item
+                                    a(href="#").banner__drop-link купити
+                                li.banner__drop-item
+                                    a(href="#").banner__drop-link блог
+.icons-wrapper
+    .container
+        .row
+            .col-md-4
+                a(href="#").icons-wrapper__item
+                    span.icons-wrapper__image-wrap
+                        img(src="img/1.svg" alt="").icons-wrapper__img
+                    span.icons-wrapper__text
+                        h3 Ваш личный консультант
+                        span.
+                            Поможет решить<br>
+                            любую сложность 
+            .col-md-4
+                a(href="#").icons-wrapper__item
+                    span.icons-wrapper__image-wrap
+                        img(src="img/2.svg" alt="").icons-wrapper__img
+                    span.icons-wrapper__text
+                        h3 Техподдержка 24/7
+                        span.
+                            Мы на связи,<br>
+                            когда вам удобно
+
+            .col-md-4
+                a(href="#").icons-wrapper__item
+                    span.icons-wrapper__image-wrap
+                        img(src="img/3.svg" alt="").icons-wrapper__img
+                    span.icons-wrapper__text
+                        h3 Быстрая доставка
+                        span.
+                            Служба доставки<br>
+                            МОЙО работает<br>
+                            по всей Украине                
+.new-items
+    .container
+        .new-items__title
+            span Новинки
+        .new-items__slider-wrap
+            .new-items__top-btns-wrapper
+                a(href="#" data-slider="slickPrev").new-items__arrow.new-items__arrow--left.js-new-arrows
+                    +icon('left')
+                a(href="#" data-slider="slickNext").new-items__arrow.new-items__arrow--right.js-new-arrows
+                    +icon('right')                                                            
+            .new-items__slider.js-new-items
+                .new-items__slide
+                    .new-items__image
+                        a(href="#")
+                            img(src="img/items/new-item.jpg" alt="").new-items__main-image 
+                        a(href="#").new-items__btn Огляд
+                    .text-center
+                        a(href="#").new-items__name Icon    
+                    .new-items__price 500 грн   
+                    .new-items__color-wrap
+                        span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
+                .new-items__slide
+                    .new-items__image
+                        a(href="#")
+                            img(src="img/items/new-item-1.jpg" alt="").new-items__main-image  
+                        a(href="#").new-items__btn Огляд
+                    .text-center
+                        a(href="#").new-items__name Icon    
+                    .new-items__price 500 грн  
+                    .new-items__color-wrap
+                        span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
+                        span(data-href="img/items/new-item-2.jpg" style="background-color: #f3f3f3;").new-items__color.js-change-color
+                        span(data-href="img/items/new-item-3.jpg" style="background-color: #ca4b4b;").new-items__color.js-change-color
+                        span(data-href="img/items/new-item-4.jpg" style="background-color: #3174c3;").new-items__color.js-change-color
+                        span(data-href="img/items/new-item-5.jpg" style="background-color: #d734e4;").new-items__color.js-change-color
+                .new-items__slide
+                    .new-items__image
+                        a(href="#")
+                            img(src="img/items/new-item-2.jpg" alt="").new-items__main-image  
+                        a(href="#").new-items__btn Огляд
+                    .text-center
+                        a(href="#").new-items__name Icon    
+                    .new-items__price 500 грн   
+                    .new-items__color-wrap
+                        span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
+
+                .new-items__slide
+                    .new-items__image
+                        a(href="#")
+                            img(src="img/items/new-item-3.jpg" alt="").new-items__main-image  
+                        a(href="#").new-items__btn Огляд
+                    .text-center
+                        a(href="#").new-items__name Icon    
+                    .new-items__price 500 грн   
+                    .new-items__color-wrap
+                        span(data-href="img/items/new-item-1.jpg" style="background-color: #3174c3;").new-items__color.js-change-color
+                .new-items__slide
+                    .new-items__image
+                        a(href="#")
+                            img(src="img/items/new-item-4.jpg" alt="").new-items__main-image  
+                        a(href="#").new-items__btn Огляд
+                    .text-center
+                        a(href="#").new-items__name Icon    
+                    .new-items__price 500 грн   
+                    .new-items__color-wrap
+                        span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
+                .new-items__slide
+                    .new-items__image
+                        a(href="#")
+                            img(src="img/items/new-item-5.jpg" alt="").new-items__main-image  
+                        a(href="#").new-items__btn Огляд
+                    .text-center
+                        a(href="#").new-items__name Icon    
+                    .new-items__price 500 грн  
+                    .new-items__color-wrap
+                        span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
+                .new-items__slide
+                    .new-items__image
+                        a(href="#")
+                            img(src="img/items/new-item.jpg" alt="").new-items__main-image  
+                        a(href="#").new-items__btn Огляд
+                    .text-center
+                        a(href="#").new-items__name Icon    
+                    .new-items__price 500 грн   
+                    .new-items__color-wrap
+                        span(data-href="img/items/new-item-1.jpg" style="background-color: #d734e4;").new-items__color.js-change-color
+                .new-items__slide
+                    .new-items__image
+                        a(href="#")
+                            img(src="img/items/new-item-2.jpg" alt="").new-items__main-image  
+                        a(href="#").new-items__btn Огляд
+                    .text-center
+                        a(href="#").new-items__name Icon    
+                    .new-items__price 500 грн                    
+                    .new-items__color-wrap
+                        span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
+.blog
+    .container
+        .blog__title 
+            span Блог
+        .blog__list
+            .blog__item
+                .blog__item-wrap
+                    a(href="#").blog__item-title Diamond Footwear: Meet The Miners: Boo Johnson    
+                    .blog__date Posted on March 27 2017
+                    a(href="#").blog__image-wrap
+                        img(src="img/blog/blog-1.jpg" alt="" width="360" height="240").blog__image
+                    .blog__preview.
+                        Diamond footwear has built a solid program since launching in January last year. Boo ...
+            .blog__item
+                .blog__item-wrap
+                    a(href="#").blog__item-title Diamond Footwear: Nick Tucker The Push Part
+                    .blog__date Posted on March 24 2017
+                    a(href="#").blog__image-wrap
+                        img(src="img/blog/blog-2.jpg" alt="" width="360" height="240").blog__image
+                    .blog__preview.
+                        Nick Tucker turned Pro two years ago and is already exhibiting the wisdom of a veteran...
+            .blog__item
+                .blog__item-wrap
+                    a(href="#").blog__item-title View Now: DIAMOND Footwear Team Rider Brandon Biebel drops his new video part #AMFD #2
+                    .blog__date Posted on March 15 2017
+                    a(href="#").blog__image-wrap
+                        img(src="img/blog/blog-3.jpg" alt="" width="360" height="240").blog__image
+                    .blog__preview.
+                        "Been hard in the streets the past year working on my PUSH part for The Berrics, but yo...
+        
+.instagram
+    .container
+        .instagram__title
+            span <a href="#">@DIAMONDSUPPLYCO</a> ON INSTAGRAM   
+        - var insta = ['img/instagram/1.jpg', 'img/instagram/2.jpg', 'img/instagram/3.jpg', 'img/instagram/4.jpg', 'img/instagram/5.jpg', 'img/instagram/6.jpg', 'img/instagram/7.jpg', 'img/instagram/8.jpg', 'img/instagram/9.jpg', 'img/instagram/10.jpg', 'img/instagram/11.jpg', 'img/instagram/12.jpg']    
+        .instagram__list
+            each instas in insta
+                a(href=instas data-fancybox="images").instagram__link
+                    img(src=instas).instagram__image

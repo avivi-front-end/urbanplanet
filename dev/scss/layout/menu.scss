@@ -1,0 +1,86 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+    z-index: 9999999;
+    left: 0;
+    font-family: $bebasBold;
+    display: none;
+        transform: translateX(-100%);
+    transition: transform .3s ease;
+
+    &.active{
+        transform: translateX(0);
+        transition: transform .3s ease;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: #fff url("../img/iconCross.png") 50% 50% no-repeat;
+        background-size: 15px 15px;
+        &:hover{
+            background-color: #f4f4f4;
+        }
+    }
+
+    .level {
+        position: absolute;
+        left: 0;
+        transform: translateX(-100%);
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        transition: 0.3s ease;
+        background: #fff;
+
+        &.current {
+            transform: translateX(0);
+            transition: 0.3s ease;
+            z-index: 999;
+        }
+    }
+
+    &__menu {
+        list-style-type: none;
+    }
+
+    &__menu-item {
+        border-bottom: 1px #e5e5e5 solid;
+    }
+
+    &__menu-link {
+        padding: 18px;
+        text-transform: uppercase;
+        color: #000;
+        text-decoration: none;
+        font-size: 20px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        &:hover{
+            background-color: #f4f4f4;
+        }
+
+        &--back {
+            color: #be9e56;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px #e5e5e5 solid;
+
+            svg {
+                width: 20px;
+                fill: #be9e56;
+                height: 20px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

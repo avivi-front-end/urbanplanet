@@ -93,6 +93,7 @@ gulp.task('sass', function() {
 gulp.task('connect', function() {
     connect.server({
         port: 1337,
+        root: 'dist',
         livereload: true
     });
 });
@@ -122,6 +123,6 @@ gulp.task('watch', function() {
     gulp.watch('dev/chunks/*.pug', ['pug']);
     gulp.watch('dev/templates/*.pug', ['pug']);
     gulp.watch('dist/img/svg/*.svg', ['svg']);
-    // gulp.watch(['*.html'], ['html']);
+    gulp.watch(['dist/*.html'], ['html']);
     gulp.watch(['dist/css/*.css'], ['css']);
 });

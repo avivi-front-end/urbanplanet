@@ -1,3 +1,174 @@
 header.wrapper.header#header
-    .container
-        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .header__top
+        .container
+            .header__top-wrap
+                a(href="#").header__top-wrap-link
+                    +icon('credit-card')
+                    span Дисконтні та Подарункові карти
+                a(href="#").header__top-wrap-link
+                    +icon('van')
+                    span Доставка та повернення
+                a(href="#").header__top-wrap-link
+                    +icon('handshake')
+                    span Робота та Співпраця   
+                a(href="#").header__top-wrap-link.header__top-wrap-link--search.js-show-search
+                    +icon('musica-searcher')
+        .header__top-lang
+            a(href="#").header__top-lang-link.ua
+                i
+    .header__search
+        a(href="#").header__search-close.js-close-search
+        .header__search-form
+            form
+                input(type="text" placeholder="Поиск    ").header__search-input
+                input(type="submit").header__search-submit                
+    .header__main
+        .header__logo-wrap
+            a(href="index.html").header__logo
+                img(src="img/logo.png" alt="logo").header__logo-img
+        ul.header__main-menu
+            li.header__main-menu-item.submenu
+                a(href="#").header__main-menu-link ВIн   
+                .header__main-drop
+                    ul.header__main-drop-list
+                        li.header__main-drop-item
+                            a(href="#drop-inner-1").header__main-drop-link.js-show-drop-inner.active Одяг
+                        li.header__main-drop-item
+                            a(href="#drop-inner-2").header__main-drop-link.js-show-drop-inner Взуття    
+                        li.header__main-drop-item
+                            a(href="#drop-inner-3").header__main-drop-link.js-show-drop-inner Аксессуари  
+                        li.header__main-drop-item
+                            a(href="#drop-inner-3").header__main-drop-link.js-show-drop-inner Sale      
+                    .header__drop
+                        .header__drop-inner#drop-inner-1.active
+
+                            .header__drop-column-wrapper
+                                .header__drop-column
+                                    .header__drop-column-title Одежда
+                                    ul.header__drop-inner-list
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Блузки и рубашки
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Брюки и леггинсы 
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link ДЖИНСЫ
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link  ЖАКЕТЫ      
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link КОМБИНЕЗОНЫ
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link КОФТЫ 
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link ЖАКЕТЫ
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link   КОФТЫ
+                                .header__drop-column
+                                    .header__drop-column-title Обувь
+                                    ul.header__drop-inner-list
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Блузки и рубашки
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Брюки и леггинсы   
+                                .header__drop-column
+                                    .header__drop-column-title Аксессуары
+                                    ul.header__drop-inner-list
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Блузки и рубашки
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Брюки и леггинсы    
+                            a(href="#").header__drop-bottom-link Новинки                
+                        .header__drop-inner#drop-inner-2
+                            .header__drop-column-wrapper
+                                .header__drop-column
+                                    .header__drop-column-title Одежда
+                                    ul.header__drop-inner-list
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link КОМБИНЕЗОНЫ
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link КОФТЫ 
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link ЖАКЕТЫ
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link   КОФТЫ
+                                .header__drop-column
+                                    .header__drop-column-title Обувь
+                                    ul.header__drop-inner-list
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Блузки и рубашки
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Брюки и леггинсы   
+                                .header__drop-column
+                                    .header__drop-column-title Аксессуары
+                                    ul.header__drop-inner-list
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Блузки и рубашки
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Брюки и леггинсы  
+
+                        .header__drop-inner#drop-inner-3
+                            .header__drop-column-wrapper
+                                .header__drop-column
+                                    .header__drop-column-title Одежда
+                                    ul.header__drop-inner-list
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link КОМБИНЕЗОНЫ
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link КОФТЫ 
+
+                                .header__drop-column
+                                    .header__drop-column-title Обувь
+                                    ul.header__drop-inner-list
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Блузки и рубашки
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Брюки и леггинсы   
+                                .header__drop-column
+                                    .header__drop-column-title Аксессуары
+                                    ul.header__drop-inner-list
+                                        li.header__drop-inner-item
+                                            a(href="#").header__drop-inner-link Блузки и рубашки
+                            a(href="#").header__drop-bottom-link Новинки                          
+
+                        .header__drop-banners
+                            a(href="#").header__drop-banners-link
+                                span.header__drop-banners-image-wrap
+                            a(href="#").header__drop-banners-link
+                                span.header__drop-banners-image-wrap
+            li.header__main-menu-item
+                a(href="#").header__main-menu-link Вона        
+            li.header__main-menu-item
+                a(href="#").header__main-menu-link SALE                  
+            li.header__main-menu-item
+                a(href="#").header__main-menu-link Бренд     
+            li.header__main-menu-item
+                a(href="#").header__main-menu-link Блог   
+            li.header__main-menu-item
+                a(href="#").header__main-menu-link Магазини     
+        .header__right-wrap.clearfix
+            a(href="#").header__right-links.header__right-links--menu.js-show-menu
+                span Меню
+            a(href="#").header__right-links.header__right-links--callback.js-show-callback
+                span Callback     
+            a(href="#").header__right-links.header__right-links--login
+                span УвIйти 
+            a(href="#").header__right-links.header__right-links--cart.js-show-cart
+                span Корзина    
+
+            a(href="#").header__right-links.header__right-links--search.js-show-search
+                span Поиск 
+
+    .header__callback
+        a(href="#").header__callback-close 
+        .header__callback__title Перезвонiть менi
+        form
+            .header__callback-form-group
+                label.header__callback-label iм’я
+                input(type="text").header__callback-input
+            .header__callback-form-group
+                label.header__callback-label ТЕЛЕФОН
+                input(type="text").header__callback-input 
+            .header__callback-form-group
+                label.header__callback-label коментар
+                textarea.header__callback-text
+            .header__callback-form-group
+                input(type="submit" value="Вiдправити").header__callback-submit 
