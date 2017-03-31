@@ -722,3 +722,35 @@ var changeCartDetail = (function() {
 
 
 })();
+
+
+//Forms Validate
+
+var formValidate = (function(){
+    var $loginForm = $('#login-form');
+
+    $loginForm.on('submit',function () {
+        return $loginFormValidate.form()
+    })
+
+    var $loginFormValidate = $loginForm.validate({
+        rules:{
+            email: {
+                required: true,
+                email: true
+            },
+            password: {
+                required: true,
+            },
+        },
+        messages:{
+            email: {
+                required: 'Введите Email',
+                email: 'Введите валидный email'
+            },
+            password: {
+                required: 'Введите свой пароль',
+            },
+        }
+    });
+})();

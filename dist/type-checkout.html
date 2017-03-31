@@ -275,26 +275,36 @@
       </div>
     </header>
     <div class="page-body" id="page-body">
-      <div class="checkout">
+      <div class="type-checkout">
         <div class="container">
-          <div class="checkout__top-link"> </div>
-          <div class="checkout__top-panel">
-            <div class="basket-bottom__summary">
-              <div class="basket-bottom__summary-item">
-                <div class="basket-bottom__name">Стоимость товаров:</div>
-                <div class="basket-bottom__value"> 3 298 грн</div>
+          <div class="type-checkout__outer"><a class="type-checkout__top-link" href="#"><img src="img/logo.png" alt="logo"></a>
+            <div class="type-checkout__wrapper">
+              <div class="type-checkout__item">
+                <div class="type-checkout__item-title">РЕГИСТРАЦИЯ    </div>
+                <div class="type-checkout__item-sub-title">
+                  Делайте заказы без регистрации выбирая функцию <br>
+                  "Быстрые покупки" или создайте аккаунт.
+                </div><a class="type-checkout__btn type-checkout__btn--gold" href="#">Быстрые покупки   </a><a class="type-checkout__btn" href="#">Создать аккаунт</a>
+                <div class="text-center">       <a class="type-checkout__info-link" href="#">Почему стоит зарегистрироваться<br> на answear.ua?</a></div>
               </div>
-              <div class="basket-bottom__summary-item">
-                <div class="basket-bottom__name">Скидка:</div>
-                <div class="basket-bottom__value">0 грн</div>
-              </div>
-              <div class="basket-bottom__summary-item">
-                <div class="basket-bottom__name">Доставка</div>
-                <div class="basket-bottom__value">0 грн</div>
-              </div>
-              <div class="basket-bottom__summary-item">
-                <div class="basket-bottom__name basket-bottom__name--total">К оплате:</div>
-                <div class="basket-bottom__value basket-bottom__value--total">3 298 грн. </div>
+              <div class="type-checkout__item">
+                <div class="type-checkout__item-title">У МЕНЯ УЖЕ ЕСТЬ АККАУНТ</div>
+                <div class="type-checkout__form">
+                  <form id="login-form">
+                    <div class="type-checkout__form-group">
+                      <div class="type-checkout__form-label">E-MAIL:</div>
+                      <input class="type-checkout__input" type="email" name="email">
+                    </div>
+                    <div class="type-checkout__form-group">
+                      <div class="type-checkout__form-label">ПАРОЛЬ:</div>
+                      <input class="type-checkout__input" type="password" name="password">
+                    </div>
+                    <div class="type-checkout__form-group">
+                      <input class="type-checkout__btn" type="submit" value="ВОЙТИ">
+                    </div>
+                    <div class="text-center">       <a class="type-checkout__info-link" href="#">Напомнить пароль        </a></div>
+                  </form>
+                </div><a class="type-checkout__btn type-checkout__btn--blue" href="#">Регистрация с помощью Facebook</a>
               </div>
             </div>
           </div>

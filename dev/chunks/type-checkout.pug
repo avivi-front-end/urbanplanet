@@ -1,0 +1,32 @@
+.type-checkout
+    .container
+        .type-checkout__outer
+            a(href="#").type-checkout__top-link
+                img(src="img/logo.png" alt="logo")
+            .type-checkout__wrapper
+                .type-checkout__item
+                    .type-checkout__item-title РЕГИСТРАЦИЯ    
+                    .type-checkout__item-sub-title.
+                        Делайте заказы без регистрации выбирая функцию <br>
+                        "Быстрые покупки" или создайте аккаунт.
+                    a(href="#").type-checkout__btn.type-checkout__btn--gold Быстрые покупки   
+                    a(href="#").type-checkout__btn Создать аккаунт
+                    .text-center        
+                        a(href="#").type-checkout__info-link.
+                            Почему стоит зарегистрироваться<br> на answear.ua?
+                .type-checkout__item
+                    .type-checkout__item-title У МЕНЯ УЖЕ ЕСТЬ АККАУНТ
+                    .type-checkout__form
+                        form#login-form
+                            .type-checkout__form-group
+                                .type-checkout__form-label E-MAIL:
+                                input(type="email" name="email").type-checkout__input
+                            .type-checkout__form-group
+                                .type-checkout__form-label ПАРОЛЬ:
+                                input(type="password" name="password").type-checkout__input    
+                            .type-checkout__form-group
+                                    input(type="submit" value="ВОЙТИ").type-checkout__btn    
+                            .text-center        
+                                a(href="#").type-checkout__info-link Напомнить пароль        
+                    a(href="#").type-checkout__btn.type-checkout__btn--blue Регистрация с помощью Facebook
+                            

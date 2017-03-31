@@ -1,0 +1,108 @@
+.type-checkout {
+    padding: 50px 0;
+
+    &__top-link{
+        max-width: 150px;
+        margin: 0 auto 30px;
+        display: block;
+    }
+
+    &__wrapper {
+        border: 1px #e5e5e5 solid;
+        display: flex;
+    }
+
+    &__outer {
+        border-bottom: 5px #000 solid;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 60px;
+
+        &:not(:first-child) {
+            border-left: 1px #e5e5e5 solid;
+        }
+    }
+
+    &__item-title {
+        font-family: $bebasBold;
+        font-size: 36px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__item-sub-title {
+        font-family: $ptsans;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #7f7f7f;
+    }
+
+    &__btn {
+        display: block;
+        font-size: 24px;
+        text-align: center;
+        padding: 15px;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 15px;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-family: $bebasBold;
+
+        &--gold {
+            background: #be9e56;
+        }
+
+        &--blue {
+            background: #5972a7;
+        }
+    }
+
+    &__info-link {
+        font-family: $ptsans;
+        font-size: 14px;
+        text-decoration: none;
+        color: #000;
+        transition: 0.3s ease;
+        text-align: center;
+        margin-bottom: 30px;
+        display: inline-block;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #be9e56;
+        }
+    }
+
+    &__form{
+        border-bottom: 1px #e5e5e5 solid;
+        margin-bottom: 30px;
+    }
+
+    &__form-group {
+        margin-bottom: 15px;
+    }
+
+    &__form-label {
+        color: #7f7f7f;
+        margin-bottom: 5px;
+        font-family: $ptsans;
+        font-size: 10px;
+    }
+
+    &__input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: #e5e5e5;
+        padding: 15px 12px 15px 15px;
+        height: 44px;
+        font-family: $ptsans;
+    }
+}

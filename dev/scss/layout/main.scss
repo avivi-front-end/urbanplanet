@@ -276,3 +276,10 @@ p {
         position: relative;
     }
 }
+
+
+label.error{
+    font-family: $ptsans;
+    font-size: 10px;
+    color: red;
+}
