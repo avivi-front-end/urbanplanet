@@ -42,6 +42,10 @@ if (ieDetector.ieVersion == 10 || ieDetector.ieVersion == 11) {
     })();
 }
 
+$(window).on('load', function() {
+    $('.page-wrapper').css('opacity', 1);
+})
+
 $(function() {
 
     // placeholder
@@ -106,6 +110,10 @@ $(function() {
     $(document).on('click', '.js-new-arrows', function(e) {
         e.preventDefault();
         $('.js-new-items').slick($(this).attr('data-slider'));
+    });
+
+    $('.js-close-info-message').on('click',function(){
+        $('.info-messages').slideUp();
     });
 
 
@@ -618,19 +626,19 @@ var hoverTable = (function() {
         clearTable();
     })
 
-    function clearTable(){
+    function clearTable() {
         $tableRow.find('.orange').removeClass('orange');
     }
 })();
 
-var sizeCategorys = (function(){
+var sizeCategorys = (function() {
     var $topLink = $('.js-top-category');
     var $innerLink = $('.js-inner-category');
     var $currentLink = $('.js-current-category');
     var $infoWrapper = $('.info-main');
 
 
-    $topLink.on('click',function(e){
+    $topLink.on('click', function(e) {
         e.preventDefault();
         $topLink.removeClass('active');
         $innerLink.removeClass('active');
@@ -638,13 +646,13 @@ var sizeCategorys = (function(){
         $(this).next('.size-info__inner-category-wrap').find('.size-info__inner-category-link').eq(0).addClass('active');
     });
 
-    $innerLink.on('click',function(e){
+    $innerLink.on('click', function(e) {
         e.preventDefault();
         $innerLink.removeClass('active');
         $(this).addClass('active');
     });
 
-    $currentLink.on('click',function(e){
+    $currentLink.on('click', function(e) {
         e.preventDefault();
         $infoWrapper.removeClass('active');
         var $target = $(this).attr('href');
@@ -653,4 +661,64 @@ var sizeCategorys = (function(){
 
         $($target).addClass('active');
     });
+})();
+
+var changeCartDetail = (function() {
+    var $btn = $('.js-change-detail-cart');
+    var $changeWrapper = $('.cart-page__change-quantity-wrapper');
+    var $close = $('.js-close-change');
+    var $save = $('.js-save-change');
+
+    var $sizeSelect = $('.js-select-change');
+
+    $btn.on('click', function(e) {
+        e.preventDefault();
+        $changeWrapper.addClass('active');
+
+        $sizeSelect.each(function() {
+            $(this).attr('data-temp-value', $(this).find('option:selected').val());
+        })
+
+    })
+
+    $close.on('click', function(e) {
+        e.preventDefault();
+
+
+
+        closeChange();
+        //возврощяем селекты к дефолтному значение если изменения не сохранены
+        setTimeout(function(){
+            $sizeSelect.each(function() {
+                var oldValue = $(this).attr('data-temp-value');
+                $(this).find('option[value="'+oldValue+'"]').prop('selected', true);
+            })
+        },300);
+    });
+
+    $sizeSelect.on('change', function() {
+
+        // $(this).attr('data-temp-value', $(this).find('option:selected').val());
+
+    });
+
+    $save.on('click', function(e) {
+        e.preventDefault();
+        $sizeSelect.each(function() {
+            var targetItem = $(this).attr('data-change');
+            var tempValue = $(this).find('option:selected').val();
+            $(targetItem).find('span').html(tempValue);
+
+            // $('.js-custom-size').find('option[value="' + targetValue + '"]').prop('selected', true);
+
+        });
+        closeChange();
+    });
+
+    function closeChange() {
+        $changeWrapper.removeClass('active');
+    }
+
+
+
 })();
