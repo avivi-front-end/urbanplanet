@@ -112,7 +112,7 @@ $(function() {
         $('.js-new-items').slick($(this).attr('data-slider'));
     });
 
-    $('.js-close-info-message').on('click',function(){
+    $('.js-close-info-message').on('click', function() {
         $('.info-messages').slideUp();
     });
 
@@ -671,6 +671,8 @@ var changeCartDetail = (function() {
 
     var $sizeSelect = $('.js-select-change');
 
+    var $removeItem = $('.js-remove-item-cart-list');
+
     $btn.on('click', function(e) {
         e.preventDefault();
         $changeWrapper.addClass('active');
@@ -688,12 +690,12 @@ var changeCartDetail = (function() {
 
         closeChange();
         //возврощяем селекты к дефолтному значение если изменения не сохранены
-        setTimeout(function(){
+        setTimeout(function() {
             $sizeSelect.each(function() {
                 var oldValue = $(this).attr('data-temp-value');
-                $(this).find('option[value="'+oldValue+'"]').prop('selected', true);
+                $(this).find('option[value="' + oldValue + '"]').prop('selected', true);
             })
-        },300);
+        }, 300);
     });
 
     $sizeSelect.on('change', function() {
@@ -715,6 +717,13 @@ var changeCartDetail = (function() {
         closeChange();
     });
 
+    $removeItem.on('click', function(e) {
+        e.preventDefault();
+        $(this).closest('.cart-page__list-item').fadeOut(200, function() {
+            $(this).remove();
+        });
+    })
+
     function closeChange() {
         $changeWrapper.removeClass('active');
     }
@@ -726,15 +735,25 @@ var changeCartDetail = (function() {
 
 //Forms Validate
 
-var formValidate = (function(){
+var formValidate = (function() {
     var $loginForm = $('#login-form');
 
-    $loginForm.on('submit',function () {
+    /*
+     _                 _        ______
+    | |               (_)       |  ___|
+    | |     ___   __ _ _ _ __   | |_ ___  _ __ _ __ ___
+    | |    / _ \ / _` | | '_ \  |  _/ _ \| '__| '_ ` _ \
+    | |___| (_) | (_| | | | | | | || (_) | |  | | | | | |
+    \_____/\___/ \__, |_|_| |_| \_| \___/|_|  |_| |_| |_|
+                 __/ |
+                |___/                                   */
+
+    $loginForm.on('submit', function() {
         return $loginFormValidate.form()
     })
 
     var $loginFormValidate = $loginForm.validate({
-        rules:{
+        rules: {
             email: {
                 required: true,
                 email: true
@@ -743,7 +762,7 @@ var formValidate = (function(){
                 required: true,
             },
         },
-        messages:{
+        messages: {
             email: {
                 required: 'Введите Email',
                 email: 'Введите валидный email'
@@ -753,4 +772,194 @@ var formValidate = (function(){
             },
         }
     });
+    /*
+        _____ _               __   ______
+       /  ___| |             /  |  |  ___|
+       \ `--.| |_ ___ _ __   `| |  | |_ ___  _ __ _ __ ___
+        `--. \ __/ _ \ '_ \   | |  |  _/ _ \| '__| '_ ` _ \
+       /\__/ / ||  __/ |_) | _| |_ | || (_) | |  | | | | | |
+       \____/ \__\___| .__/  \___/ \_| \___/|_|  |_| |_| |_|
+                     | |                                    */
+
+    var $step1 = $('#checkout-step-1');
+
+    $step1.on('submit', function() {
+        return $step1Validate.form()
+    })
+
+    var $step1Validate = $step1.validate({
+        rules: {
+            firstname: {
+                required: true,
+            },
+            lastname: {
+                required: true,
+            },
+            phone: {
+                required: true,
+                digits: true
+            },
+            email: {
+                required: true,
+                email: true,
+            },
+            rules: {
+                required: true,
+            }
+        },
+        messages: {
+            firstname: {
+                required: "Введите свое имя",
+            },
+            lastname: {
+                required: "Введите свою фамилию",
+            },
+            phone: {
+                required: "Введите свою телефон",
+            },
+            email: {
+                required: "Введите свой email",
+                email: 'Введите валидный email'
+            },
+            rules: {
+                required: "Вы должны быть согласны с правилами",
+            }
+        }
+    });
+
+
+
 })();
+
+
+//Checkout Form - multiSteps
+
+var checkForm = (function() {
+    var $checkbox = $('.js-checkbox');
+
+    var $radio = $('.js-radio');
+    var $cartBtn = $('.js-show-small-cart');
+    var $cartList = $('.checkout__cart-list')
+
+    $checkbox.on('change', function() {
+        $(this).closest('.checkout__option').toggleClass('active');
+        $(this).closest('.checkout__option').find('.js-form-wrapper').slideToggle(150);
+    });
+
+    $radio.on('click', function() {
+        $('.js-radio-content').slideUp(150)
+        $(this).closest('.js-radio-parent').find('.js-radio-content').slideDown(150)
+
+    });
+
+
+    $cartBtn.on('click', function(e) {
+        e.preventDefault();
+
+        $cartList.slideToggle(150);
+        $(this).toggleClass('active');
+        $(this).find('.inner-text > span').toggleClass('hidden');
+
+
+    })
+})();
+
+var locationPage = (function() {
+    var $btn = $('.js-show-map');
+    var load = false;
+
+    if ($('.location').length > 0) {
+
+    }
+
+    $btn.on('click', function(e) {
+        var $this = $(this);
+
+        var datalat = parseFloat($this.attr('data-lat'));
+        var datalng = parseFloat($this.attr('data-lng'));
+
+        if ($(window).outerWidth() > 767) {
+            e.preventDefault();
+
+            if (!load) {
+                $('body').append('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4iiu69HGNYjeWowMnGtdghML_vNg5M_Y"></script>')
+                load = !load;
+            }
+
+            $this.closest('.location__image-wrap').append('<div class="location__map-wrap"><a href="#" class="location__close"></a><div class="map-wrapper" id="map"></div></div>');
+
+            if ((($this.closest('.location__item').index() + 1) % 2) == 0) {
+                $('.location__map-wrap').show().addClass('left');
+            } else {
+                $('.location__map-wrap').show().addClass('right');
+
+            }
+            setTimeout(function() {
+                initMap(datalat, datalng);
+            }, 500);
+        }
+    });
+
+    function initMap(datalat, datalng) {
+        var myLatLng = {
+            lat: datalat,
+            lng: datalng
+        };
+
+        console.log(myLatLng);
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 20,
+            center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng
+        });
+        marker.setMap(map);
+    };
+
+    $(document).on('click', '.location__close', function(e) {
+        e.preventDefault();
+        $(this).closest('.location__map-wrap').remove();
+    })
+})();
+
+
+var storyScroll = (function() {
+    var $storyWrap = $('.story__item');
+
+    $(window).on('load', function() {
+        $storyWrap.css('height', $(window).outerHeight())
+
+        if ($(window).outerWidth() < 767) {
+        } else {
+            ParallaxScroll.init();
+        }
+    });
+
+    // $('.story__item').each(function(key){
+    //
+    //     $(this).attr('data-number',key+1);
+    // })
+
+
+    // $(window).on('scroll',function(){
+    //     $('.story__item').each(function(){
+    //         var $this = $(this);
+    //         if (($(window).scrollTop()+$(window).outerHeight()) > $this.offset().top && ( $(window).scrollTop() < ($this.offset().top + $this.outerHeight())) ){
+    //             $this.addClass('visible');
+    //             var tempPerc = (($(window).scrollTop() + $(window).outerHeight() - $this.offset().top) * 100) / ($this.offset().top + $this.outerHeight());
+    //             var tempPx = $(window).scrollTop() + ($(window).outerHeight()/2) - $this.outerHeight() ;
+    //             console.log('block : '+$this.attr('data-number')+' perc = '+tempPerc);
+    //             $this.find('.story__info-wrap').css({
+    //                 'transform':'translateY(-'+tempPx+'px)'
+    //             })
+    //             // $this.attr('data-perc',)
+    //         } else {
+    //             $this.removeClass('visible');
+    //         }
+    //     });
+    //
+    // });
+})()

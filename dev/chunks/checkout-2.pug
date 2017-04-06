@@ -1,0 +1,168 @@
+.checkout
+    .container
+        .checkout__head
+            a(href="#").type-checkout__top-link
+                img(src="img/logo.png" alt="logo")
+            .checkout__steps
+                .checkout__steps-item.active.complete    
+                    span.checkout__steps-num 1.
+                    span.checkout__steps-name Адресные данные    
+                .checkout__steps-item.active    
+                    span.checkout__steps-num 2.
+                    span.checkout__steps-name ДОСТАВКА И ОПЛАТА
+                .checkout__steps-item
+                    span.checkout__steps-num 3.
+                    span.checkout__steps-name ПОДТВЕРЖДЕНИЕ ЗАКАЗА
+            .checkout__cart-list
+                - for (var i = 0; i < 2; i++)         
+                    .cart-page__list-item.cart-page__list-item--checkout
+                        .cart-page__list-name.cart-page__list-name--inner
+                            a(href="#").cart-page__list-remove.js-remove-item-cart-list
+                            a(href="#").cart-page__list-image
+                                img(src="img/cart/cart-1.jpg" alt="")
+                            .cart-page__list-name-wrap
+                                a(href="#").cart-page__list-name-info MEDICINE
+                                .cart-page__list-name-value Medicine - Брюки Urban Uniform
+                                .cart-page__mobile-info
+                                    .cart-page__list-name-value M, Черный, 2 шт.
+                                .cart-page__mobile-info 
+                                    .cart-page__mobile-price
+                                        .cart-page__price-total 3 298 грн.
+                                .cart-page__mobile-info
+                                    a(href="#").cart-page__favorite удалить
+                        .cart-page__list-details.cart-page__list-details--inner
+                            .cart-page__list-inner
+                                .cart-page__detail-item размер: <span> S</span>
+                                .cart-page__detail-item цвет: <span>Черный</span> 
+                        .cart-page__list-quantity.cart-page__list-quantity--inner
+                            .cart-page__list-inner
+                                .cart-page__list-quantity-change-wrap
+                                    input(type="text" value="1" readonly).cart-page__input-quantity
+                        .cart-page__list-total.cart-page__list-total--inner
+                            .cart-page__list-total-product 1 649 грн.                      
+        .checkout__top-info.clearfix   
+            a(href="#").checkout__your-cart.js-show-small-cart
+                +icon('shopping-cart')
+                span.inner-text 
+                    span Оформить заказ
+                    span.hidden Скрыть корзину
+                span.checkout__your-cart-count 2 
+            .basket-bottom__summary.checkout__summary
+                .basket-bottom__summary-item
+                    .basket-bottom__name Стоимость товаров:
+                    .basket-bottom__value  3 298 грн
+                .basket-bottom__summary-item
+                    .basket-bottom__name Скидка:
+                    .basket-bottom__value 0 грн
+                .basket-bottom__summary-item
+                    .basket-bottom__name Доставка
+                    .basket-bottom__value 0 грн
+                .basket-bottom__summary-item
+                    .basket-bottom__name.basket-bottom__name--total К оплате:
+                    .basket-bottom__value.basket-bottom__value--total 3 298 грн. 
+        .checkout__item
+            .checkout__item-title 
+                +icon ('van')
+                | ВЫБЕРИТЕ СПОСОБ ДОСТАВКИ
+            .checkout__option.js-radio-parent
+                label.checkout__radio-label
+                    input(type="radio" name="global[shipping]" checked).checkout__radio.js-radio      
+                    span.checkout__option-radio-icon
+                    .checkout__label-wrap
+                        .checkout__label-name ПОЧТОМАТ ПРИВАТБАНКА (МІСТ ЕКСПРЕС)
+                        .checkout__label-price 0 грн.
+                        .checkout__label-time
+                            .checkout__label-time-inner
+                                span Расчетное время доставки:
+                                strong До 150 часов
+                                i.info
+                .checkout__option-content.active.js-radio-content
+                    .checkout__option-form-group
+                        .checkout__option-content-label ВЫБЕРИТЕ ПУНКТ ПОЛУЧЕНИЯ
+                        select.checkout__option-content-select
+                            option ВІННИЦЬКА
+                            option ВОЛИНСЬКА 
+                            option ДНІПРОПЕТРОВСЬКА
+                            option ДОНЕЦЬКА 
+                            option ВІННИЦЬКА
+                            option ВОЛИНСЬКА 
+                            option ДНІПРОПЕТРОВСЬКА
+                            option ДОНЕЦЬКА 
+                        select.checkout__option-content-select
+                            option ВІННИЦЬКА
+                            option ВОЛИНСЬКА 
+                            option ДНІПРОПЕТРОВСЬКА
+                            option ДОНЕЦЬКА 
+                            option ВІННИЦЬКА
+                            option ВОЛИНСЬКА 
+                            option ДНІПРОПЕТРОВСЬКА
+                            option ДОНЕЦЬКА   
+
+            .checkout__option.js-radio-parent
+                label.checkout__radio-label
+                    input(type="radio" name="global[shipping]").checkout__radio.js-radio      
+                    span.checkout__option-radio-icon
+                    .checkout__label-wrap
+                        .checkout__label-name ТОЧКА ВЫДАЧИ (МІСТ ЕКСПРЕС)
+                        .checkout__label-price 0 грн.
+                        .checkout__label-time
+                            .checkout__label-time-inner
+                                span Расчетное время доставки:
+                                strong До 150 часов
+                                i.info
+                .checkout__option-content.js-radio-content
+                    .checkout__option-form-group
+                        .checkout__option-content-label ВЫБЕРИТЕ ПУНКТ ПОЛУЧЕНИЯ
+                        select.checkout__option-content-select
+                            option ВІННИЦЬКА
+                            option ВОЛИНСЬКА 
+                            option ДНІПРОПЕТРОВСЬКА
+                            option ДОНЕЦЬКА 
+                            option ВІННИЦЬКА
+                            option ВОЛИНСЬКА 
+                            option ДНІПРОПЕТРОВСЬКА
+                            option ДОНЕЦЬКА 
+                        select.checkout__option-content-select
+                            option ВІННИЦЬКА
+                            option ВОЛИНСЬКА 
+                            option ДНІПРОПЕТРОВСЬКА
+                            option ДОНЕЦЬКА 
+                            option ВІННИЦЬКА
+                            option ВОЛИНСЬКА 
+                            option ДНІПРОПЕТРОВСЬКА
+                            option ДОНЕЦЬКА   
+
+            .checkout__option.js-radio-parent
+                label.checkout__radio-label
+                    input(type="radio" name="global[shipping]").checkout__radio.js-radio      
+                    span.checkout__option-radio-icon
+                    .checkout__label-wrap
+                        .checkout__label-name КУРЬЕР (МІСТ ЕКСПРЕС)
+                        .checkout__label-price 0 грн.
+                        .checkout__label-time
+                            .checkout__label-time-inner
+                                span Расчетное время доставки:
+                                strong До 150 часов
+                                i.info        
+        .checkout__item
+            .checkout__item-title 
+                +icon ('credit-card')
+                | ВЫБЕРИТЕ СПОСОБ ОПЛАТЫ
+            .checkout__option.js-radio-parent
+                label.checkout__radio-label
+                    input(type="radio" name="global[price]" checked).checkout__radio.js-radio      
+                    span.checkout__option-radio-icon
+                    .checkout__label-wrap
+                        .checkout__label-name ПОЧТОМАТ ПРИВАТБАНКА (МІСТ ЕКСПРЕС)
+                        .checkout__label-price 0 грн.
+                        .checkout__label-time
+                            .checkout__label-time-inner
+                                span Расчетное время доставки:
+                                strong До 150 часов
+                                i.info
+        .checkout__btns        
+            .basket-bottom__btns
+                a(href="#").basket-bottom__btn-checkout 
+                    span Оформить заказ
+                a(href="#").basket-bottom__btn-continue 
+                    span Вернуться                 

@@ -1,0 +1,37 @@
+.breadcrumbs
+    ul.breadcrumbs__list
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Главная страница
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Магазины
+.location
+    .container
+        .location__title
+            span Магазины
+        .row    
+            .location__list
+                - for (var i=0; i < 4;i++)
+                    .location__item
+                        .location__image-wrap
+                            .location__big-name KITH MANHATTAN
+                            img(src="img/location/location-1.jpg" alt="").location__image
+                            a(href="https://www.google.com/maps/place/644+Broadway,+New+York,+NY+10012/@40.7264924,-73.9976008,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2598ff0690eed:0x12fd739e5fb46a78!8m2!3d40.7264924!4d-73.9954121" target="_blank" data-lat="40.726720" data-lng="-73.995412").location__map-link.js-show-map
+                                +icon ('placeholder')
+                        .location__adress.
+                            644 Broadway (at Bleecker St.) <br>
+                            NY, NY 10012
+                        .location__info
+                            .location__info-name.
+                                MONDAY - SATURDAY:             
+                            .location__info-val.
+                                10AM - 9PM
+                        .location__info
+                            .location__info-name.
+                                MONDAY - SATURDAY:             
+                            .location__info-val.
+                                10AM - 9PM            
+                        .location__info
+                            .location__info-name.
+                                MONDAY - SATURDAY:             
+                            .location__info-val.
+                                10AM - 9PM     

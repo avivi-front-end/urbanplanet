@@ -1,0 +1,6 @@
+.container
+    - var list = ['blog','cart','catalog','category','checkout','checkout-2','checkout-3','detail','index','locations','sale','story','type-checkout','help','discount']
+    ul(style="list-style-type:none; margin: 30px 0;")
+        each listItem in list
+            li(style="margin-bottom:10px;")
+                a(href=listItem+'.html' style="color: black;")= listItem

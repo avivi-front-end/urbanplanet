@@ -297,10 +297,61 @@
               <div class="cart-page__list-details"><strong class="cart-page__list-value"> подробности</strong></div>
               <div class="cart-page__list-quantity"><strong class="cart-page__list-value"> Количество</strong></div>
               <div class="cart-page__list-price">   <strong class="cart-page__list-value"> Цена</strong></div>
-              <div class="cart-page__list-total"><strong class="cart-page__list-value">  Сумма   </strong></div>
+              <div class="cart-page__list-total"><strong class="cart-page__list-value">  Сумма  </strong></div>
             </div>
             <div class="cart-page__list-item">
-              <div class="cart-page__list-name cart-page__list-name--inner"><a class="cart-page__list-remove" href="#"></a><a class="cart-page__list-image" href="#"><img src="img/cart/cart-1.jpg" alt=""></a>
+              <div class="cart-page__list-name cart-page__list-name--inner"><a class="cart-page__list-remove js-remove-item-cart-list" href="#"></a><a class="cart-page__list-image" href="#"><img src="img/cart/cart-1.jpg" alt=""></a>
+                <div class="cart-page__list-name-wrap"><a class="cart-page__list-name-info" href="#">MEDICINE</a>
+                  <div class="cart-page__list-name-value">Medicine - Брюки Urban Uniform</div>
+                  <div class="cart-page__mobile-info">
+                    <div class="cart-page__list-name-value">M, Черный, 2 шт.</div>
+                  </div>
+                  <div class="cart-page__mobile-info"> 
+                    <div class="cart-page__mobile-price">
+                      <div class="cart-page__price-current">1 649 грн.</div>
+                      <div class="cart-page__price-total">3 298 грн.</div>
+                    </div>
+                  </div><a class="cart-page__favorite" href="#">Добавить в избранное</a>
+                  <div class="cart-page__mobile-info"><a class="cart-page__favorite" href="#">удалить</a></div>
+                </div>
+              </div>
+              <div class="cart-page__list-details cart-page__list-details--inner">
+                <div class="cart-page__change-quantity-wrapper">
+                  <select class="cart-page__select js-select-change" data-change="#change-1">
+                    <option value="value-1">Размер: S</option>
+                    <option value="value-2">Размер: M</option>
+                    <option value="value-3">Размер: L</option>
+                    <option value="value-4">Размер: XL</option>
+                    <option value="value-5">Размер: XXL</option>
+                  </select>
+                  <select class="cart-page__select js-select-change" data-change="#change-2">
+                    <option value="value-6">Цвет Черный</option>
+                    <option value="value-7">Цвет не Черный</option>
+                  </select>
+                  <div class="cart-page__change-quantity-btns"><a class="cart-page__change-quantity-link js-close-change" href="#">Анулировать</a><a class="cart-page__change-quantity-link js-save-change" href="#">Сохранить</a></div>
+                </div>
+                <div class="cart-page__list-inner">
+                  <div class="cart-page__detail-item" id="change-1">размер: <span> S</span></div>
+                  <div class="cart-page__detail-item" id="change-2">цвет: <span>Черный</span> </div><a class="cart-page__detail-change js-change-detail-cart" href="#">Изменить</a>
+                </div>
+              </div>
+              <div class="cart-page__list-quantity cart-page__list-quantity--inner">
+                <div class="cart-page__list-inner">
+                  <div class="cart-page__list-quantity-change-wrap">
+                    <input class="cart-page__input-quantity" type="text" value="1">
+                    <div><a class="cart-page__change-quantity" href="#">Изменить</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-page__list-price cart-page__list-price--inner">
+                <div class="cart-page__list-price-product">1 649 грн.    </div>
+              </div>
+              <div class="cart-page__list-total cart-page__list-total--inner">
+                <div class="cart-page__list-total-product">1 649 грн.        </div>
+              </div>
+            </div>
+            <div class="cart-page__list-item">
+              <div class="cart-page__list-name cart-page__list-name--inner"><a class="cart-page__list-remove js-remove-item-cart-list" href="#"></a><a class="cart-page__list-image" href="#"><img src="img/cart/cart-1.jpg" alt=""></a>
                 <div class="cart-page__list-name-wrap"><a class="cart-page__list-name-info" href="#">MEDICINE</a>
                   <div class="cart-page__list-name-value">Medicine - Брюки Urban Uniform</div>
                   <div class="cart-page__mobile-info">
@@ -385,10 +436,11 @@
         <div class="footer__row">
           <div class="footer__item"><a class="footer__item-title" href="#">Информация</a>
             <ul class="footer__item-list">
-              <li class="footer__list-item"><a class="footer__list-link" href="#">O ANSWEAR.ua    </a></li>
-              <li class="footer__list-item"><a class="footer__list-link" href="#">Правила магазина ANSWEAR.ua</a></li>
-              <li class="footer__list-item"><a class="footer__list-link" href="#">Правила Answear Club</a></li>
-              <li class="footer__list-item"><a class="footer__list-link" href="#">Правила "Рекомендуйте нас знакомым"</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Про Urban Planet</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Подарункові та дисконтні картки</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Правила магазину</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Правила системи лояльності та знижок</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Дисконтнтні и подарункові картки </a></li>
             </ul>
           </div>
           <div class="footer__item"><a class="footer__item-title" href="#">Центр поддержки</a>
@@ -451,7 +503,6 @@
       </div>
     </footer>
   </div>
-  <link rel="stylesheet" href="css/style.css">
   <script src="js/ie-detector.js"></script>
   <script src="js/modernizr.js"></script>
   <script src="js/libs.js"></script>

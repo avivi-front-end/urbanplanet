@@ -18,6 +18,10 @@
         @media (max-width: $screen-sm-max) {
             display: block;
         }
+
+        &--checkout{
+            justify-content: space-between;
+        }
     }
 
     &__title {
@@ -433,6 +437,8 @@
         width: 400px;
         flex-shrink: 0;
         transition: .3s ease;
+        outline: none;
+        border: none;
         &:hover{
             background: #a3843f;
         }

@@ -38,7 +38,7 @@ gulp.task('svg', function() {
 gulp.task('default', ['concat', 'sass', 'pug', 'connect', 'watch']);
 
 gulp.task('sprite', function() {
-    var spriteData = gulp.src('dist/img/sprites/*.png').pipe(spritesmith({
+    var spriteData = gulp.src('dist/img/sprites/locations.png').pipe(spritesmith({
         imgName: 'sprite.png',
         cssName: 'sprite.scss',
         algorithm: 'binary-tree',

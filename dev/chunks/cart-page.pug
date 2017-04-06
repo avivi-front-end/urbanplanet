@@ -24,54 +24,55 @@
                 .cart-page__list-price    
                     strong.cart-page__list-value  Цена
                 .cart-page__list-total
-                    strong.cart-page__list-value   Сумма   
-            .cart-page__list-item
-                .cart-page__list-name.cart-page__list-name--inner
-                    a(href="#").cart-page__list-remove
-                    a(href="#").cart-page__list-image
-                        img(src="img/cart/cart-1.jpg" alt="")
-                    .cart-page__list-name-wrap
-                        a(href="#").cart-page__list-name-info MEDICINE
-                        .cart-page__list-name-value Medicine - Брюки Urban Uniform
-                        .cart-page__mobile-info
-                            .cart-page__list-name-value M, Черный, 2 шт.
-                        .cart-page__mobile-info 
-                            .cart-page__mobile-price
-                                .cart-page__price-current 1 649 грн.
-                                .cart-page__price-total 3 298 грн.
-                        a(href="#").cart-page__favorite Добавить в избранное
-                        .cart-page__mobile-info
+                    strong.cart-page__list-value   Сумма  
+            - for (var i = 0; i < 2; i++)         
+                .cart-page__list-item
+                    .cart-page__list-name.cart-page__list-name--inner
+                        a(href="#").cart-page__list-remove.js-remove-item-cart-list
+                        a(href="#").cart-page__list-image
+                            img(src="img/cart/cart-1.jpg" alt="")
+                        .cart-page__list-name-wrap
+                            a(href="#").cart-page__list-name-info MEDICINE
+                            .cart-page__list-name-value Medicine - Брюки Urban Uniform
+                            .cart-page__mobile-info
+                                .cart-page__list-name-value M, Черный, 2 шт.
+                            .cart-page__mobile-info 
+                                .cart-page__mobile-price
+                                    .cart-page__price-current 1 649 грн.
+                                    .cart-page__price-total 3 298 грн.
+                            a(href="#").cart-page__favorite Добавить в избранное
+                            .cart-page__mobile-info
+                                
+                                a(href="#").cart-page__favorite удалить
                             
-                            a(href="#").cart-page__favorite удалить
-                        
-                .cart-page__list-details.cart-page__list-details--inner
-                    .cart-page__change-quantity-wrapper
-                        select.cart-page__select.js-select-change(data-change="#change-1")
-                            option(value="value-1") Размер: S
-                            option(value="value-2") Размер: M
-                            option(value="value-3") Размер: L
-                            option(value="value-4") Размер: XL
-                            option(value="value-5") Размер: XXL
-                        select.cart-page__select.js-select-change(data-change="#change-2")
-                            option(value="value-6") Цвет Черный
-                            option(value="value-7") Цвет не Черный
-                        .cart-page__change-quantity-btns
-                            a(href="#").cart-page__change-quantity-link.js-close-change Анулировать
-                            a(href="#").cart-page__change-quantity-link.js-save-change Сохранить
-                    .cart-page__list-inner
-                        .cart-page__detail-item#change-1 размер: <span> S</span>
-                        .cart-page__detail-item#change-2 цвет: <span>Черный</span> 
-                        a(href="#").cart-page__detail-change.js-change-detail-cart Изменить
-                .cart-page__list-quantity.cart-page__list-quantity--inner
-                    .cart-page__list-inner
-                        .cart-page__list-quantity-change-wrap
-                            input(type="text" value="1").cart-page__input-quantity
-                            div
-                                a(href="#").cart-page__change-quantity Изменить
-                .cart-page__list-price.cart-page__list-price--inner
-                    .cart-page__list-price-product 1 649 грн.    
-                .cart-page__list-total.cart-page__list-total--inner
-                    .cart-page__list-total-product 1 649 грн.        
+                    .cart-page__list-details.cart-page__list-details--inner
+                        .cart-page__change-quantity-wrapper
+                            select.cart-page__select.js-select-change(data-change="#change-1")
+                                option(value="value-1") Размер: S
+                                option(value="value-2") Размер: M
+                                option(value="value-3") Размер: L
+                                option(value="value-4") Размер: XL
+                                option(value="value-5") Размер: XXL
+                            select.cart-page__select.js-select-change(data-change="#change-2")
+                                option(value="value-6") Цвет Черный
+                                option(value="value-7") Цвет не Черный
+                            .cart-page__change-quantity-btns
+                                a(href="#").cart-page__change-quantity-link.js-close-change Анулировать
+                                a(href="#").cart-page__change-quantity-link.js-save-change Сохранить
+                        .cart-page__list-inner
+                            .cart-page__detail-item#change-1 размер: <span> S</span>
+                            .cart-page__detail-item#change-2 цвет: <span>Черный</span> 
+                            a(href="#").cart-page__detail-change.js-change-detail-cart Изменить
+                    .cart-page__list-quantity.cart-page__list-quantity--inner
+                        .cart-page__list-inner
+                            .cart-page__list-quantity-change-wrap
+                                input(type="text" value="1").cart-page__input-quantity
+                                div
+                                    a(href="#").cart-page__change-quantity Изменить
+                    .cart-page__list-price.cart-page__list-price--inner
+                        .cart-page__list-price-product 1 649 грн.    
+                    .cart-page__list-total.cart-page__list-total--inner
+                        .cart-page__list-total-product 1 649 грн.        
 .basket-bottom
     .container
         .basket-bottom__info-panel

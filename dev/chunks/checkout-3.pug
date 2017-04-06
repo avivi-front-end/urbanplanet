@@ -1,0 +1,70 @@
+.checkout
+    .container
+        .checkout__head
+            a(href="#").type-checkout__top-link
+                img(src="img/logo.png" alt="logo")
+            .checkout__steps
+                .checkout__steps-item.active.complete    
+                    span.checkout__steps-num 1.
+                    span.checkout__steps-name Адресные данные    
+                .checkout__steps-item.active.complete   
+                    span.checkout__steps-num 2.
+                    span.checkout__steps-name ДОСТАВКА И ОПЛАТА
+                .checkout__steps-item.active
+                    span.checkout__steps-num 3.
+                    span.checkout__steps-name ПОДТВЕРЖДЕНИЕ ЗАКАЗА
+        .checkout__success            
+            .checkout__success-title СПАСИБО ЗА ВАШ ЗАКАЗ!
+            .checkout__success-item
+                .checkout__success-value 170113-014586-ANU
+                .checkout__success-name Это номер Вашего заказа. 
+            .checkout__success-item
+                .checkout__success-value test@GMAIL.COM
+                .checkout__success-name E-mail, на который будет приходить информация о состоянии Вашего заказа.
+            .checkout__success-item
+                .checkout__success-value ОТСЛЕЖИВАНИЕ ПОСЫЛКИ
+                .checkout__success-name.
+                    Номер товарно-траспортной накладной (ТТН) для отслеживания будет отправлен на Ваш e-mail, указанный при оформлении заказа.           
+            .checkout__success-item
+                .checkout__success-value АККАУНТ КЛИЕНТА
+                .checkout__success-name.
+                    Там Вы можете проверять статус заказов и отслеживать посылки (если Вы зарегистрированный Клиент!).
+        .checkout__new-acc            
+            .checkout__new-acc-title СОЗДАЙТЕ СВОЙ АККАУНТ ЗА 10 СЕКУНД!
+            .checkout__new-acc-wrap
+                .checkout__new-acc-item
+                    .checkout__new-acc-owner-wrap
+                        .checkout__new-acc-owner
+                            .checkout__new-acc-own-info ВЛАДЕЛЕЦ АККАУНТА:
+                            .checkout__new-acc-own-info.checkout__new-acc-own-info--black   KOVALCHUK YURIY  
+                        .checkout__new-acc-owner
+                            .checkout__new-acc-own-info АДРЕС E-MAIL:
+                            .checkout__new-acc-own-info.checkout__new-acc-own-info--black  JIMBOKID89@GMAIL.COM       
+                    .checkout__new-acc-form
+                        form
+                            .checkout__form-group
+                                label(for="input-25").checkout__form-label пароль:          
+                                input(type="text" name="firstname" placeholder="Введите пароль").checkout__form-group-input.checkout__form-group-input--white#input-25
+                            .checkout__form-group
+                                label(for="input-26").checkout__form-label   ПОВТОРИТЕ ПАРОЛЬ:         
+                                input(type="text" name="lastname"  placeholder="Повторите пароль").checkout__form-group-input.checkout__form-group-input--white#input-26        
+                            .checkout__form-group    
+                                label.checkout__new-acc-label
+                                    input(type="checkbox" checked).checkout__checkbox
+                                    span.checkout__text-icon.checkout__text-icon--white
+                                    span.checkout__option-text.    
+                                        Я ХОЧУ ПЕРВЫМ(ОЙ) ПОЛУЧАТЬ ИНФОРМАЦИЮ О РАСПРОДАЖАХ, АКЦИЯХ И КОНКУРСАХ
+                            .checkout__form-group
+                                input(type="submit" value="Создать аккаунт").checkout__form-group-submit     
+                .checkout__new-acc-item
+                    .checkout__new-acc-why-title  ПОЧЕМУ СТОИТ ЗАРЕГИСТРИРОВАТЬСЯ НА ANSWEAR.UA?
+                    ul.checkout__new-acc-why-list
+                        li.checkout__new-acc-why-item Акция Счастливые часы только для Клиентов с аккаунтом!
+                        li.checkout__new-acc-why-item Более быстрые покупки (без вода адресных данных)
+                        li.checkout__new-acc-why-item Эксклюзивные предложения только для Клиентов!
+                        li.checkout__new-acc-why-item Список избранных товаров хранится без ограничений!
+                        li.checkout__new-acc-why-item Отслеживание посылок и история покупок!
+        .checkout__btns        
+            .basket-bottom__btns
+                a(href="#").basket-bottom__btn-checkout 
+                    span Продолжить покупки

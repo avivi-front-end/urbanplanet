@@ -1,0 +1,348 @@
+.breadcrumbs
+    ul.breadcrumbs__list
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Главная страница
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link он
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link одежда  
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link брюки         
+.catalog
+    .container
+        .row
+            .catalog__info-wrapper
+                a(href="#" data-text="Показать фильтры").catalog__show-filter-btn.js-show-filter.
+                    Скрыть фильтры
+
+                .catalog__sorting
+                    .catalog__sorting-select-wrapper
+                        .catalog__sorting-item
+                            .catalog__sorting-name Сортировать:
+                            select.catalog__sorting-select
+                                option сначала новые
+                                option сначала дешевые
+                                option сначала сначала дорогие
+                                option сначала со скидками
+                        .catalog__sorting-item.catalog__sorting-item--count 
+                            .catalog__sorting-name ПОКАЗАТЬ:
+                            select.catalog__sorting-select
+                                option 60
+                                option 180
+                            .catalog__sorting-info 60 из 384    
+                    .catalog__sorting-pagination
+                        a(href="#").catalog__pagination-btn.catalog__pagination-btn--prev.disabled
+                        .catalog__sorting-name.catalog__sorting-name--pagination Страница
+                        input(type="text" value="1").catalog__pagination-input
+                        .catalog__sorting-name.catalog__sorting-name--pagination из 7
+                        a(href="#").catalog__pagination-btn.catalog__pagination-btn--next    
+            .catalog__wrap
+
+                .catalog__aside
+
+                    .catalog__aside-wrapper    
+                        .catalog__item
+                            .catalog__title Пол: 
+                            .catalog__item-wrap.scroll
+                                ul.catalog__list    
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Джинсы 
+                        .catalog__item
+                            .catalog__title Цвет: 
+                            .catalog__item-wrap.scroll
+                                ul.catalog__list    
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Джинсы 
+
+                        .catalog__item
+                            .catalog__title Свойства: 
+                            .catalog__item-wrap.scroll
+                                ul.catalog__list    
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: slim 
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: зауженные
+
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: прямые
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: свободные  
+
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: скинни
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: узкие 
+
+
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: slim 
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: зауженные
+
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: прямые
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: свободные  
+
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: скинни
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: узкие 
+                        .catalog__item
+                            .catalog__title Свойства: 
+                            .catalog__item-wrap.scroll
+                                ul.catalog__list    
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: slim 
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: зауженные
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: прямые
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: свободные  
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: скинни
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: узкие 
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: slim 
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: зауженные
+
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: прямые
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: свободные  
+
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: скинни
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: узкие                                                 
+                        .catalog__item
+                            .catalog__title Бренд: 
+                            label.catalog__param-item
+                                input(type="checkbox").catalog__input
+                                span.catalog__icon
+                                span.catalog__item-name Премиум
+                            .catalog__item-search
+                                form
+                                    input(type='text').catalog__search-input
+                            .catalog__item-wrap.scroll
+                                ul.catalog__list    
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: прямые
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: свободные  
+
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: скинни
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: узкие
+
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: прямые
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: свободные  
+
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: скинни
+                                    li.catalog__list-item
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name Крой: узкие                 
+                        .catalog__item
+                            .catalog__title Цена:
+                            .price-range__wrapper
+                                #priceRange(data-set-min="0" data-set-max="3699").price-range                   
+                            .price-inputs
+                                div
+                                    input(type="text").price-inputs__input.price-inputs__input--min
+                                div    
+                                    input(type="text").price-inputs__input.price-inputs__input--max
+                                    input(type="submit" value="OK").price-inputs__btn    
+                            label.catalog__param-item
+                                input(type="checkbox").catalog__input
+                                span.catalog__icon
+                                span.catalog__item-name только со скидками         
+
+
+
+
+
+
+                .catalog__main
+                    .catalog__main-wrapper
+                        -for (var i = 0; i < 16; i++)
+                            .catalog__main-item
+                                .catalog__main-image-wrapper.js-other-side
+                                    a(href="#" data-other-side="img/catalog/1-back.jpg").catalog__main-item-photo
+                                        img(src="img/catalog/1.jpg" alt="" data-object-fit="cover").catalog__main-item-img
+                                    .catalog__main-info-wrapper
+                                        .catalog__main-sizes
+                                            span xs
+                                            span s
+                                            span m
+                                            span l
+                                            span xl
+                                        a(href="#").catalog__quick-buy ШВИДКА ПОКУПКА        
+                                a(href="#").catalog__main-item-name Basic Tee
+                                .catalog__main-item-price 280 ₴    
+            .catalog__info-wrapper.catalog__info-wrapper--right
+                .catalog__sorting
+                    .catalog__sorting-select-wrapper
+                        .catalog__sorting-item
+                            .catalog__sorting-name Сортировать:
+                            select.catalog__sorting-select
+                                option сначала новые
+                                option сначала дешевые
+                                option сначала сначала дорогие
+                                option сначала со скидками
+                        .catalog__sorting-item.catalog__sorting-item--count
+                            .catalog__sorting-name ПОКАЗАТЬ:
+                            select.catalog__sorting-select
+                                option 60
+                                option 180
+                            .catalog__sorting-info 60 из 384    
+                    .catalog__sorting-pagination
+                        a(href="#").catalog__pagination-btn.catalog__pagination-btn--prev.disabled
+                        .catalog__sorting-name.catalog__sorting-name--pagination Страница
+                        input(type="text" value="1").catalog__pagination-input
+                        .catalog__sorting-name.catalog__sorting-name--pagination из 7
+                        a(href="#").catalog__pagination-btn.catalog__pagination-btn--next                      
+
+
+
+
+
+.text
+    .container
+        .text__wrapper
+            .text__img-wrapper
+                img(src="img/category/text.jpg").text__image
+            .text__text-wrapper
+                h2 Мужской гардероб
+                p.
+                    Гардероб современного мужчины разнообразен и многогранен. И если, ещё пару-тройку десятков лет назад, в шкафу среднестатистического мужчины можно было найти лишь спортивный костюм, пару брюк, джинсы и несколько рубашек, то в настоящее время, мировая fasion-индустрия предлагает представителям сильной половины человечества широчайший выбор! Одежда, аксессуары и обувь на все случаи жизни, для любой ситуации и на самый притязательный вкус.                                        
+                ul
+                    li.
+                        повседневные коллекции
+                    li.
+                        деловой и классический стиль
+                    li.
+                        торжественную и праздничную одежду
+                    li.
+                        спортивную линию
+                    li.
+                        оригинальные и стильные аксессуары
+                    li.
+                        великолепную и качественную обувь различной стилистики            
+                br
+                p.
+                    А также, множество прочих интересных вещиц и деталей гардероба различного предназначения.
+                p.
+                    Сегодня, большинство мужчин стремится выглядеть хорошо, эффектно и модно, быть в тренде и идти в ногу со временем. Выбирая для отдыха, работы и путешествий комфортные, практичные и стильные модели от ведущих мировых брендов. Мужчины бросают вызов обыденности, отдавая предпочтения дерзким и смелым коллекциям креативных лейблов, зачастую, не уступая своим избранницам в хорошем вкусе и безупречном чувстве стиля.    
+                h3.
+                    Шоппинг
+                p.
+                    Как правило, мужчины отличаются своей практичностью и прагматичным взглядом на жизнь. Они ценят и экономят свое время, не желая тратить на шоппинг все выходные, предпочитая проводить их с большей пользой, чем хождение по магазинам в поисках нужной вещицы и трата времени в пробках по пути в торговые центры. <strong>Интернет-магазин ANSWEAR </strong>
+                    прекрасно понимает и чувствует своих Клиентов, а потому решает эту задачу и предлагает совершать покупки легко и быстро! Вы можете заказать любую деталь для своего гардероба, не выходя из дома или офиса. Купить вещи от таких культовых мировых брендов, как Pepe Jeans,             
