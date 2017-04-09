@@ -159,7 +159,7 @@ $(function() {
 
 
 
-    $('.js-product-slider').slick({
+    $('.detail .js-product-slider').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
@@ -173,6 +173,26 @@ $(function() {
             }
         }],
     });
+
+    $('.js-quick-buy').fancybox({
+        afterLoad: function() {
+            $('.quick-buy .js-product-slider').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true,
+                swipeToSlide: true,
+                responsive: [{
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }],
+            });
+
+        }
+    })
 
 
 
@@ -257,12 +277,12 @@ var cart = (function() {
     var $cart = $('.cart');
     var $cartClose = $('.js-cart-close');
     var $removeItem = $('.js-remove-cart-item');
-
+$cart.show();
 
     $cartBtn.on('mouseover', function() {
         setTimeout(function() {
             if ($cartBtn.is(':hover')) {
-                $cart.show();
+
                 setTimeout(function() {
                     $cart.addClass('active');
                     $html.addClass('hidden');
@@ -297,7 +317,7 @@ var cart = (function() {
         $html.removeClass('hidden');
         $overlay.fadeOut();
         setTimeout(function() {
-            $cart.hide();
+            // $cart.hide();
         }, 350)
     }
 })();
@@ -858,7 +878,7 @@ var checkForm = (function() {
 
         $cartList.slideToggle(150);
         $(this).toggleClass('active');
-        $(this).find('.inner-text > span').toggleClass('hidden');
+        $(this).find('.inner-text > span').toggleClass('v-hidden');
 
 
     })
@@ -932,34 +952,21 @@ var storyScroll = (function() {
     $(window).on('load', function() {
         $storyWrap.css('height', $(window).outerHeight())
 
-        if ($(window).outerWidth() < 767) {
-        } else {
+        if ($(window).outerWidth() < 767) {} else {
             ParallaxScroll.init();
         }
     });
+})();
 
-    // $('.story__item').each(function(key){
-    //
-    //     $(this).attr('data-number',key+1);
-    // })
+var addToSave = (function() {
+
+    var $btn = $('.js-add-to-save');
+
+    $btn.on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+    });
 
 
-    // $(window).on('scroll',function(){
-    //     $('.story__item').each(function(){
-    //         var $this = $(this);
-    //         if (($(window).scrollTop()+$(window).outerHeight()) > $this.offset().top && ( $(window).scrollTop() < ($this.offset().top + $this.outerHeight())) ){
-    //             $this.addClass('visible');
-    //             var tempPerc = (($(window).scrollTop() + $(window).outerHeight() - $this.offset().top) * 100) / ($this.offset().top + $this.outerHeight());
-    //             var tempPx = $(window).scrollTop() + ($(window).outerHeight()/2) - $this.outerHeight() ;
-    //             console.log('block : '+$this.attr('data-number')+' perc = '+tempPerc);
-    //             $this.find('.story__info-wrap').css({
-    //                 'transform':'translateY(-'+tempPx+'px)'
-    //             })
-    //             // $this.attr('data-perc',)
-    //         } else {
-    //             $this.removeClass('visible');
-    //         }
-    //     });
-    //
-    // });
-})()
+
+})();

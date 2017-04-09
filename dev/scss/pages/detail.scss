@@ -342,6 +342,10 @@
             width: 100%;
             margin-bottom: 5px;
         }
+        transition: .3s ease;
+        &:hover{
+            background-color: #a3843f;
+        }
     }
 
     &__product-size-btn {
@@ -355,6 +359,10 @@
         text-decoration: none;
         font-size: 16px;
         width: 100%;
+        transition: .3s ease;
+        &:hover{
+            background-color: #a3843f;
+        }
     }
 
     &__product-size-wrapper {
@@ -419,6 +427,10 @@
         width: 45px;
         background: #dddddd;
         position: relative;
+        transition: .3s ease;
+        &:hover{
+            background: #a1a1a1;
+        }
 
         &:before {
             content: '';
@@ -426,8 +438,21 @@
             width: 30px;
             height: 30px;
             background-size: cover;
-            @include position(absolute, 0 0 0 0);
-            margin: auto;
+            @include position(absolute, 50% null null 50%);
+            transform: translate(-50%,-50%);
+            transition: .15s ease;
+
+        }
+
+
+
+        &.active{
+
+            background: #ec314a;
+            &:before{
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 

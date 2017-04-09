@@ -1,35 +1,56 @@
-.jobs{
-    &__banner{
+.jobs {
+    &__banner {
         padding: 15% 0;
-
     }
 
-    &__banner-text{
+    &__banner-text {
         width: 80%;
         margin: 0 auto;
         text-align: center;
         font-family: $bebasBold;
         color: #fff;
-        p{
+
+        p {
             font-family: $bebasBold;
             font-size: 26px;
             color: #fff;
             line-height: 1.2;
             margin-bottom: 15px;
-
         }
     }
 
-    &__banner-title{
+    &__banner-title {
         font-size: 60px;
         margin-bottom: 15px;
     }
 
-    &__banner-sub-title{
+    &__banner-sub-title {
         font-size: 40px;
         margin-bottom: 15px;
     }
 
+    &__btns-wrapper {
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+    }
 
-
+    &__btns {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        padding: 8px 20px;
+        margin: 0 5px;
+        font-size: 20px;
+        text-transform: uppercase;
+        background: #f95600;
+        background: linear-gradient(to bottom, #fc791a 0%,#f52b13 100%);
+        background-position: 50% 0;
+        background-size: auto 80px;
+        transition: .3s ease;
+        &:hover{
+            background-position: 50% 50%;
+        }
+    }
 }
