@@ -368,26 +368,19 @@
                         .catalog__sorting-item
                             .catalog__sorting-name Сортировать:
                             select.catalog__sorting-select
-                                option сначала новые
-                                option сначала дешевые
-                                option сначала сначала дорогие
-                                option сначала со скидками
+                                option нові товари
+                                option ціна за збільшенням
+                                option ціна за спаданням
+                                option товари зі знижкою
                         .catalog__sorting-item.catalog__sorting-item--count 
                             .catalog__sorting-name ПОКАЗАТЬ:
                             select.catalog__sorting-select
                                 option 60
                                 option 180
+                                option усі
                             .catalog__sorting-info 60 из 384    
-                    .catalog__sorting-pagination
-                        a(href="#").catalog__pagination-btn.catalog__pagination-btn--prev.disabled
-                        .catalog__sorting-name.catalog__sorting-name--pagination Страница
-                        input(type="text" value="1").catalog__pagination-input
-                        .catalog__sorting-name.catalog__sorting-name--pagination из 7
-                        a(href="#").catalog__pagination-btn.catalog__pagination-btn--next    
             .catalog__wrap
-
                 .catalog__aside
-
                     .catalog__aside-wrapper    
                         .catalog__item
                             .catalog__title Джинсы: 
@@ -398,7 +391,6 @@
                                             input(type="checkbox").catalog__input
                                             span.catalog__icon
                                             span.catalog__item-name Джинсы 
-
                         .catalog__item
                             .catalog__title Свойства: 
                             .catalog__item-wrap.scroll
@@ -607,7 +599,7 @@
 
 
 
-
+                    
 
                 .catalog__main
                     .catalog__main-wrapper
@@ -626,22 +618,9 @@
                                         a(href="#quick-buy" data-fancybox).js-quick-buy.catalog__quick-buy ШВИДКА ПОКУПКА        
                                 a(href="#").catalog__main-item-name Basic Tee
                                 .catalog__main-item-price 280 ₴    
+                    a(href="#").catalog__show-all показати усі товари        
             .catalog__info-wrapper.catalog__info-wrapper--right
                 .catalog__sorting
-                    .catalog__sorting-select-wrapper
-                        .catalog__sorting-item
-                            .catalog__sorting-name Сортировать:
-                            select.catalog__sorting-select
-                                option сначала новые
-                                option сначала дешевые
-                                option сначала сначала дорогие
-                                option сначала со скидками
-                        .catalog__sorting-item.catalog__sorting-item--count
-                            .catalog__sorting-name ПОКАЗАТЬ:
-                            select.catalog__sorting-select
-                                option 60
-                                option 180
-                            .catalog__sorting-info 60 из 384    
                     .catalog__sorting-pagination
                         a(href="#").catalog__pagination-btn.catalog__pagination-btn--prev.disabled
                         .catalog__sorting-name.catalog__sorting-name--pagination Страница

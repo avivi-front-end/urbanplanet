@@ -620,10 +620,10 @@
                   <div class="catalog__sorting-item">
                     <div class="catalog__sorting-name">Сортировать:</div>
                     <select class="catalog__sorting-select">
-                      <option>сначала новые</option>
-                      <option>сначала дешевые</option>
-                      <option>сначала сначала дорогие</option>
-                      <option>сначала со скидками</option>
+                      <option>нові товари</option>
+                      <option>ціна за збільшенням</option>
+                      <option>ціна за спаданням</option>
+                      <option>товари зі знижкою</option>
                     </select>
                   </div>
                   <div class="catalog__sorting-item catalog__sorting-item--count"> 
@@ -631,14 +631,10 @@
                     <select class="catalog__sorting-select">
                       <option>60</option>
                       <option>180</option>
+                      <option>усі</option>
                     </select>
                     <div class="catalog__sorting-info">60 из 384    </div>
                   </div>
-                </div>
-                <div class="catalog__sorting-pagination"><a class="catalog__pagination-btn catalog__pagination-btn--prev disabled" href="#"></a>
-                  <div class="catalog__sorting-name catalog__sorting-name--pagination">Страница</div>
-                  <input class="catalog__pagination-input" type="text" value="1">
-                  <div class="catalog__sorting-name catalog__sorting-name--pagination">из 7</div><a class="catalog__pagination-btn catalog__pagination-btn--next" href="#">   </a>
                 </div>
               </div>
             </div>
@@ -996,30 +992,11 @@
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
                     <div class="catalog__main-item-price">280 ₴    </div>
                   </div>
-                </div>
+                </div><a class="catalog__show-all" href="#">показати усі товари        </a>
               </div>
             </div>
             <div class="catalog__info-wrapper catalog__info-wrapper--right">
               <div class="catalog__sorting">
-                <div class="catalog__sorting-select-wrapper">
-                  <div class="catalog__sorting-item">
-                    <div class="catalog__sorting-name">Сортировать:</div>
-                    <select class="catalog__sorting-select">
-                      <option>сначала новые</option>
-                      <option>сначала дешевые</option>
-                      <option>сначала сначала дорогие</option>
-                      <option>сначала со скидками</option>
-                    </select>
-                  </div>
-                  <div class="catalog__sorting-item catalog__sorting-item--count">
-                    <div class="catalog__sorting-name">ПОКАЗАТЬ:</div>
-                    <select class="catalog__sorting-select">
-                      <option>60</option>
-                      <option>180</option>
-                    </select>
-                    <div class="catalog__sorting-info">60 из 384    </div>
-                  </div>
-                </div>
                 <div class="catalog__sorting-pagination"><a class="catalog__pagination-btn catalog__pagination-btn--prev disabled" href="#"></a>
                   <div class="catalog__sorting-name catalog__sorting-name--pagination">Страница</div>
                   <input class="catalog__pagination-input" type="text" value="1">
@@ -1055,6 +1032,18 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="subscribe">
+      <div class="container">
+        <form id="subscribe">
+          <div class="subscribe__form">
+            <div class="subscribe__input-wrap">
+              <input class="subscribe__input" type="text" name="email" placeholder="Подпишитесь на рассылку и получите 300 грн.">
+            </div>
+            <input class="subscribe__submit" type="submit" value="СОХРАНИТЬ">
+          </div>
+        </form>
       </div>
     </div>
     <footer class="wrapper footer" id="footer">

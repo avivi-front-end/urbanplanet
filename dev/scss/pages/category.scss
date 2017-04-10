@@ -132,6 +132,22 @@
     padding-bottom: 30px;
     padding-top: 30px;
 
+    &__show-all{
+        float: right;
+        display: inline-block;
+        padding: 15px;
+        color: #000;
+        font-family: $bebasBold;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: .3s ease;
+        margin-bottom: 30px;
+        &:hover{
+            background: #000;
+            color: #fff;
+        }
+    }
+
     &__sorting {
         display: flex;
         justify-content: space-between;

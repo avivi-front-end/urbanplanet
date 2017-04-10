@@ -277,7 +277,7 @@ var cart = (function() {
     var $cart = $('.cart');
     var $cartClose = $('.js-cart-close');
     var $removeItem = $('.js-remove-cart-item');
-$cart.show();
+    $cart.show();
 
     $cartBtn.on('mouseover', function() {
         setTimeout(function() {
@@ -693,6 +693,8 @@ var changeCartDetail = (function() {
 
     var $removeItem = $('.js-remove-item-cart-list');
 
+
+
     $btn.on('click', function(e) {
         e.preventDefault();
         $changeWrapper.addClass('active');
@@ -844,6 +846,39 @@ var formValidate = (function() {
             rules: {
                 required: "Вы должны быть согласны с правилами",
             }
+        }
+    });
+
+    /*
+ _____ _   _______  _____ _____ ______ ___________ _____
+/  ___| | | | ___ \/  ___/  __ \| ___ \_   _| ___ \  ___|
+\ `--.| | | | |_/ /\ `--.| /  \/| |_/ / | | | |_/ / |__
+`--. \ | | | ___ \ `--. \ |    |    /  | | | ___ \  __|
+/\__/ / |_| | |_/ //\__/ / \__/\| |\ \ _| |_| |_/ / |___
+\____/ \___/\____/ \____/ \____/\_| \_|\___/\____/\____/
+
+                                                        */
+
+    var $subscribe = $('#subscribe');
+
+    $subscribe.on('submit', function() {
+        console.log('test');
+        return $subscribeValidate.form()
+    })
+
+    var $subscribeValidate = $subscribe.validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+        },
+        messages: {
+            email: {
+                required: 'Введите Email',
+                email: 'Введите валидный email'
+            },
+
         }
     });
 
