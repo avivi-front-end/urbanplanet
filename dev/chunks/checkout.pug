@@ -46,7 +46,7 @@
                         +icon('shopping-cart')
                         span.inner-text 
                             span Оформить заказ
-                            span.hidden Скрыть корзину
+                            span.v-hidden Скрыть корзину
                         span.checkout__your-cart-count 2 
                     .basket-bottom__summary.checkout__summary
                         .basket-bottom__summary-item
@@ -159,9 +159,8 @@
                                     label.checkout__form-label Дата рождения:       
                                     .checkout__form-group-wrapper.checkout__form-group-wrapper--width
                                         select#input-22.checkout__form-group-select
-                                            option пол
-                                            option Женщина
-                                            option Мужчина        
+                                            each day in ['Дата','01','02','03','04','05','06','07','08','09','10','11','12']
+                                                option= day 
                                         select#input-23.checkout__form-group-select
                                             each month in ['Месяц','01','02','03','04','05','06','07','08','09','10','11','12']
                                                 option= month 

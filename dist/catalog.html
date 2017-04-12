@@ -137,7 +137,13 @@
                 <use xlink:href="img/svgsprite/sprite.svg#musica-searcher"></use>
               </svg></a></div>
         </div>
-        <div class="header__top-lang"><a class="header__top-lang-link ua" href="#"><i></i></a></div>
+        <div class="header__top-lang"><a class="header__top-lang-link ua js-show-lang" href="#"><i></i></a>
+          <ul class="header__top-lang-list">
+            <li class="header__top-lang-item"><a class="header__top-lang-list-link pl" href="#"> </a></li>
+            <li class="header__top-lang-item"><a class="header__top-lang-list-link ua" href="#">     </a></li>
+            <li class="header__top-lang-item"><a class="header__top-lang-list-link sk" href="#">        </a></li>
+          </ul>
+        </div>
       </div>
       <div class="header__search"><a class="header__search-close js-close-search" href="#"></a>
         <div class="header__search-form">
@@ -654,7 +660,7 @@
                     </div>
                   </div>
                   <div class="catalog__item">
-                    <div class="catalog__title">Свойства: </div>
+                    <div class="catalog__title">размер: </div>
                     <div class="catalog__item-wrap scroll">
                       <ul class="catalog__list">   
                         <li class="catalog__list-item">
@@ -721,7 +727,7 @@
                     </div>
                   </div>
                   <div class="catalog__item">
-                    <div class="catalog__title">Свойства: </div>
+                    <div class="catalog__title">цвет: </div>
                     <div class="catalog__item-wrap scroll">
                       <ul class="catalog__list">   
                         <li class="catalog__list-item">
@@ -788,61 +794,6 @@
                     </div>
                   </div>
                   <div class="catalog__item">
-                    <div class="catalog__title">Бренд: </div>
-                    <label class="catalog__param-item">
-                      <input class="catalog__input" type="checkbox"><span class="catalog__icon"></span><span class="catalog__item-name">Премиум</span>
-                    </label>
-                    <div class="catalog__item-search">
-                      <form>
-                        <input class="catalog__search-input" type="text">
-                      </form>
-                    </div>
-                    <div class="catalog__item-wrap scroll">
-                      <ul class="catalog__list">   
-                        <li class="catalog__list-item">
-                          <label class="catalog__param-item">
-                            <input class="catalog__input" type="checkbox"><span class="catalog__icon"></span><span class="catalog__item-name">Крой: прямые</span>
-                          </label>
-                        </li>
-                        <li class="catalog__list-item">
-                          <label class="catalog__param-item">
-                            <input class="catalog__input" type="checkbox"><span class="catalog__icon"></span><span class="catalog__item-name">Крой: свободные  </span>
-                          </label>
-                        </li>
-                        <li class="catalog__list-item">
-                          <label class="catalog__param-item">
-                            <input class="catalog__input" type="checkbox"><span class="catalog__icon"></span><span class="catalog__item-name">Крой: скинни</span>
-                          </label>
-                        </li>
-                        <li class="catalog__list-item">
-                          <label class="catalog__param-item">
-                            <input class="catalog__input" type="checkbox"><span class="catalog__icon"></span><span class="catalog__item-name">Крой: узкие</span>
-                          </label>
-                        </li>
-                        <li class="catalog__list-item">
-                          <label class="catalog__param-item">
-                            <input class="catalog__input" type="checkbox"><span class="catalog__icon"></span><span class="catalog__item-name">Крой: прямые</span>
-                          </label>
-                        </li>
-                        <li class="catalog__list-item">
-                          <label class="catalog__param-item">
-                            <input class="catalog__input" type="checkbox"><span class="catalog__icon"></span><span class="catalog__item-name">Крой: свободные  </span>
-                          </label>
-                        </li>
-                        <li class="catalog__list-item">
-                          <label class="catalog__param-item">
-                            <input class="catalog__input" type="checkbox"><span class="catalog__icon"></span><span class="catalog__item-name">Крой: скинни</span>
-                          </label>
-                        </li>
-                        <li class="catalog__list-item">
-                          <label class="catalog__param-item">
-                            <input class="catalog__input" type="checkbox"><span class="catalog__icon"></span><span class="catalog__item-name">Крой: узкие                 </span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="catalog__item">
                     <div class="catalog__title">Цена:</div>
                     <div class="price-range__wrapper">
                       <div class="price-range" id="priceRange" data-set-min="0" data-set-max="3699">                  </div>
@@ -870,7 +821,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -878,7 +829,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -886,7 +837,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -894,7 +845,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -902,7 +853,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -910,7 +861,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -918,7 +869,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -926,7 +877,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -934,7 +885,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -942,7 +893,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -950,7 +901,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -958,7 +909,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -966,7 +917,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -974,7 +925,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -982,7 +933,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                   <div class="catalog__main-item">
                     <div class="catalog__main-image-wrapper js-other-side"><a class="catalog__main-item-photo" href="#" data-other-side="img/catalog/1-back.jpg"><img class="catalog__main-item-img" src="img/catalog/1.jpg" alt="" data-object-fit="cover"></a>
@@ -990,7 +941,7 @@
                         <div class="catalog__main-sizes"><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div><a class="js-quick-buy catalog__quick-buy" href="#quick-buy" data-fancybox>ШВИДКА ПОКУПКА        </a>
                       </div>
                     </div><a class="catalog__main-item-name" href="#">Basic Tee</a>
-                    <div class="catalog__main-item-price">280 ₴    </div>
+                    <div class="catalog__main-item-price">280 грн.    </div>
                   </div>
                 </div><a class="catalog__show-all" href="#">показати усі товари        </a>
               </div>

@@ -197,6 +197,7 @@
     }
 
     &__top-info {
+            padding-top: 15px;
         border-bottom: 1px #e5e5e5 solid;
     }
 
@@ -311,7 +312,7 @@
     &__form-group-select {
         background-color: #e5e5e5;
         background-image: url("../img/selectArrow.png");
-        background-position: 92% 50%;
+        background-position: calc(100% - 15px) 50%;
         background-repeat: no-repeat;
         background-size: 9px auto;
         width: 100%;

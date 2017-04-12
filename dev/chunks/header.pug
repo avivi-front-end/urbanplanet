@@ -14,8 +14,15 @@ header.wrapper.header#header
                 a(href="#").header__top-wrap-link.header__top-wrap-link--search.js-show-search
                     +icon('musica-searcher')
         .header__top-lang
-            a(href="#").header__top-lang-link.ua
+            a(href="#").header__top-lang-link.ua.js-show-lang
                 i
+            ul.header__top-lang-list
+                li.header__top-lang-item
+                    a(href="#").header__top-lang-list-link.pl 
+                li.header__top-lang-item
+                    a(href="#").header__top-lang-list-link.ua      
+                li.header__top-lang-item
+                    a(href="#").header__top-lang-list-link.sk         
     .header__search
         a(href="#").header__search-close.js-close-search
         .header__search-form

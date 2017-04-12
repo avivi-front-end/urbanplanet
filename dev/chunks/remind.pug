@@ -1,0 +1,17 @@
+.register
+    .container
+        form#remind
+            .checkout__option        
+                .checkout__form
+                    .checkout__form-title ЗАБЫЛИ ПАРОЛЬ?
+                    .checkout__form-group
+                        .checkout__info-helper ВВЕДИТЕ E-MAIL, КОТОРЫЙ ВЫ ИСПОЛЬЗОВАЛИ ДЛЯ РЕГИСТРАЦИИ, И МЫ СРАЗУ ВАМ ВЫШЛЕМ НОВЫЙ ПАРОЛЬ:
+                        label(for="email").checkout__form-label E-MAIL:          
+                        input(type="email" name="email")#email.checkout__form-group-input
+                .checkout__btns        
+                    .basket-bottom__btns
+                        button(type="submit").basket-bottom__btn-checkout 
+                            span Отправить
+                        a(href="#").basket-bottom__btn-continue 
+                            span Вернуться 
+            

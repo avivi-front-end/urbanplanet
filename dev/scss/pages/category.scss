@@ -317,13 +317,19 @@
         display: block;
         text-decoration: none;
         margin-bottom: 15px;
+        font-size: 16px;
 
         &:hover {
             text-decoration: underline;
         }
     }
 
-    &__main-item-price {}
+    &__main-item-price {
+        &--old{
+            color: #cacaca;
+            text-decoration: line-through;
+        }
+    }
 
     &__main-image-wrapper {
         position: relative;
@@ -374,12 +380,14 @@
             display: inline-block;
             margin: 0 5px;
             font-family: $bebasBold;
+            font-size: 16px;
         }
     }
 
     &__quick-buy {
         color: #000;
         text-decoration: none;
+        font-size: 16px;
 
         &:hover {
             text-decoration: underline;

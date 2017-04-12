@@ -1,12 +1,52 @@
 .header {
     position: relative;
 
+    &__top-lang-list {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: 60px;
+        z-index: 1;
+        background: #fff;
+        border-bottom: 1px #e5e5e5 solid;
+        border-left: 1px #e5e5e5 solid;
+        display: none;
+    }
+
+    &__top-lang-item {
+        display: block;
+    }
+
+    &__top-lang-list-link {
+        display: block;
+        height: 30px;
+        text-indent: -99999px;
+        background-color: transparent;
+        background-position: 9px 50%;
+        background-repeat: no-repeat;
+        background-size: 16px 12px;
+        transition: .3s ease;
+
+        &.pl{
+            background-image: url(../img/flag/langPl.png);
+        }
+        &.sk{
+            background-image: url(../img/flag/langSk.png);
+        }
+        &.ua{
+            background-image: url(../img/flag/langUa.png);
+        }
+        &:hover{
+            background-color: #cacacc;
+        }
+    }
+
     &__logo-wrap {
         display: flex;
         align-items: center;
         height: 100%;
         margin-right: 20px;
-        @media (max-width: $screen-sm-max){
+        @media (max-width: $screen-sm-max) {
             display: block;
             margin-right: 0;
             height: 53px;
@@ -256,6 +296,7 @@
                 height: 31px;
                 width: 32px;
             }
+
             &.icon-handshake {
                 height: 31px;
                 width: 32px;
@@ -275,7 +316,10 @@
     &__top-lang-link {
         width: 60px;
         height: 30px;
+        transition: .3s ease;
         @include position(absolute, 0 0 null null);
+
+
 
         &:before {
             content: '';
@@ -286,6 +330,16 @@
             text-indent: -99999px;
             background: transparent url("../img/topBannerSwitch.png") 40px -30px no-repeat;
             background-size: 8px 90px;
+            transition: .3s ease;
+        }
+        &:hover{
+            background: #cacacc;
+        }
+        &.active{
+            background: #fff;
+            &:before{
+                background-position: 40px 0;
+            }
         }
 
         > i {

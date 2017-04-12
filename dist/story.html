@@ -137,7 +137,13 @@
                 <use xlink:href="img/svgsprite/sprite.svg#musica-searcher"></use>
               </svg></a></div>
         </div>
-        <div class="header__top-lang"><a class="header__top-lang-link ua" href="#"><i></i></a></div>
+        <div class="header__top-lang"><a class="header__top-lang-link ua js-show-lang" href="#"><i></i></a>
+          <ul class="header__top-lang-list">
+            <li class="header__top-lang-item"><a class="header__top-lang-list-link pl" href="#"> </a></li>
+            <li class="header__top-lang-item"><a class="header__top-lang-list-link ua" href="#">     </a></li>
+            <li class="header__top-lang-item"><a class="header__top-lang-list-link sk" href="#">        </a></li>
+          </ul>
+        </div>
       </div>
       <div class="header__search"><a class="header__search-close js-close-search" href="#"></a>
         <div class="header__search-form">
@@ -282,26 +288,42 @@
         </ul>
       </div>
       <div class="story">
-        <div class="story__item"><img class="story__img" src="img/story/story-1.jpg" alt>
-          <div class="story__info-wrap" data-parallax="{&quot;y&quot;: -550, &quot;smoothness&quot;: 30}">
+        <div class="container">
+          <div class="story__text">
+            <div class="story__title">OUR HISTORY</div>
+            <div class="story__history-text">
+              <p>It starts in 1882 with the opening of a little hosiery store in Romilly-sur-Seine, in a part of the Champagne region called the Aube.</p>
+              <p>Emile Camuset, the man who opened that store, loved sports with a fierce passion. When he started making sports jersey in his small workshop, he probably never dreamed that, 130 years later, le coq sportif would become one of the world's most prestigious brands, renowned for its clothing, footwear and sporting equipment.    </p>
+            </div>
+          </div>
+        </div>
+        <div class="story__years">  
+          <div class="container">
+            <div class="story__years-wrap"><a class="story__years-links js-story-scroll" href="#2013">2013<span class="story__years-photo-wrap"><img class="story__years-photo" src="img/story/story-1-thumb.jpg" width="120"></span></a><a class="story__years-links js-story-scroll" href="#2014">
+                 2014<span class="story__years-photo-wrap"><img class="story__years-photo" src="img/story/story-2-thumb.jpg" width="120"></span></a><a class="story__years-links js-story-scroll" href="#2015">
+                 2015<span class="story__years-photo-wrap"><img class="story__years-photo" src="img/story/story-3-thumb.jpg" width="120"></span></a><a class="story__years-links js-story-scroll" href="#2016">2016<span class="story__years-photo-wrap"><img class="story__years-photo" src="img/story/story-4-thumb.jpg" width="120"></span></a></div>
+          </div>
+        </div>
+        <div class="story__item" id="2013"><img class="story__img" src="img/story/story-1.jpg" alt>
+          <div class="story__info-wrap" data-parallax="{&quot;y&quot;: -200, &quot;smoothness&quot;: 30}">
             <div class="story__info-year">2013</div>
             <div class="story__info-text">France and England anounce plans to build the Chunnel between their two countries. Argentina's Diego Maradona enters soccer history in a le Coq Sportif jersey with his goal against England in the Mexico World Cup.</div>
           </div>
         </div>
-        <div class="story__item"><img class="story__img" src="img/story/story-2.jpg" alt>
-          <div class="story__info-wrap" data-parallax="{&quot;y&quot;: -550, &quot;smoothness&quot;: 30}">
+        <div class="story__item" id="2014"><img class="story__img" src="img/story/story-2.jpg" alt>
+          <div class="story__info-wrap" data-parallax="{&quot;y&quot;: -200, &quot;smoothness&quot;: 30}">
             <div class="story__info-year">2014</div>
             <div class="story__info-text">France and England anounce plans to build the Chunnel between their two countries. Argentina's Diego Maradona enters soccer history in a le Coq Sportif jersey with his goal against England in the Mexico World Cup.            </div>
           </div>
         </div>
-        <div class="story__item"><img class="story__img" src="img/story/story-3.jpg" alt>
-          <div class="story__info-wrap" data-parallax="{&quot;y&quot;: -550, &quot;smoothness&quot;: 30}">
+        <div class="story__item" id="2015"><img class="story__img" src="img/story/story-3.jpg" alt>
+          <div class="story__info-wrap" data-parallax="{&quot;y&quot;: -200, &quot;smoothness&quot;: 30}">
             <div class="story__info-year">2015</div>
             <div class="story__info-text">France and England anounce plans to build the Chunnel between their two countries. Argentina's Diego Maradona enters soccer history in a le Coq Sportif jersey with his goal against England in the Mexico World Cup.                    </div>
           </div>
         </div>
-        <div class="story__item"><img class="story__img" src="img/story/story-4.jpg" alt>
-          <div class="story__info-wrap" data-parallax="{&quot;y&quot;: -550, &quot;smoothness&quot;: 30}">
+        <div class="story__item" id="2016"><img class="story__img" src="img/story/story-4.jpg" alt>
+          <div class="story__info-wrap" data-parallax="{&quot;y&quot;: -200, &quot;smoothness&quot;: 30}">
             <div class="story__info-year">2016</div>
             <div class="story__info-text">France and England anounce plans to build the Chunnel between their two countries. Argentina's Diego Maradona enters soccer history in a le Coq Sportif jersey with his goal against England in the Mexico World Cup.                    </div>
           </div>

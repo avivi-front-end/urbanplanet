@@ -281,39 +281,207 @@
       </div>
     </header>
     <div class="page-body" id="page-body">
-      <div class="breadcrumbs">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная страница</a></li>
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">ЦЕНТР ПОДДЕРЖКИ</a></li>
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</a></li>
-        </ul>
-      </div>
-      <div class="help-page">
+      <div class="register">
         <div class="container">
-          <div class="help-page__wrapper">
-            <div class="help-page__aside">
-              <div class="help-page__aside-title">Дисконтні та подарункові картки</div>
-              <ul class="help-page__aside-list">
-                <li><a class="help-page__aside-link active" href="#">Подарункові картки</a></li>
-                <li><a class="help-page__aside-link" href="#">Дисконтні картки</a></li>
-              </ul>
-            </div>
-            <div class="help-page__main">
-              <div class="help-page__main-title">Подарункові картки</div>
-              <div class="help-page__text-wrapper">
-                <blockquote>ВОЗВРАТ ТОВАРА И ДЕНЕЖНЫХ СРЕДСТВ</blockquote>
-                <p>Мы хотим радовать Вас идеальным <a href="#"> online-шопингом</a> и сделать его максимально простым и приятным!</p>
-                <p>Иногда товар может не подойти или не понравиться, поэтому ВЫ ВСЕГДА МОЖЕТЕ ВЕРНУТЬ ЕГО В ТЕЧЕНИЕ 30 КАЛЕНДАРНЫХ ДНЕЙ ПОСЛЕ ДОСТАВКИ (получения у курьера, в точке выдачи Міст Експресс или почтомате ПриватБанка)</p>
-                <p>Если по каким-либо причинам Вы приняли такое решения, просим связаться с нами по телефону либо онлайн для согласования возврата:</p>
-                <blockquote>ОБМЕН ТОВАРА</blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                 </p>
-                <blockquote>РЕКЛАМАЦИЯ ТОВАРА</blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                     </p>
+          <form id="registerUser">
+            <div class="checkout__option">       
+              <div class="checkout__form">
+                <div class="checkout__form-title">ЗАРЕГИСТРИРОВАТЬСЯ</div>
+                <div class="checkout__form-group">
+                  <label class="checkout__form-label req" for="input-1">Имя:          </label>
+                  <input class="checkout__form-group-input" type="text" name="firstname" id="input-1">
+                </div>
+                <div class="checkout__form-group">
+                  <label class="checkout__form-label req" for="input-2">  ФАМИЛИЯ:         </label>
+                  <input class="checkout__form-group-input" type="text" name="lastname" id="input-2">
+                </div>
+                <div class="checkout__form-group">
+                  <label class="checkout__form-label" for="input-21">Пол:          </label>
+                  <select class="checkout__form-group-select" id="input-21">
+                    <option>пол</option>
+                    <option>Женщина</option>
+                    <option>Мужчина    </option>
+                  </select>
+                </div>
+                <div class="checkout__form-group">
+                  <label class="checkout__form-label">Дата рождения:       </label>
+                  <div class="checkout__form-group-wrapper checkout__form-group-wrapper--width">
+                    <select class="checkout__form-group-select" id="input-22">
+                      <option>Дата</option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                    </select>
+                    <select class="checkout__form-group-select" id="input-23">
+                      <option>Месяц</option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                    </select>
+                    <select class="checkout__form-group-select" id="input-24">
+                      <option>Год</option>
+                      <option>1910</option>
+                      <option>1911</option>
+                      <option>1912</option>
+                      <option>1913</option>
+                      <option>1914</option>
+                      <option>1915</option>
+                      <option>1916</option>
+                      <option>1917</option>
+                      <option>1918</option>
+                      <option>1919</option>
+                      <option>1920</option>
+                      <option>1921</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="checkout__form-group checkout__form-group--short">
+                  <label class="checkout__form-label req" for="input-10">  НОМЕР МОБИЛЬНОГО ТЕЛЕФОНА:   </label>
+                  <input class="checkout__form-group-input" type="number" name="phone" id="input-10">
+                </div>
+                <div class="checkout__form-group checkout__form-group--short">
+                  <label class="checkout__form-label req" for="input-11">  E-MAIL:</label>
+                  <input class="checkout__form-group-input" type="text" name="email" id="input-11">
+                </div>
+                <div class="checkout__form-group">
+                  <div class="checkout__info-helper">Придумайте свой пароль для аккаунта (Вы должны иметь аккаунт, чтобы вступить в ANSWEAR.Club):</div>
+                  <label class="checkout__form-label" for="password">пароль:          </label>
+                  <input class="checkout__form-group-input" type="text" name="password" id="password">
+                </div>
+                <div class="checkout__form-group">
+                  <label class="checkout__form-label" for="passwordAgain">  ПОВТОРИТЕ ПАРОЛЬ:         </label>
+                  <input class="checkout__form-group-input" type="text" name="passwordAgain" id="passwordAgain">
+                </div>
+              </div>
+              <div class="checkout__option">
+                <label class="checkout__option-label">
+                  <input class="checkout__checkbox js-checkbox" type="checkbox" name="subscribe"><span class="checkout__text-icon"> </span><span class="checkout__option-text">Я ХОЧУ ПОЛУЧАТЬ ХОРОШИЕ РЕКЛАМНЫЕ ПРЕДЛОЖЕНИЯ НА УКАЗАННЫЙ НОМЕР МОБИЛЬНОГО ТЕЛЕФОНА"    </span>
+                </label>
+              </div>
+              <div class="checkout__option">
+                <label class="checkout__option-label">
+                  <input class="checkout__checkbox js-checkbox" type="checkbox" name="program"><span class="checkout__text-icon"> </span><span class="checkout__option-text">Я ХОЧУ УЧАСТВОВАТЬ В ПРОГРАММЕ ANSWEAR.CLUB (ПРАВИЛА),ПОЛУЧАТЬ ПРИГЛАШЕНИЯ НА VIP РАСПРОДАЖИ, НОЧНЫЕ ПОКУПКИ И ДРУГУЮ КОММЕРЧЕСКУЮ ИНФОРМАЦИЮ ПО ЭЛЕКТРОННОЙ ПОЧТЕ! Я ДАЮ СОГЛАСИЕ НА ОБРАБОТКУ МОИХ ПЕРСОНАЛЬНЫХ ДАННЫХ       </span>
+                </label>
+              </div>
+              <div class="checkout__option">
+                <label class="checkout__option-label">
+                  <input class="checkout__checkbox js-checkbox" type="checkbox" name="rules"><span class="checkout__text-icon"> </span><span class="checkout__option-text">Я СОГЛАСЕН С <a href="#">ПРАВИЛАМИ МАГАЗИНА</a>. *  </span>
+                </label>
+              </div>
+              <div class="checkout__btns">       
+                <div class="basket-bottom__btns">
+                  <button class="basket-bottom__btn-checkout" type="submit"> <span>Регистрация</span></button><a class="basket-bottom__btn-continue" href="#"> <span>Вернуться </span></a>
+                </div>
               </div>
             </div>
-          </div>
+            <div class="checkout__cart-list">
+              <div class="cart-page__list-item cart-page__list-item--checkout">
+                <div class="cart-page__list-name cart-page__list-name--inner"><a class="cart-page__list-remove js-remove-item-cart-list" href="#"></a><a class="cart-page__list-image" href="#"><img src="img/cart/cart-1.jpg" alt=""></a>
+                  <div class="cart-page__list-name-wrap"><a class="cart-page__list-name-info" href="#">MEDICINE</a>
+                    <div class="cart-page__list-name-value">Medicine - Брюки Urban Uniform</div>
+                    <div class="cart-page__mobile-info">
+                      <div class="cart-page__list-name-value">M, Черный, 2 шт.</div>
+                    </div>
+                    <div class="cart-page__mobile-info"> 
+                      <div class="cart-page__mobile-price">
+                        <div class="cart-page__price-total">3 298 грн.</div>
+                      </div>
+                    </div>
+                    <div class="cart-page__mobile-info"><a class="cart-page__favorite" href="#">удалить</a></div>
+                  </div>
+                </div>
+                <div class="cart-page__list-details cart-page__list-details--inner">
+                  <div class="cart-page__list-inner">
+                    <div class="cart-page__detail-item">размер: <span> S</span></div>
+                    <div class="cart-page__detail-item">цвет: <span>Черный</span> </div>
+                  </div>
+                </div>
+                <div class="cart-page__list-quantity cart-page__list-quantity--inner">
+                  <div class="cart-page__list-inner">
+                    <div class="cart-page__list-quantity-change-wrap">
+                      <input class="cart-page__input-quantity" type="text" value="1" readonly>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-page__list-total cart-page__list-total--inner">
+                  <div class="cart-page__list-total-product">1 649 грн.                     </div>
+                </div>
+              </div>
+              <div class="cart-page__list-item cart-page__list-item--checkout">
+                <div class="cart-page__list-name cart-page__list-name--inner"><a class="cart-page__list-remove js-remove-item-cart-list" href="#"></a><a class="cart-page__list-image" href="#"><img src="img/cart/cart-1.jpg" alt=""></a>
+                  <div class="cart-page__list-name-wrap"><a class="cart-page__list-name-info" href="#">MEDICINE</a>
+                    <div class="cart-page__list-name-value">Medicine - Брюки Urban Uniform</div>
+                    <div class="cart-page__mobile-info">
+                      <div class="cart-page__list-name-value">M, Черный, 2 шт.</div>
+                    </div>
+                    <div class="cart-page__mobile-info"> 
+                      <div class="cart-page__mobile-price">
+                        <div class="cart-page__price-total">3 298 грн.</div>
+                      </div>
+                    </div>
+                    <div class="cart-page__mobile-info"><a class="cart-page__favorite" href="#">удалить</a></div>
+                  </div>
+                </div>
+                <div class="cart-page__list-details cart-page__list-details--inner">
+                  <div class="cart-page__list-inner">
+                    <div class="cart-page__detail-item">размер: <span> S</span></div>
+                    <div class="cart-page__detail-item">цвет: <span>Черный</span> </div>
+                  </div>
+                </div>
+                <div class="cart-page__list-quantity cart-page__list-quantity--inner">
+                  <div class="cart-page__list-inner">
+                    <div class="cart-page__list-quantity-change-wrap">
+                      <input class="cart-page__input-quantity" type="text" value="1" readonly>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-page__list-total cart-page__list-total--inner">
+                  <div class="cart-page__list-total-product">1 649 грн.                     </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__top-info clearfix">  <a class="checkout__your-cart js-show-small-cart" href="#">
+                <svg class="icon icon-shopping-cart ">
+                  <use xlink:href="img/svgsprite/sprite.svg#shopping-cart"></use>
+                </svg><span class="inner-text"> <span>Оформить заказ</span><span class="v-hidden">Скрыть корзину</span></span><span class="checkout__your-cart-count">2 </span></a>
+              <div class="basket-bottom__summary checkout__summary">
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name">Стоимость товаров:</div>
+                  <div class="basket-bottom__value"> 3 298 грн</div>
+                </div>
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name">Скидка:</div>
+                  <div class="basket-bottom__value">0 грн</div>
+                </div>
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name">Доставка</div>
+                  <div class="basket-bottom__value">0 грн</div>
+                </div>
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name basket-bottom__name--total">К оплате:</div>
+                  <div class="basket-bottom__value basket-bottom__value--total">3 298 грн.                      </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

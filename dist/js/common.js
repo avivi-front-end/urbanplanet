@@ -245,7 +245,6 @@ var dropInner = (function() {
     var $droplist = $('.header__main-drop-list');
     var $drop = $('.header__drop');
 
-
     $btn.on('mouseover', function() {
         $(this).closest('.header__main-drop-list').find('.header__main-drop-link').removeClass('active');
         $(this).addClass('active');
@@ -255,18 +254,17 @@ var dropInner = (function() {
         var tempTarget = $(this).attr('href');
         $(tempTarget).addClass('active');
     });
-
 })();
 
-var changeColor = (function() {
-    var $color = $('.js-change-color');
-
-    $color.on('mouseover', function() {
-        var targetHref = $(this).attr('data-href');
-
-        $(this).closest('.new-items__slide').find('.new-items__main-image').attr('src', targetHref);
-    });
-})();
+// var changeColor = (function() {
+//     var $color = $('.js-change-color');
+//
+//     $color.on('mouseover', function() {
+//         var targetHref = $(this).attr('data-href');
+//
+//         $(this).closest('.new-items__slide').find('.new-items__main-image').attr('src', targetHref);
+//     });
+// })();
 
 var $html = $('html');
 var $pageWrapper = $('.page-wrapper');
@@ -882,6 +880,91 @@ var formValidate = (function() {
         }
     });
 
+    //registerUser
+
+    var $register = $('#registerUser');
+
+    $register.on('submit', function() {
+        return $registerValidate.form()
+    })
+
+    var $registerValidate = $register.validate({
+        rules: {
+            firstname: {
+                required: true,
+            },
+            lastname: {
+                required: true,
+            },
+            phone: {
+                required: true,
+                digits: true
+            },
+            email: {
+                required: true,
+                email: true,
+            },
+            rules: {
+                required: true,
+            },
+            password: {
+                required: true,
+            },
+            passwordAgain: {
+                equalTo: "#password"
+            },
+        },
+        messages: {
+            firstname: {
+                required: "Введите свое имя",
+            },
+            lastname: {
+                required: "Введите свою фамилию",
+            },
+            phone: {
+                required: "Введите свою телефон",
+            },
+            email: {
+                required: "Введите свой email",
+                email: 'Введите валидный email'
+            },
+            rules: {
+                required: "Вы должны быть согласны с правилами",
+            },
+            password: {
+                required: "Введите пароль",
+            },
+            passwordAgain: {
+                equalTo: "Пароли должны совпадать",
+            },
+        }
+    });
+
+    //remind
+
+    var $remind = $('#remind');
+
+    $remind.on('submit', function() {
+        console.log('test');
+        return $remindValidate.form()
+    })
+
+    var $remindValidate = $remind.validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+        },
+        messages: {
+            email: {
+                required: 'Введите Email',
+                email: 'Введите валидный email'
+            },
+
+        }
+    });
+
 
 
 })();
@@ -983,6 +1066,7 @@ var locationPage = (function() {
 
 var storyScroll = (function() {
     var $storyWrap = $('.story__item');
+    var $storyLink = $('.js-story-scroll');
 
     $(window).on('load', function() {
         $storyWrap.css('height', $(window).outerHeight())
@@ -990,6 +1074,14 @@ var storyScroll = (function() {
         if ($(window).outerWidth() < 767) {} else {
             ParallaxScroll.init();
         }
+    });
+
+    $storyLink.on('click', function(event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
     });
 })();
 
@@ -1004,4 +1096,17 @@ var addToSave = (function() {
 
 
 
+})();
+
+
+var showLang = (function() {
+    var $btn = $('.js-show-lang');
+    var $langList = $('.header__top-lang-list');
+
+
+    $btn.on('click', function(e) {
+        e.preventDefault();
+        $langList.slideToggle(200);
+        $(this).toggleClass('active');
+    })
 })();
