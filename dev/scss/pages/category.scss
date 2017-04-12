@@ -338,8 +338,7 @@
 
         &:hover {
             .catalog__main-info-wrapper {
-                transform: translateY(0);
-                transition: transform 0.2s ease;
+                display: block;
             }
         }
     }
@@ -366,7 +365,7 @@
         z-index: 1;
         padding: 13px 0;
         text-align: center;
-        transform: translateY(100%);
+        display: none;
         transition: transform 0.2s ease;
     }
 
