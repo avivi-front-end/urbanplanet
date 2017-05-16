@@ -48,6 +48,9 @@ $(window).on('load', function() {
 
 $(function() {
 
+    $("input[name=phone]").mask("+380 99-99-99-999");
+    $("input[name=period1], input[name=period2], input[name=period3], input[name=period4], input[name=birthdate]").mask("99/99/99");
+
     // placeholder
     //-----------------------------------------------------------------------------
     $('input[placeholder], textarea[placeholder]').placeholder();
@@ -71,6 +74,12 @@ $(function() {
     $(document).on('click', '.js-arrows', function(e) {
         e.preventDefault();
         $('.js-slider').slick($(this).attr('data-slider'));
+    });
+
+    $('.js-open-video').on('click', function(e) {
+        $('this').toggleClass('active');
+        e.preventDefault();
+        $('.story__video-container').toggleClass('active');
     });
 
 
@@ -159,7 +168,7 @@ $(function() {
 
 
 
-    $('.detail .js-product-slider').slick({
+    $('.js-product-slider').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
@@ -174,9 +183,16 @@ $(function() {
         }],
     });
 
+    $('.js-blog-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true
+    });
+
+
     $('.js-quick-buy').fancybox({
         afterLoad: function() {
-            $('.quick-buy .js-product-slider').slick({
+            $('.js-popup-slider').slick({
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: true,
@@ -190,21 +206,14 @@ $(function() {
                     }
                 }],
             });
-
         }
     })
-
-
-
-
-
 
     $('.detail__product-slide').fancybox({
         thumbs: {
             showOnStart: true
         }
     })
-
 
     $('.js-other-side').on('mouseover', function() {
         var $this = $(this);
@@ -419,19 +428,16 @@ var search = (function() {
 
 var category = (function() {
     var $btn = $('.js-show-category');
+    var $container = $(".category__filter-list");
 
-    $btn.on('click', function(e) {
+    $btn.on('click', function(e){
         e.preventDefault();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).next('.js-show-category-body').slideUp();
-            return false;
-        }
-        $btn.removeClass('active');
-        $btn.next('.js-show-category-body').slideUp();
-        $(this).addClass('active');
-        $(this).next('.js-show-category-body').slideDown();
-    })
+        $(this).next($container).slideToggle(200);
+        $btn.not(this).next($container).slideUp(200);
+        $btn.not(this).addClass('active');
+        $(this).toggleClass('active');
+
+    });
 })();
 
 
@@ -457,6 +463,17 @@ var priceRange = (function() {
 
 })();
 
+var filter = (function(){
+    var $btn = $('.js-filter-link');
+    var $container = $(".catalog__item-wrap");
+
+    $btn.on('click', function(e){
+        e.preventDefault();
+        $(this).next($container).slideToggle(200);
+        $(this).toggleClass('active');
+    });
+
+})();
 
 var filter = (function() {
     var $btn = $('.js-show-filter');
@@ -471,32 +488,24 @@ var filter = (function() {
         } else {
             openFilter();
         }
-
         changeText($(this));
-
-
     });
-
     if ($(window).outerWidth() < 767) {
         changeText($btn);
     }
-
     function openFilter() {
         $aside.show();
         $aside.fadeIn(200)
         $btn.removeClass('active');
         $wrap.removeClass('active');
     }
-
     function closeFilter() {
         $aside.fadeOut(200, function() {
             $aside.hide();
             $btn.addClass('active');
             $wrap.addClass('active animate');
         });
-
     }
-
     function changeText($this) {
         var newText = $this.attr('data-text');
         var oldText = $this.text();
@@ -524,16 +533,31 @@ var detailPageSlide = (function() {
     });
 })();
 
-var customSizeSelect = (function() {
+var popuplPageSlide = (function() {
+    var $link = $('.js-go-to-slide-popup');
+    var $slider = $('.js-popup-slider');
+
+    $link.on('click', function(e) {
+        e.preventDefault();
+        var targetNumber = ($(this).attr('href') - 1) == ($('.js-product-slider').find('.detail__product-slide').length - 1) ? $(this).attr('href') - 2 : $(this).attr('href') - 1;
+        $slider.slick('slickGoTo', targetNumber);
+    })
+
+
+    $('.js-popup-slider').on('afterChange', function(event, slick, currentSlide) {
+        $('.js-go-to-slide-popup').removeClass('active');
+        $('.js-go-to-slide-popup').eq(currentSlide).addClass('active');
+    });
+})();
+
+/*var customSizeSelect = (function() {
     var $select = $('.js-custom-size');
     var $parent = $select.parent();
     var $selectList = $('.detail__size-list');
     var $sizeName = $('.detail__size-name');
     var $btn = $('.js-show-drop-select');
     var $drop = $('.detail__size-dropdown');
-
     //change select value
-
     $(document).on('click', '.detail__size-item', function(e) {
         e.preventDefault();
         if ($(this).hasClass('disabled') || $(this).hasClass('selected')) {
@@ -545,13 +569,78 @@ var customSizeSelect = (function() {
         $(this).addClass('selected');
         showSizeInButton(targetValue);
     });
-
     $select.on('change', function() {
-        getCustomList();
+        $(this).getCustomList();
         var targetValue = $(this).find('option:selected').val();
         showSizeInButton(targetValue);
     });
+    $btn.on('click', function(e) {
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+            closeDrop();
+        } else {
+            $(this).addClass('active')
+            $drop.fadeIn(150);
+        }
+    });
+    getCustomList()
+    function getCustomList() {
+        var sizes = [];
+        $select.find('option').each(function(key, value) {
+            sizes.push({
+                name: $(this).text(),
+                value: $(this).val(),
+                status: $(this).hasClass('disabled'),
+                selected: this.selected
+            })
+        });
+        $selectList.html('');
+        $.each(sizes, function(key) {
+            var tempClassDisabled = this.status ? 'disabled' : '';
+            var tempClassSelectd = this.selected ? 'selected' : '';
+            $selectList.append('<li class="detail__size-item ' + tempClassDisabled + tempClassSelectd + '" data-value="' + this.value + '">' + this.name + '</li>')
+        });
+    }
+    function showSizeInButton(size) {
+        $sizeName.html('(' + size + ')');
+        closeDrop();
+    }
+    function closeDrop() {
+        $btn.removeClass('active');
+        $drop.fadeOut(150);
+    }
+})();*/
 
+
+(function( $ ){
+
+  $.fn.customSelect = function() {
+    var $select = this;
+    var $parent = $select.parent();
+    var $selectList =  $('.detail__size-list');
+    var $sizeName =  $('.detail__size-name');
+    var $btn =  $('.js-show-drop-select');
+    var $drop =  $('.detail__size-dropdown');
+    var $wrap = $('.detail__product-size');
+    //change select value
+
+    $(document).on('click', '.detail__size-item', function(e) {
+        e.preventDefault();
+        if ($(this).hasClass('disabled') || $(this).hasClass('selected')) {
+            return false;
+        }
+        var targetValue = $(this).attr('data-value');
+        $select.find('option[value="' + targetValue + '"]').prop('selected', true);
+        $('.detail__size-item').removeClass('selected');
+        $(this).addClass('selected');
+        showSizeInButton(targetValue);
+    });
+
+    $wrap.find($select).on('change', function() {
+        $(this).getCustomList();
+        var targetValue = $(this).find('option:selected').val();
+        showSizeInButton(targetValue);
+    });
 
     $btn.on('click', function(e) {
         e.preventDefault();
@@ -563,56 +652,90 @@ var customSizeSelect = (function() {
         }
     });
 
-
-
     getCustomList()
 
     function getCustomList() {
-        var sizes = [];
-
-        $select.find('option').each(function(key, value) {
-            sizes.push({
+        var sizes0 = [];
+        var sizes1 = [];
+        $select.eq(0).find('option').each(function(key, value) {
+            sizes0.push({
                 name: $(this).text(),
                 value: $(this).val(),
                 status: $(this).hasClass('disabled'),
                 selected: this.selected
             })
         });
-
+        $select.eq(1).find('option').each(function(key, value) {
+            sizes1.push({
+                name: $(this).text(),
+                value: $(this).val(),
+                status: $(this).hasClass('disabled'),
+                selected: this.selected
+            })
+        });
         $selectList.html('');
-
-        $.each(sizes, function(key) {
+        $.each(sizes0, function(key) {
             var tempClassDisabled = this.status ? 'disabled' : '';
             var tempClassSelectd = this.selected ? 'selected' : '';
-            $selectList.append('<li class="detail__size-item ' + tempClassDisabled + tempClassSelectd + '" data-value="' + this.value + '">' + this.name + '</li>')
+            $selectList.eq(0).append('<li class="detail__size-item ' + tempClassDisabled + tempClassSelectd + '" data-value="' + this.value + '">' + this.name + '</li>');
+        });
+        $.each(sizes1, function(key) {
+            var tempClassDisabled = this.status ? 'disabled' : '';
+            var tempClassSelectd = this.selected ? 'selected' : '';
+            $selectList.eq(1).append('<li class="detail__size-item ' + tempClassDisabled + tempClassSelectd + '" data-value="' + this.value + '">' + this.name + '</li>');
         });
     }
 
     function showSizeInButton(size) {
-        $sizeName.html('(' + size + ')');
+        $sizeName.html('' + size + '');
         closeDrop();
     }
 
     function closeDrop() {
         $btn.removeClass('active');
         $drop.fadeOut(150);
-
     }
 
-})();
+  };
+})( jQuery );
+
+$('.js-custom-size, .js-custom-size-popup').customSelect();
 
 
 var detailVideo = (function() {
     var $btn = $('.js-show-video');
     var $video = $('.detail__video');
+    var $slider = $('.detailSlider');
+    $btn.on('click', function() {
+        $(this).parent().parent().find($video).show();
+        console.log($(this).parent().parent().find($video).find('video'));
+        $(this).parent().parent().find($video).css({
+            'height': $slider.outerHeight(),
+            'width': $slider.outerWidth() / 2
+        });
+        $(this).parent().parent().find($video).find('video')[0].play();
+    });
+    $slider.on('beforeChange', function() {
+        $video.hide();
+    });
+})();
+
+var popupVideo = (function() {
+    var $btn = $('.js-show-videoP');
+    var $video = $('.detail__video');
+    var $sliderPopup = $('.popup-slider');
+
 
     $btn.on('click', function() {
-        $video.show();
-        $video.css({
-            'height': $('.detail__product-slider').outerHeight(),
-            'width': $('.detail__product-slider').outerWidth() / 2
+        $(this).parent().parent().find($video).show();
+        $(this).parent().parent().find($video).css({
+            'height': $sliderPopup.outerHeight(),
+            'width': $sliderPopup.outerWidth() / 2
         });
-        $video.find('video')[0].play();
+        $(this).parent().parent().find($video).find('video')[0].play();
+    });
+    $sliderPopup.on('beforeChange', function() {
+        $video.hide();
     });
 })();
 
@@ -686,28 +809,16 @@ var changeCartDetail = (function() {
     var $changeWrapper = $('.cart-page__change-quantity-wrapper');
     var $close = $('.js-close-change');
     var $save = $('.js-save-change');
-
     var $sizeSelect = $('.js-select-change');
-
     var $removeItem = $('.js-remove-item-cart-list');
-
-
 
     $btn.on('click', function(e) {
         e.preventDefault();
-        $changeWrapper.addClass('active');
-
-        $sizeSelect.each(function() {
-            $(this).attr('data-temp-value', $(this).find('option:selected').val());
-        })
-
+        $(this).parent().parent().find($changeWrapper).addClass('active');
+        $btn.not($(this)).parent().parent().find($changeWrapper).removeClass('active');
     })
-
     $close.on('click', function(e) {
         e.preventDefault();
-
-
-
         closeChange();
         //возврощяем селекты к дефолтному значение если изменения не сохранены
         setTimeout(function() {
@@ -719,21 +830,19 @@ var changeCartDetail = (function() {
     });
 
     $sizeSelect.on('change', function() {
-
         // $(this).attr('data-temp-value', $(this).find('option:selected').val());
-
     });
-
     $save.on('click', function(e) {
         e.preventDefault();
-        $sizeSelect.each(function() {
+        $(this).parent().parent().find($sizeSelect).each(function() {
             var targetItem = $(this).attr('data-change');
             var tempValue = $(this).find('option:selected').val();
-            $(targetItem).find('span').html(tempValue);
-
+            $(this).parent().parent().find(targetItem).find('span').html(tempValue);
             // $('.js-custom-size').find('option[value="' + targetValue + '"]').prop('selected', true);
-
         });
+        $(this).parent().parent().find($sizeSelect).each(function() {
+            $(this).attr('data-temp-value', $(this).find('option:selected').val());
+        })
         closeChange();
     });
 
@@ -743,13 +852,9 @@ var changeCartDetail = (function() {
             $(this).remove();
         });
     })
-
     function closeChange() {
         $changeWrapper.removeClass('active');
     }
-
-
-
 })();
 
 
@@ -866,17 +971,271 @@ var formValidate = (function() {
 
     var $subscribeValidate = $subscribe.validate({
         rules: {
-            email: {
-                required: true,
-                email: true
+            country: {
+                required: true
             },
         },
         messages: {
             email: {
-                required: 'Введите Email',
-                email: 'Введите валидный email'
+                required: "Введите свою фамилию",
             },
 
+        }
+    });
+
+    /*vacancyForm*/
+
+    var $vacancyForm = $('#vacancyForm');
+
+    $vacancyForm.on('submit', function() {
+        console.log('test');
+        return $vacancyFormValidate.form()
+    })
+
+    var $vacancyFormValidate = $vacancyForm.validate({
+        rules: {
+            country: {
+                required: true,
+            },
+            name: {
+                required: true,
+            },
+            surname: {
+                required: true,
+            },
+            birthdate: {
+                required: true,
+            },
+            region1: {
+                required: true,
+            },
+            region2: {
+                required: true,
+            },
+            registrationCity1: {
+                required: true,
+            },
+            registrationCity2: {
+                required: true,
+            },
+            registrationAdress1: {
+                required: true,
+            },
+            registrationAdress2: {
+                required: true,
+            },
+            phone: {
+                required: true,
+            },
+            email: {
+                required: true,
+            },
+            family: {
+                required: true,
+            },
+            where: {
+                required: true,
+            },
+            period1: {
+                required: true,
+            },
+            period2: {
+                required: true,
+            },
+            period3: {
+                required: true,
+            },
+            period4: {
+                required: true,
+            },
+            studyForm: {
+                required: true,
+            },
+            studyStage: {
+                required: true,
+            },
+            typeStudy: {
+                required: true,
+            },
+            education: {
+                required: true,
+            },
+            specialty: {
+                required: true,
+            },
+            workPlace: {
+                required: true,
+            },
+            career: {
+                required: true,
+            },
+            VacancyPrestige: {
+                required: true,
+            },
+            money: {
+                required: true,
+            },
+            stability: {
+                required: true,
+            },
+            newExperience: {
+                required: true,
+            },
+            possibility: {
+                required: true,
+            },
+            interest: {
+                required: true,
+            },
+            distance: {
+                required: true,
+            },
+            CompanyPrestige: {
+                required: true,
+            },
+            collective: {
+                required: true,
+            },
+            reason1: {
+                required: true,
+            },
+            reason2: {
+                required: true,
+            },
+            reason3: {
+                required: true,
+            },
+            position: {
+                required: true,
+            },
+            salary1: {
+                required: true,
+            },
+            salary2: {
+                required: true,
+            },
+        },
+        messages: {
+            country: {
+                required: 'Оберіть місто',
+            },
+            name: {
+                required: 'Введите свое имя',
+            },
+            surname: {
+                required: 'Це поле необхідно заповнити',
+            },
+            birthdate: {
+                required: 'Це поле необхідно заповнити',
+            },
+            region1: {
+                required: 'Оберіть регіон',
+            },
+            region2: {
+                required: 'Оберіть регіон',
+            },
+            registrationCity1: {
+                required: 'Це поле необхідно заповнити',
+            },
+            registrationCity2: {
+                required: 'Це поле необхідно заповнити',
+            },
+            registrationAdress1: {
+                required: 'Це поле необхідно заповнити',
+            },
+            registrationAdress2: {
+                required: 'Це поле необхідно заповнити',
+            },
+            phone: {
+                required: 'Це поле необхідно заповнити',
+            },
+            email: {
+                required: 'Це поле необхідно заповнити',
+            },
+            family: {
+                required: 'Це поле необхідно заповнити',
+            },
+            where: {
+                required: 'Це поле необхідно заповнити',
+            },
+            period1: {
+                required: 'Це поле необхідно заповнити',
+            },
+            period2: {
+                required: 'Це поле необхідно заповнити',
+            },
+            period3: {
+                required: 'Це поле необхідно заповнити',
+            },
+            period4: {
+                required: 'Це поле необхідно заповнити',
+            },
+            studyForm: {
+                required: 'Це поле необхідно заповнити',
+            },
+            studyStage: {
+                required: 'Це поле необхідно заповнити',
+            },
+            typeStudy: {
+                required: 'Це поле необхідно заповнити',
+            },
+            education: {
+                required: 'Вкажіть рівень',
+            },
+            specialty: {
+                required: 'Це поле необхідно заповнити',
+            },
+            workPlace: {
+                required: 'Це поле необхідно заповнити',
+            },
+            career: {
+                required: 'Це поле необхідно заповнити',
+            },
+            VacancyPrestige: {
+                required: 'Це поле необхідно заповнити',
+            },
+            money: {
+                required: 'Це поле необхідно заповнити',
+            },
+            stability: {
+                required: 'Це поле необхідно заповнити',
+            },
+            newExperience: {
+                required: 'Це поле необхідно заповнити',
+            },
+            possibility: {
+                required: 'Це поле необхідно заповнити',
+            },
+            interest: {
+                required: 'Це поле необхідно заповнити',
+            },
+            distance: {
+                required: 'Це поле необхідно заповнити',
+            },
+            CompanyPrestige: {
+                required: 'Це поле необхідно заповнити',
+            },
+            collective: {
+                required: 'Це поле необхідно заповнити',
+            },
+            reason1: {
+                required: 'Це поле необхідно заповнити',
+            },
+            reason2: {
+                required: 'Це поле необхідно заповнити',
+            },
+            reason3: {
+                required: 'Це поле необхідно заповнити',
+            },
+            position: {
+                required: 'Це поле необхідно заповнити',
+            },
+            salary1: {
+                required: 'Це поле необхідно заповнити',
+            },
+            salary2: {
+                required: 'Це поле необхідно заповнити',
+            },
         }
     });
 
@@ -922,7 +1281,7 @@ var formValidate = (function() {
                 required: "Введите свою фамилию",
             },
             phone: {
-                required: "Введите свою телефон",
+                required: "Введите свой телефон",
             },
             email: {
                 required: "Введите свой email",
@@ -937,6 +1296,137 @@ var formValidate = (function() {
             passwordAgain: {
                 equalTo: "Пароли должны совпадать",
             },
+            typeStudy: {
+                equalTo: "Пароли должны совпадать",
+            },
+        }
+    });
+
+
+    //privateData
+
+    var $privateData = $('#privateData');
+
+    $privateData.on('submit', function() {
+        return $privateDataValidate.form()
+    })
+
+    var $privateDataValidate = $privateData.validate({
+        rules: {
+            name: {
+                required: true,
+            },
+            surname: {
+                required: true,
+            },
+            country: {
+                required: true
+            },
+            sex: {
+                required: true,
+            },
+            phone: {
+                required: true,
+            },
+            email: {
+                required: true,
+                email: true,
+            }
+        },
+        messages: {
+            name: {
+                required: "Введите свое имя",
+            },
+            surname: {
+                required: "Введите свою фамилию",
+            },
+            country: {
+                required: "Введите город доставки"
+            },
+            sex: {
+                required: "Выберите ваш пол",
+            },
+            phone: {
+                required: "Введите ваш телефон",
+            },
+            email: {
+                required: "Введите свой email",
+                email: 'Введите валидный email'
+            }
+        }
+    });
+
+
+    //speed-order
+
+    var $speedOrder = $('#speedBuy');
+
+    $speedOrder.on('submit', function() {
+        return $speedOrderValidate.form()
+    })
+
+    var $speedOrderValidate = $speedOrder.validate({
+        rules: {
+            name: {
+                required: true,
+            },
+            phone: {
+                required: true,
+            }
+        },
+        messages: {
+            name: {
+                required: "Введите свое имя",
+            },
+            phone: {
+                required: "Введите свой телефон",
+            }
+        }
+    });
+
+    //contactForm
+
+    var $contactForm = $('#contactForm');
+
+    $contactForm.on('submit', function() {
+        return $contactValidate.form()
+    })
+
+    var $contactValidate = $contactForm.validate({
+        rules: {
+            name: {
+                required: true,
+            },
+            adress: {
+                required: true,
+            },
+            phone: {
+                required: true,
+                digits: true
+            },
+            theme: {
+                required: true
+            },
+            mess: {
+                required: true,
+            }
+        },
+        messages: {
+            name: {
+                required: "Введите свое имя",
+            },
+            adress: {
+                required: "Введите свой адрес",
+            },
+            phone: {
+                required: "Введите свой телефон",
+            },
+            theme: {
+                required: "Введите тему вопроса"
+            },
+            mess: {
+                required: "Введите ваше сообщение",
+            }
         }
     });
 
@@ -961,7 +1451,40 @@ var formValidate = (function() {
                 required: 'Введите Email',
                 email: 'Введите валидный email'
             },
+        }
+    });
 
+    //newpass
+
+    var $newpass = $('#newpass');
+
+    $newpass.on('submit', function() {
+        console.log('test');
+        return $newpassValidate.form()
+    })
+
+    var $newpassValidate = $newpass.validate({
+        rules: {
+            actualpass: {
+                required: true
+            },
+            newpass: {
+                required: true
+            },
+            repeatpass: {
+                required: true
+            }
+        },
+        messages: {
+            actualpass: {
+                required: 'Введіть пароль'
+            },
+            newpass: {
+                required: 'Введіть новий пароль'
+            },
+            repeatpass: {
+                required: 'Пароли должны совпадать'
+            }
         }
     });
 
@@ -984,9 +1507,9 @@ var checkForm = (function() {
         $(this).closest('.checkout__option').find('.js-form-wrapper').slideToggle(150);
     });
 
-    $radio.on('click', function() {
-        $('.js-radio-content').slideUp(150)
-        $(this).closest('.js-radio-parent').find('.js-radio-content').slideDown(150)
+    $radio.on('click', function(e) {
+        $('.js-radio-content').slideUp(150);
+        $(this).closest('.js-radio-parent').find('.js-radio-content').slideDown(150);
 
     });
 
@@ -998,9 +1521,9 @@ var checkForm = (function() {
         $(this).toggleClass('active');
         $(this).find('.inner-text > span').toggleClass('v-hidden');
 
-
     })
 })();
+
 
 var locationPage = (function() {
     var $btn = $('.js-show-map');
@@ -1109,4 +1632,196 @@ var showLang = (function() {
         $langList.slideToggle(200);
         $(this).toggleClass('active');
     })
+})();
+
+var colorSwitch = (function(){
+    var $color = $('.detail__product-link');
+
+    $color.on('click', function(e){
+        e.preventDefault();
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+    });
+
+})();
+
+var video = (function(){
+    var videoBtn = $('.js-open-video');
+    var closeBtn = $('.js-close-video');
+    var videoLink = 'https://www.youtube.com/embed/0H6Wk5UaI_U';
+    var videoWrapper = $('.story__video-wrap');
+
+    videoBtn.on('click', function(e) {
+        e.preventDefault();
+        var windowWidth = $(window).outerWidth();
+        var windowHeight = $(window).outerHeight();
+        $(this).toggleClass('active')
+        if ($(this).hasClass('active')){
+            videoWrapper.html('')
+        } else {
+            videoWrapper.append('<iframe width="' + (windowWidth - 60) + '" height="' + (windowHeight - 96 - 50) + '" src="' + videoLink + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>')
+        }
+    })
+
+    function showVideo(videoWrapper){
+        var windowWidth = $(window).outerWidth();
+        var windowHeight = $(window).outerHeight();
+        setTimeout(function() {
+            videoWrapper.append('<iframe width="' + (windowWidth - 60) + '" height="' + (windowHeight - 96 - 50) + '" src="' + videoLink + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>')
+        }, 500)
+    }
+
+    /*closeBtn.on('click', function(e) {
+        e.preventDefault();
+        closeBtn.addClass('active');
+        videoBtn.removeClass('avtive');
+        setTimeout(function() {
+            videoWrapper.hide();
+            videoWrapper.empty();
+        }, 550)
+    })*/
+})();
+
+var productReturn = (function(){
+    var $btn = $('.js-product-choice');
+    var $inputName = $('.js-input-return');
+    var $input = [
+        $('input[name="product-size"]'),
+        $('input[name="product-color"]'),
+        $('input[name="product-id"]')
+    ]
+
+    $btn.on('click', function(e){
+        e.preventDefault();
+        var $this = $(this);
+        var $size = $this.parent().find('.product-choice__size .active').text();
+        var $color = $this.parent().find('.product-choice__color .active img').attr('alt');
+        var $name  = $this.parent().find('.js-product-name').text();
+        var $id = $this.parent().data('id');
+        $inputName.val($name);
+        $input[0].val($size);
+        $input[1].val($color);
+        $input[2].val($id);
+        $this.parent().parent().slideUp();
+    });
+
+})();
+
+var historyOpen = (function(){
+    var $btn = $('.js-history-open');
+    var $wrap = $('.history__item');
+    var $inner = $('.history__inner');
+
+    $btn.on('click', function(e){
+        var $this = $(this);
+        e.preventDefault();
+        $this.toggleClass('active');
+        if($this.hasClass('active')){
+            $this.parent().find('.js-hide').hide();
+            $wrap.not($this.parent()).find($btn).removeClass('active');
+            $wrap.not($this.parent()).find('.js-hide').show();
+            $wrap.find($inner).slideUp();
+            $this.closest($wrap).find($inner).slideDown();
+        } else{
+            $this.closest($wrap).find($inner).slideUp();
+            $this.parent().find('.js-hide').show();
+        }
+    });
+})();
+
+var map = (function(){
+    var $mapLink = $('.location-link');
+
+    $(window).on('click', function(){
+        $('.history__popup').hide();
+    });
+
+    $mapLink.on('click', function(e){
+        e.preventDefault();
+        var $this = $(this);
+        $this.toggleClass('active');
+        $mapLink.not($(this)).removeClass('active');
+        $mapLink.next().hide();
+        if($mapLink.hasClass('active')){
+            $this.next().show();
+        }
+        return false;
+    });
+
+})();
+
+var vacancyForm = (function(){
+    var $check = $('.js-vacancy-check');
+    var $input = $('.js-vacancy-input');
+    var $btnAdd = $('.js-add-form');
+    var $copyBlock = $('.vacancy-form__block');
+
+    $btnAdd.on('click', function(e){
+        e.preventDefault();
+        var $this = $(this);
+        $this.parent().prev().find('.vacancy-form__block').first().clone().appendTo($this.parent().prev());
+        $this.parent().prev().find('.vacancy-form__block').last().find('.js-vacancy-input').val('');
+    });
+
+    $check.change(function(){
+        if($('.js-vacancy-check').is(':checked')){
+            $('.js-vacancy-input').attr('disabled', true);
+        } else{
+            $('.js-vacancy-input').removeAttr('disabled');
+        }
+    });
+
+    /*$("#vacancyForm").on( "submit", function( event ) {
+      event.preventDefault();
+      $(this).serialize();
+      console.log( $(this).serialize() );
+    });*/
+
+
+})();
+
+var vacancyList = (function(){
+    var $btn = $('.js-vacancy-toggle');
+    var $wrap = $('.js-vacancy-wrap');
+
+    $btn.on('click', function(e){
+        var $this = $(this);
+        e.preventDefault();
+        $this.toggleClass('active');
+        $btn.not($this).removeClass('active');
+        /*$this.parent().find($wrap).slideDown();*/
+        if($this.hasClass('active')){
+            $this.parent().find($wrap).slideDown();
+            $btn.not($this).parent().find($wrap).slideUp();
+        } else{
+            $this.parent().find($wrap).slideUp();
+        }
+    });
+
+})();
+
+var titleHeight = (function(){
+    var $title = $('.js-height');
+    var max = 0;
+    $title.each(function(){
+        if($(this).height() > max) {
+            max = $(this).height(); //нахожу высоту самого высокого блока
+        }
+    });
+    $title.height(max);
+
+})();
+
+var detailSize = (function(){
+    var $select = $('.js-detail-size');
+    var $btn = $('.js-detail-btn');
+    var $text = $('.detail__speed-text');
+
+    $select.find('.detail__size-item').not('.disabled').on('click', function(){
+        $btn.removeClass('disabled');
+        $text.hide();
+    });
+
+    $btn.addClass('disabled');
+
 })();

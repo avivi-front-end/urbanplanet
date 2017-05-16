@@ -150,7 +150,7 @@
 
     &__sorting {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         padding: 0 5px;
         margin-bottom: 30px;
     }
@@ -274,6 +274,28 @@
         font-size: 20px;
         text-transform: uppercase;
         margin-bottom: 15px;
+        position: relative;
+    }
+
+    &__open-link{
+        cursor: pointer;
+        &.active{
+            &:after{
+                background-position: 0 -19px;
+            }
+        }
+        &:after{
+            content: '';
+            background: url(../img/plusMinus.png) no-repeat;
+            background-position: 0 -69px;
+            background-size: cover;
+            width: 12px;
+            height: 16px;
+            position: absolute;
+            top: 5px;
+            right: 0;
+            cursor: pointer;
+        }
     }
 
     &__item {
@@ -326,8 +348,13 @@
 
     &__main-item-price {
         &--old{
-            color: #cacaca;
+            color: #000;
             text-decoration: line-through;
+        }
+        &--new{
+            color: #b30000;
+            font-size: 18px;
+            font-family: "BebasNeueBold",sans-serif;
         }
     }
 
@@ -338,8 +365,7 @@
 
         &:hover {
             .catalog__main-info-wrapper {
-                transform: translateY(0);
-                transition: transform 0.2s ease;
+                display: block;
             }
         }
     }
@@ -366,8 +392,7 @@
         z-index: 1;
         padding: 13px 0;
         text-align: center;
-        transform: translateY(100%);
-        transition: transform 0.2s ease;
+        display: none;
     }
 
     &__main-sizes {
@@ -508,7 +533,7 @@
 
     &__show-filter-btn {
         display: block;
-        background: #e5e5e5 url("../img/gridSwitchArrow.png") 10px 0 no-repeat;
+        background: #e5e5e5 url(../img/plusMinus.png) 15px -40px no-repeat;
         background-size: 10px 80px;
         // width: 100%;
         height: 40px;
@@ -529,9 +554,7 @@
         transition: 0.3s ease;
 
         &.active {
-            background-color: #000;
-            color: #fff;
-            background-position: 10px -40px;
+            background-position: 15px 0;
             transition: 0.3s ease;
         }
         @media (max-width: $screen-md-max) {
@@ -545,8 +568,8 @@
         display: flex;
         justify-content: space-between;
 
-        &--right {
-            justify-content: flex-end;
+        &--center {
+            justify-content: center;
         }
 
         @media (max-width: $screen-sm-max){

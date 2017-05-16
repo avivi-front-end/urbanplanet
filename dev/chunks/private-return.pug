@@ -1,0 +1,264 @@
+.breadcrumbs
+    ul.breadcrumbs__list
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Главная страница
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Аккаунт клиента
+.private.clearfix
+    .private-nav
+        ul.private-nav__list
+            li.private-nav__item
+                a(href="#").private-nav__link Дані та адреса доставки
+            li.private-nav__item
+                a(href="#").private-nav__link Кошти програми лояльності
+            li.private-nav__item
+                a(href="#").private-nav__link Зміна пароля
+            li.private-nav__item
+                a(href="#").private-nav__link Мої замовлення
+            li.private-nav__item
+                a(href="#").private-nav__link.active Повернення замовлення
+            li.private-nav__item
+                a(href="#").private-nav__link Обране
+    .private-info
+        .private-return
+            .cart-page__title Повернення замовлення
+            .checkout__option
+                form
+                    label.checkout__option-label.private__label
+                        input(type="checkbox").checkout__checkbox.js-checkbox
+                        span.checkout__option-text ВОЗВРАТ ЗАКАЗА
+                    .checkout__option-form-wrapper.js-form-wrapper
+                        .checkout__option-form.private__option
+                            .checkout__form-title Форма для возврата заказа
+                            .checkout__form-group
+                                label(for="input-21").checkout__form-label Номер заказа:
+                                select#input-21.checkout__form-group-select
+                                    option(selected disabled) Выберите заказ
+                                    option 1000000-11110000
+                                    option 1000000-11110000
+                                    option 1000000-11110000
+                                    option 1000000-11110000
+                                    option 1000000-11110000
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label Какие позиции из заказа вы хотели бы вернуть(в форме указываются названия):
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label Причина возврата(не подошел размер,цвет отличается):
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label Номер счета в банке куда возместить средства(Если счет в приват банке то только номер карты Приватбанка. Для других банков заполните все поля.):
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label Ф.И.О (владельца счета):
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label Номер карты /Номер счета:
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label МФО:
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label ОКПО:
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label Номер ТТН по которой возвращается посылка:
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label.checkout__option-label
+                                    input(type="checkbox" name="rules").checkout__checkbox
+                                    span.checkout__text-icon 
+                                    span.checkout__option-text Я СОГЛАСЕН С <a href="#"> условиями возврата и обмена товара</a>. *
+                            .private__btn
+                                button(type="submit").basket-bottom__btn-checkout.btn_black
+                                    span Відправити
+            .checkout__option
+                form
+                    label.checkout__option-label.private__label
+                        input(type="checkbox").checkout__checkbox.js-checkbox
+                        span.checkout__option-text ОБМЕН ЗАКАЗА
+                    .checkout__option-form-wrapper.js-form-wrapper
+                        .checkout__option-form.private__option
+                            .checkout__form-title Форма для обмена заказа
+                            .checkout__form-group
+                                label(for="input-21").checkout__form-label Номер заказа:
+                                select#input-21.checkout__form-group-select
+                                    option(selected disabled) Выберите заказ
+                                    option 1000000-11110000
+                                    option 1000000-11110000
+                                    option 1000000-11110000
+                                    option 1000000-11110000
+                                    option 1000000-11110000
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label Какие позиции из заказа вы хотели бы вернуть(в форме указываются названия):
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label Причина обмена(не подошел размер,цвет отличается):
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label На какой товар вы хотели бы заменить данный товар:
+                                input(type="hidden" name="product-id" value="")
+                                input(type="hidden" name="product-size" value="")
+                                input(type="hidden" name="product-color" value="")
+                                input(type="text" name="lastname").js-input-return.checkout__form-group-input#input-14
+                            .product-wrap
+                                .product-choice(data-id="1002")
+                                    .product-choice__img
+                                        img(src="img/items/new-item.jpg")
+                                    .product-choice__name-price
+                                        a(href="#").new-items__name.product-choice__name.js-product-name JACK & JONES - КОФТА
+                                        .product-choice__price 1000 грн.
+                                    .product-choice__color-size
+                                        .product-choice__size
+                                            .detail__product-color
+                                                a(href="#").detail__product-link.active.
+                                                    s
+                                                a(href="#").detail__product-link.
+                                                    m
+                                                a(href="#").detail__product-link.
+                                                    l
+                                                a(href="#").detail__product-link.
+                                                    xl
+                                                a(href="#").detail__product-link.
+                                                    xxl
+                                        .product-choice__color
+                                            .detail__product-color
+                                                a(href="#").detail__product-link.active
+                                                    img(src="img/color/1.jpg" alt="red")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/2.jpg" alt="white")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/3.jpg" alt="black")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/4.jpg" alt="brown")
+                                    a(href="#").product-choice__btn.checkout__form-group-submit.js-product-choice выбрать
+                                .product-choice(data-id="1003")
+                                    .product-choice__img
+                                        img(src="img/items/new-item.jpg")
+                                    .product-choice__name-price
+                                        a(href="#").new-items__name.product-choice__name.js-product-name JACK & JONES - ботінки
+                                        .product-choice__price 1000 грн.
+                                    .product-choice__color-size
+                                        .product-choice__size
+                                            .detail__product-color
+                                                a(href="#").detail__product-link.active.
+                                                    s
+                                                a(href="#").detail__product-link.
+                                                    m
+                                                a(href="#").detail__product-link.
+                                                    l
+                                                a(href="#").detail__product-link.
+                                                    xl
+                                                a(href="#").detail__product-link.
+                                                    xxl
+                                        .product-choice__color
+                                            .detail__product-color 
+                                                a(href="#").detail__product-link.active
+                                                    img(src="img/color/1.jpg" alt="red")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/2.jpg" alt="white")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/3.jpg" alt="black")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/4.jpg" alt="brown")
+                                    a(href="#").product-choice__btn.checkout__form-group-submit.js-product-choice выбрать
+                                .product-choice(data-id="1005")
+                                    .product-choice__img
+                                        img(src="img/items/new-item.jpg")
+                                    .product-choice__name-price
+                                        a(href="#").new-items__name.product-choice__name.js-product-name JACK & JONES - курточка
+                                        .product-choice__price 1000 грн.
+                                    .product-choice__color-size
+                                        .product-choice__size
+                                            .detail__product-color
+                                                a(href="#").detail__product-link.active.
+                                                    s
+                                                a(href="#").detail__product-link.
+                                                    m
+                                                a(href="#").detail__product-link.
+                                                    l
+                                                a(href="#").detail__product-link.
+                                                    xl
+                                                a(href="#").detail__product-link.
+                                                    xxl
+                                        .product-choice__color
+                                            .detail__product-color 
+                                                a(href="#").detail__product-link.active
+                                                    img(src="img/color/1.jpg" alt="red")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/2.jpg" alt="white")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/3.jpg" alt="black")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/4.jpg" alt="brown")
+                                    a(href="#").product-choice__btn.checkout__form-group-submit.js-product-choice выбрать
+                                .product-choice(data-id="10011")
+                                    .product-choice__img
+                                        img(src="img/items/new-item.jpg")
+                                    .product-choice__name-price
+                                        a(href="#").new-items__name.product-choice__name.js-product-name JACK & JONES - шапка
+                                        .product-choice__price 1000 грн.
+                                    .product-choice__color-size
+                                        .product-choice__size
+                                            .detail__product-color
+                                                a(href="#").detail__product-link.active.
+                                                    s
+                                                a(href="#").detail__product-link.
+                                                    m
+                                                a(href="#").detail__product-link.
+                                                    l
+                                                a(href="#").detail__product-link.
+                                                    xl
+                                                a(href="#").detail__product-link.
+                                                    xxl
+                                        .product-choice__color
+                                            .detail__product-color 
+                                                a(href="#").detail__product-link.active
+                                                    img(src="img/color/1.jpg" alt="red")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/2.jpg" alt="white")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/3.jpg" alt="black")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/4.jpg" alt="brown")
+                                    a(href="#").product-choice__btn.checkout__form-group-submit.js-product-choice выбрать
+                                .product-choice(data-id="10017")
+                                    .product-choice__img
+                                        img(src="img/items/new-item.jpg")
+                                    .product-choice__name-price
+                                        a(href="#").new-items__name.product-choice__name.js-product-name JACK & JONES - фуфайка
+                                        .product-choice__price 1000 грн.
+                                    .product-choice__color-size
+                                        .product-choice__size
+                                            .detail__product-color
+                                                a(href="#").detail__product-link.active.
+                                                    s
+                                                a(href="#").detail__product-link.
+                                                    m
+                                                a(href="#").detail__product-link.
+                                                    l
+                                                a(href="#").detail__product-link.
+                                                    xl
+                                                a(href="#").detail__product-link.
+                                                    xxl
+                                        .product-choice__color
+                                            .detail__product-color
+                                                a(href="#").detail__product-link.active
+                                                    img(src="img/color/1.jpg" alt="red")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/2.jpg" alt="white")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/3.jpg" alt="black")
+                                                a(href="#").detail__product-link
+                                                    img(src="img/color/4.jpg" alt="brown")
+                                    a(href="#").product-choice__btn.checkout__form-group-submit.js-product-choice выбрать
+                            .checkout__form-group
+                                label(for="input-14").checkout__form-label Номер ТТН новой Почты по которому возвращается товар:
+                                input(type="text" name="lastname").checkout__form-group-input#input-14
+                            .checkout__form-group
+                                label.checkout__option-label
+                                    input(type="checkbox" name="rules").checkout__checkbox
+                                    span.checkout__text-icon 
+                                    span.checkout__option-text Я СОГЛАСЕН С <a href="#"> условиями возврата и обмена товара</a>. *
+                            .private__btn
+                                button(type="submit").basket-bottom__btn-checkout.btn_black
+                                    span Відправити

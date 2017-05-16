@@ -1,0 +1,180 @@
+.breadcrumbs
+    ul.breadcrumbs__list
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Главная страница
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Вакансії
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Анкета
+.container
+    form(method="post")#vacancyForm.vacancy-form
+        .cart-page__title Анкета на вакансIю "Менджер"
+        .vacancy__row
+            label(for="input-1").checkout__form-label Місто:
+            select(name="country")#input-1.checkout__form-group-select.vacancy__input
+                option(selected disabled) Оберіть місто
+                option Хмельницький
+                option Київ
+                option Вінниця
+            .vacancy__help Оберіть місто в якому ви прагнете отримати вакансію
+        .blog__title
+            span Контактна IнформацIя
+        .vacancy__row
+            label(for="input-2").checkout__form-label Ім'я:
+            input(type="text" name="name").checkout__form-group-input#input-2
+        .vacancy__row
+            label(for="input-3").checkout__form-label Прізвище:
+            input(type="text" name="surname").checkout__form-group-input#input-3
+        .vacancy__row
+            label(for="input-4").checkout__form-label Дата народження:
+            input(type="text" name="birthdate" placeholder="дд.мм.рр").checkout__form-group-input#input-4
+        .vacancy__row
+            label(for="input-5").checkout__form-label Адреса за пропискою:
+            select(name="region1")#input-5.checkout__form-group-select.vacancy__input
+                option(selected disabled) Оберіть область
+                option Хмельницька
+                option Київська
+                option Вінницька
+            input(type="text" name="registrationCity1" placeholder="Місто прописки").checkout__form-group-input.vacancy__input
+            input(type="text" name="registrationAdress1" placeholder="Адреса прописки").checkout__form-group-input.vacancy__input
+        .vacancy__row
+            label(for="input-6").checkout__form-label Адреса проживання:
+            select(name="region2")#input-6.checkout__form-group-select.vacancy__input
+                option(selected disabled) Оберіть область
+                option Хмельницька
+                option Київська
+                option Вінницька
+            input(type="text" name="registrationCity2" placeholder="Місто прописки").checkout__form-group-input.vacancy__input
+            input(type="text" name="registrationAdress2" placeholder="Адреса прописки").checkout__form-group-input.vacancy__input
+        .vacancy__row
+            label(for="input-7").checkout__form-label Номер телефона:
+            input(type="text" name="phone" placeholder="+380").checkout__form-group-input#input-7
+        .vacancy__row
+            label(for="input-8").checkout__form-label Електронна пошта:
+            input(type="text" name="email" placeholder="email").checkout__form-group-input#input-8
+        .vacancy__row
+            label(for="input-9").checkout__form-label Родина:
+            input(type="text" name="family" placeholder="Ваш сімейний стан").checkout__form-group-input#input-9
+        .vacancy__row
+            label(for="input-10").checkout__form-label Звідки ви дізнались про вакансію:
+            input(type="text" name="where" placeholder="Вкажіть звідки ви дізнались про вакансію").checkout__form-group-input#input-10
+        .blog__title
+            span оствIта
+        .vacancy-form__wrapper
+            .vacancy-form__block
+                .vacancy__row
+                    label.checkout__form-label Період навчання:
+                    input(type="text" name="period1" placeholder="дд.мм.рр").js-vacancy-input.checkout__form-group-input.vacancy__input
+                    input(type="text" name="period2" placeholder="дд.мм.рр").js-vacancy-input.checkout__form-group-input.vacancy__input
+                .vacancy__row
+                    label.checkout__form-label Форма навчання:
+                    input(type="text" name="studyForm" placeholder="Вкажіть форму навчання").js-vacancy-input.checkout__form-group-input
+                .vacancy__row
+                    label.checkout__form-label Період навчання:
+                    input(type="text" name="studyStage" placeholder="Вкажіть на якому етапі знаходиться ваше навчання").js-vacancy-input.checkout__form-group-input
+                .vacancy__row
+                    label.checkout__form-label Тип навчального закладу:
+                    input(type="text" name="typeStudy" placeholder="Вкажіть тип навчального закладу").js-vacancy-input.checkout__form-group-input
+                .vacancy__row
+                    label.checkout__form-label Освіта:
+                    select(name="education" placeholder="Вкажіть рівень вашої освіти").checkout__form-group-select.vacancy__input.vacancy__input
+                        option(selected disabled) Вкажіть рівень вашої освіти
+                        option 1
+                        option 2
+                        option 3
+                .vacancy__row
+                    label(for="input-17").checkout__form-label Спеціальність:
+                    input(type="text" name="specialty" placeholder="Спеціальність").js-vacancy-input.checkout__form-group-input
+        .vacancy__row.vacancy__row_btn
+            a(href="#").vacancy-form__add.js-add-form.js-add-form Добавити мIсце освIти
+        .blog__title
+            span ПрофесIйний досвIд роботи
+        .vacancy__row
+            label.catalog__param-item
+                input(type="checkbox").catalog__input.js-vacancy-check
+                span.catalog__icon
+                span.catalog__item-name Без досвіду роботи
+        .vacancy-form__wrapper
+            .vacancy-form__block
+                .vacancy__row
+                    label.checkout__form-label Період праці:
+                    input(type="text" name="period3" placeholder="дд.мм.рр").vacancy__dis.js-vacancy-input.checkout__form-group-input.vacancy__input
+                    input(type="text" name="period4" placeholder="дд.мм.рр").vacancy__dis.js-vacancy-input.checkout__form-group-input.vacancy__input
+                .vacancy__row
+                    label.checkout__form-label Місце праці:
+                    input(type="text" name="workPlace").vacancy__dis.js-vacancy-input.checkout__form-group-input
+                .vacancy__row
+                    label.checkout__form-label Посада:
+                    input(type="text" name="position").vacancy__dis.js-vacancy-input.checkout__form-group-input
+                .vacancy__row
+                    label.checkout__form-label.req Обов'язки:
+                    textarea(name="duties").vacancy__dis.js-vacancy-input.checkout__form-group-input.vacancy__text
+        .vacancy__row.vacancy__row_btn
+            a(href="#").vacancy-form__add.js-add-form Добавити мIсце роботи
+        .blog__title
+            span Додаткова IнформацIя
+        .vacancy__row
+            .vacancy__help.vacancy__help_center Які для вас головні фактори при виборі роботи
+            .vacancy__help.vacancy__help_center розмістіть за приорітетом значення кожного фактора найбільш значимий, далі по зменшенню значущості до 10 (значання не повинні повторюватись)
+        .vacancy__row.vacancy__row-group
+            .vacancy__item
+                label(for="input-22").checkout__form-label Кар'єра:
+                input(type="number" maxlength="2" name="career").checkout__form-group-input#input-22
+            .vacancy__item
+                label(for="input-23").checkout__form-label Престиж вакансії:
+                input(type="number" maxlength="2" name="VacancyPrestige").checkout__form-group-input#input-23
+        .vacancy__row.vacancy__row-group
+            .vacancy__item
+                label(for="input-24").checkout__form-label Гроші:
+                input(type="number" maxlength="2" name="money").checkout__form-group-input#input-24
+            .vacancy__item
+                label(for="input-25").checkout__form-label Стабільність роботи:
+                input(type="number" maxlength="2" name="stability").checkout__form-group-input#input-25
+        .vacancy__row.vacancy__row-group
+            .vacancy__item
+                label(for="input-26").checkout__form-label Новий досвід:
+                input(type="number" maxlength="2" name="newExperience").checkout__form-group-input#input-26
+            .vacancy__item
+                label(for="input-27").checkout__form-label Можливість бути кращим від інших:
+                input(type="number" maxlength="2" name="possibility").checkout__form-group-input#input-27
+        .vacancy__row.vacancy__row-group
+            .vacancy__item
+                label(for="input-28").checkout__form-label Цікавість до праці:
+                input(type="number" maxlength="2" name="interest").checkout__form-group-input#input-28
+            .vacancy__item
+                label(for="input-29").checkout__form-label Близько до дому:
+                input(type="number" maxlength="2" name="distance").checkout__form-group-input#input-29
+        .vacancy__row.vacancy__row-group
+            .vacancy__item
+                label(for="input-30").checkout__form-label Перстиж компанії:
+                input(type="number" maxlength="2" name="CompanyPrestige").checkout__form-group-input#input-30
+            .vacancy__item
+                label(for="input-31").checkout__form-label Гарний колектив:
+                input(type="number" maxlength="2" name="collective").checkout__form-group-input#input-31
+        .vacancy__row
+            .vacancy__help.vacancy__help_center Назвіть три головні причини які спонукають вас шукати нову роботу
+        .vacancy__row
+            label(for="input-32").checkout__form-label 1:
+            input(type="text" name="reason1").checkout__form-group-input#input-32
+        .vacancy__row
+            label(for="input-33").checkout__form-label 2:
+            input(type="text" name="reason2").checkout__form-group-input#input-33
+        .vacancy__row
+            label(for="input-34").checkout__form-label 3:
+            input(type="text" name="reason3").checkout__form-group-input#input-34
+        .vacancy__row
+            label(for="input-35").checkout__form-label Бажана заробітня плата на випробувальний термін:
+            input(type="number" name="salary1" maxlength="5").price-inputs__input.vacancy__input#input-35
+        .vacancy__row
+            label(for="input-36").checkout__form-label Бажана заробітня плата на постійній основі:
+            input(type="number" name="salary2" maxlength="5").price-inputs__input.vacancy__input#input-36
+        .vacancy__row
+            label(for="input-37").checkout__form-label.req Додаткова інформація:
+            textarea(name="additionally").checkout__form-group-input.vacancy__text#input-37
+        .vacancy__row
+            .vacancy__help.vacancy__help_center Поля не відмічені *, не обов'язкові для заповнення.
+        .vacancy__row
+            label(for="input-38").checkout__form-label Фото:
+            input(type="file" name="filePhoto")#input-38
+        .vacancy__row.vacancy__row_btn
+            button.checkout__form-group-submit ВIдправити анкету

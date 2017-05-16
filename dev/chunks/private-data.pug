@@ -1,0 +1,79 @@
+.breadcrumbs
+    ul.breadcrumbs__list
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Главная страница
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Аккаунт клиента
+.private.clearfix
+    .private-nav
+        ul.private-nav__list
+            li.private-nav__item
+                a(href="#").private-nav__link.active Дані та адреса доставки
+            li.private-nav__item
+                a(href="#").private-nav__link Кошти програми лояльності
+            li.private-nav__item
+                a(href="#").private-nav__link Зміна пароля
+            li.private-nav__item
+                a(href="#").private-nav__link Мої замовлення
+            li.private-nav__item
+                a(href="#").private-nav__link Повернення замовлення
+            li.private-nav__item
+                a(href="#").private-nav__link Обране
+    .private-info
+        .private-data
+            .cart-page__title ДанI та адреса доставки
+            form#privateData
+                .checkout__form-group
+                    label(for="input-1").checkout__form-label.req Имя:
+                    input(type="text" name="name" value="Имя").checkout__form-group-input#input-1
+                .checkout__form-group
+                    label(for="input-2").checkout__form-label.req Фамилия:
+                    input(type="text" name="surname" value="Фамилия").checkout__form-group-input#input-2
+                .checkout__form-group
+                    label(for="input-3").checkout__form-label Название фирмы (дополнительно для курьера, если вы делаете заказ на работу):
+                    input(type="text" name="firmname").checkout__form-group-input#input-3
+                .checkout__form-group
+                    label(for="input-4").checkout__form-label Улица:
+                    input(type="text" name="street").checkout__form-group-input#input-4
+                .checkout__form-group-wrapper
+                    .checkout__form-group
+                        label(for="input-5").checkout__form-label Номер дома:
+                        input(type="text" name="num").checkout__form-group-input#input-5
+                    .checkout__form-group
+                        label(for="input-6").checkout__form-label НОМЕР КВАРТИРЫ:
+                        input(type="text" name="apt").checkout__form-group-input#input-6
+                .checkout__form-group-wrapper
+                    .checkout__form-group
+                        label(for="input-7").checkout__form-label.req Город
+                        input(type="text" name="country").checkout__form-group-input#input-7
+                .checkout__form-group
+                    label(for="input-8").checkout__form-label ОБЛАСТЬ:
+                    input(type="text" name="region").checkout__form-group-input#input-8
+                .checkout__form-group
+                    label(for="input-9").checkout__form-label Страна
+                    input(type="text" name="country" value="Украина" readonly).checkout__form-group-input#input-9
+                .checkout__form-group-wrapper
+                    .checkout__form-group
+                        label(for="input-10" ).checkout__form-label.req Пол:
+                        select(name="sex")#input-10.checkout__form-group-select
+                            option(selected disabled) пол
+                            option Женщина
+                            option Мужчина
+                    .checkout__form-group
+                        .private__birthdate.
+                            Дата рождения: 
+                            <strong> 1993-08-19
+                .checkout__form-group
+                    label(for="input-11").checkout__form-label.req Номер мобильного телефона:
+                    input(type="text" name="mobile").checkout__form-group-input#input-11
+                .checkout__form-group
+                    label(for="input-12").checkout__form-label.req E-mail:
+                    input(type="text" name="email" value="email@mail.com").checkout__form-group-input#input-12
+                .checkout__option
+                    label.checkout__option-label
+                        input(type="checkbox" name="rules").checkout__checkbox.js-checkbox
+                        span.checkout__text-icon 
+                        span.checkout__option-text Я хочу першим(ою) отримувати інформацію про знижки та новинки. *
+                .private__btn
+                    button(type="submit").basket-bottom__btn-checkout.btn_black
+                        span Зберегти

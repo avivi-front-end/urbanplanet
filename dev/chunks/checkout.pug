@@ -2,8 +2,6 @@
     .container
         .checkout__head
             form#checkout-step-1
-                a(href="#").type-checkout__top-link
-                    img(src="img/logo.png" alt="logo")
                 .checkout__steps
                     .checkout__steps-item.active      
                         span.checkout__steps-num 1.
@@ -61,11 +59,6 @@
                         .basket-bottom__summary-item
                             .basket-bottom__name.basket-bottom__name--total К оплате:
                             .basket-bottom__value.basket-bottom__value--total 3 298 грн. 
-                .checkout__option
-                    label.checkout__option-label
-                        input(type="checkbox").checkout__checkbox.js-checkbox            
-                        span.checkout__text-icon 
-                        span.checkout__option-text Я ХОЧУ ПЕРВЫМ(ОЙ) ПОЛУЧАТЬ ИНФОРМАЦИЮ НА E-MAIL О РАСПРОДЖАХ, АКЦИЯХ И КОНКУРСАХ     
                 .checkout__option        
                     .checkout__form
                         .checkout__form-title ДАННЫЕ КЛИЕНТА
@@ -96,8 +89,11 @@
                             label(for="input-8").checkout__form-label   ОБЛАСТЬ:   
                             input(type="text" name="region").checkout__form-group-input#input-8         
                         .checkout__form-group.checkout__form-group--short
-                            label(for="input-9").checkout__form-label.req   СТРАНА:   
-                            input(type="text" name="country" value="Украина" readonly).checkout__form-group-input#input-9 
+                            label(for="input-9").checkout__form-label.req   СТРАНА:
+                            select#input-9.checkout__form-group-select
+                                option(selected) Украина
+                                option Россия
+                                option Белоруссия
                         .checkout__form-group.checkout__form-group--short
                             label(for="input-10").checkout__form-label.req   НОМЕР МОБИЛЬНОГО ТЕЛЕФОНА:   
                             input(type="number" name="phone").checkout__form-group-input#input-10     
@@ -109,85 +105,22 @@
                             textarea(type="text" name="special_instruction").checkout__form-group-input#input-12 
                 .checkout__option
                     label.checkout__option-label
-                        input(type="checkbox").checkout__checkbox.js-checkbox            
+                        input(type="checkbox" name="rules").checkout__checkbox.js-checkbox            
                         span.checkout__text-icon 
-                        span.checkout__option-text Я ХОЧУ УКАЗАТЬ ДРУГОЙ АДРЕС ДОСТАВКИ
-                    .checkout__option-form-wrapper.js-form-wrapper    
-                        .checkout__option-form
-                            .checkout__form-title ДАННЫЕ ДЛЯ ДОСТАВКИ
-                            .checkout__form-group
-                                label(for="input-13").checkout__form-label Имя:          
-                                input(type="text" name="firstname").checkout__form-group-input#input-13
-                            .checkout__form-group
-                                label(for="input-14").checkout__form-label   ФАМИЛИЯ:         
-                                input(type="text" name="lastname").checkout__form-group-input#input-14    
-                            .checkout__form-group
-                                label(for="input-15").checkout__form-label НАЗВАНИЕ ФИРМЫ (ДОПОЛНИТЕЛЬНО ДЛЯ КУРЬЕРА, ЕСЛИ ВЫ ДЕЛАЕТЕ ЗАКАЗ НА РАБОТУ):
-                                input(type="text" name="company").checkout__form-group-input#input-15        
-                            .checkout__form-group-wrapper
-                                .checkout__form-group
-                                    label(for="input-16").checkout__form-label Номер дома:
-                                    input(type="text" name="num").checkout__form-group-input#input-16        
-                                .checkout__form-group
-                                    label(for="input-17").checkout__form-label НОМЕР КВАРТИРЫ:
-                                    input(type="text" name="apt").checkout__form-group-input#input-17          
-                            .checkout__form-group-wrapper
-                                .checkout__form-group
-                                    label(for="input-18").checkout__form-label ПОЧТОВЫЙ ИНДЕКС:
-                                    input(type="text" name="zip").checkout__form-group-input#input-18        
-                                .checkout__form-group
-                                    label(for="input-19").checkout__form-label ГОРОД:
-                                    input(type="text" name="city").checkout__form-group-input#input-19                    
-                            .checkout__form-group.checkout__form-group--short
-                                label(for="input-20").checkout__form-label   СТРАНА:   
-                                input(type="text" name="country").checkout__form-group-input#input-20 
+                        span.checkout__option-text Я хочу першим(ою) отримувати інформацію про знижки та новинки. *
                 .checkout__option
                     label.checkout__option-label
-                        input(type="checkbox").checkout__checkbox.js-checkbox            
+                        input(type="checkbox" name="program").checkout__checkbox.js-checkbox            
                         span.checkout__text-icon 
-                        span.checkout__option-text Я ХОЧУ ПРИСОЕДИНИТЬСЯ К ANSWEAR.CLUB И ПОЛУЧАТЬ СКИДКИ НА ПОКУПКИ!
-                    .checkout__option-form-wrapper.js-form-wrapper
-                        .checkout__option-form-inner
-                            .checkout__option-form
-                                .checkout__form-group
-                                    label(for="input-21").checkout__form-label Пол:          
-                                    select#input-21.checkout__form-group-select
-                                        option пол
-                                        option Женщина
-                                        option Мужчина
-                                .checkout__form-group
-                                    label.checkout__form-label Дата рождения:       
-                                    .checkout__form-group-wrapper.checkout__form-group-wrapper--width
-                                        select#input-22.checkout__form-group-select
-                                            each day in ['Дата','01','02','03','04','05','06','07','08','09','10','11','12']
-                                                option= day 
-                                        select#input-23.checkout__form-group-select
-                                            each month in ['Месяц','01','02','03','04','05','06','07','08','09','10','11','12']
-                                                option= month 
-                                        select#input-24.checkout__form-group-select
-                                            each years in ['Год','1910','1911','1912','1913','1914','1915','1916','1917','1918','1919','1920','1921']
-                                                option= years       
-                                .checkout__form-group
-                                    .checkout__info-helper Придумайте свой пароль для аккаунта (Вы должны иметь аккаунт, чтобы вступить в ANSWEAR.Club):
-                                    label(for="input-25").checkout__form-label пароль:          
-                                    input(type="text" name="firstname").checkout__form-group-input#input-25
-                                .checkout__form-group
-                                    label(for="input-26").checkout__form-label   ПОВТОРИТЕ ПАРОЛЬ:         
-                                    input(type="text" name="lastname").checkout__form-group-input#input-26      
-                        label.checkout__option-label
-                            input(type="checkbox").checkout__checkbox
-                            span.checkout__text-icon 
-                            span.checkout__option-text.
-                                Хочу участвовать в программе&nbsp;ANSWEAR.Club (<a target="_blank" href="/answear_club-a/okno.html">правила</a>), получать приглашения на VIP РАСПРОДАЖИ, НОЧНЫЕ ПОКУПКИ и другую коммерческую информацию по электронной почте!&nbsp;Выражаю согласие на обработку моих персональных данных, в частности имена, адреса, адреса электронной почты для того, чтобы обеспечить получение маркетинговых предложений от Wearco Sp. z o.o. (Краков, ул. Na Zjeździe, 11). Соглашаясь, Вы получаете бесплатное участие в ANSWEAR.Club           
-
+                        span.checkout__option-text Я ХОЧУ ПРИМАТИ УЧАСТЬ У ПРОГРАМІ ЛОЯЛЬНОСТІ URBAN PLANET, ДІЗНАВАТИСЯ ПРО НОВИНКИ,АКЦІЇ ТА ЗНИЖКИ
                 .checkout__option
                     label.checkout__option-label
                         input(type="checkbox" name="rules").checkout__checkbox.js-checkbox            
                         span.checkout__text-icon 
-                        span.checkout__option-text Я СОГЛАСЕН С <a href="#">ПРАВИЛАМИ МАГАЗИНА</a>. *
+                        span.checkout__option-text Я ПОГОДЖУЮСЬ З <a href="#">ПРАВИЛАМИ МАГАЗИНУ</a>. *
                 .checkout__btns        
                     .basket-bottom__btns
-                        button(type="submit").basket-bottom__btn-checkout 
+                        button(type="submit").basket-bottom__btn-checkout.btn-black 
                             span Оформить заказ
                         a(href="#").basket-bottom__btn-continue 
                             span Вернуться  
