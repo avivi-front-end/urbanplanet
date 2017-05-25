@@ -1,0 +1,42 @@
+include ../chunks/quiсk-buy.pug
+
+.breadcrumbs
+    ul.breadcrumbs__list
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Главная страница
+        li.breadcrumbs__item
+            a(href="#").breadcrumbs__link Аккаунт клиента
+.private.clearfix
+    .private-nav
+        ul.private-nav__list
+            li.private-nav__item
+                a(href="#").private-nav__link Дані та адреса доставки
+            li.private-nav__item
+                a(href="#").private-nav__link Кошти програми лояльності
+            li.private-nav__item
+                a(href="#").private-nav__link Зміна пароля
+            li.private-nav__item
+                a(href="#").private-nav__link Мої замовлення
+            li.private-nav__item
+                a(href="#").private-nav__link Повернення замовлення
+            li.private-nav__item
+                a(href="#").private-nav__link.active Обране
+    .private-info
+        .private-favorites
+            .cart-page__title Обране
+            .catalog__main-wrapper
+                -for (var i = 0; i < 16; i++)
+                    .catalog__main-item
+                        .catalog__main-image-wrapper.js-other-side
+                            a(href="#" data-other-side="img/catalog/1-back.jpg").catalog__main-item-photo
+                                img(src="img/catalog/1.jpg" alt="" data-object-fit="cover").catalog__main-item-img
+                            .catalog__main-info-wrapper
+                                .catalog__main-sizes
+                                    span xs
+                                    span s
+                                    span m
+                                    span l
+                                    span xl
+                                a(href="#quick-buy" data-fancybox).js-quick-buy.catalog__quick-buy ШВИДКА ПОКУПКА        
+                        a(href="#").catalog__main-item-name Basic Tee
+                        .catalog__main-item-price 280 грн.    

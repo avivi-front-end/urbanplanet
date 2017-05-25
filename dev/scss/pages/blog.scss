@@ -19,8 +19,6 @@
         }
     }
 
-    
-
     &__banner-list {
         display: flex;
         // padding-bottom: 15px;
@@ -143,6 +141,133 @@
     &__link-image {
         img {
             width: 100%;
+        }
+    }
+}
+
+.blog-inner{
+    padding: 30px 0;
+    &__arrows{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    &__arrow{
+        opacity: 0;
+        position: absolute;
+        transition: all linear .3s;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 15px;
+        height: 28px;
+        &_left{
+            left: 30px;
+        }
+        &_right{
+            right: 30px;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: #898989;
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            svg {
+                fill: #000;
+                transition: 0.3s ease;
+            }
+        }
+    }
+    &__slide{
+        height: 500px;
+
+        @media(max-width: 568px){
+            height: 300px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &___share-title{
+        text-transform: uppercase;
+        font-size: 24px;
+        text-align: center;
+        font-weight: 700;
+        font-family: "BebasNeueBold",sans-serif;
+        margin-bottom: 8px;
+    }
+    &__slider{
+        margin-bottom: 30px;
+        &-wrap{
+            position: relative;
+            &:hover .blog-inner__arrow{
+                opacity: 1;
+                transition: all linear .3s;
+            }
+        }
+    }
+    &__title{
+        font-family: "BebasNeueBold",sans-serif;
+        font-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__date{
+        text-align: center;
+    }
+    &__text{
+        text-align: center;
+        font-size: 19px;
+        line-height: 24px;
+        color: #231F20;
+        margin-bottom: 30px;
+    }
+    &__list{
+        font-size: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+    }
+    &__list-item{
+        height: 32px;
+        width: 32px;
+        .fb{
+            background: rgb(59, 89, 152);
+        }
+        .tw{
+            background: rgb(29, 161, 242);
+        }
+        .reddit{
+            background: rgb(255, 87, 0);
+        }
+        .pin{
+            background-color: rgb(203, 32, 39);
+        }
+        .email{
+            background-color: rgb(132, 132, 132);
+        }
+        &:not(:last-child){
+            margin-right: 5px;
+        }
+    }
+    &__social-link{
+        display: block;
+        line-height: 32px;
+        width: 32px;
+        height: 32px;
+        svg{
+            height: 32px;
+            width: 32px;
+            fill: #fff;
         }
     }
 }

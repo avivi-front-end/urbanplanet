@@ -4,6 +4,16 @@
         .cart__title КОРЗИНА (1)
         .cart__info Мы Вам доставим все бесплатно! Просто добавьте к заказу товар на сумму от 0 грн
         ul.cart__list
+            li.cart__item.clearfix
+                .cart__remove-wrap
+                    a(href="#").cart__remove-item.js-remove-cart-item
+                .cart__item-wrap.clearfix
+                    img(src="img/item-image.jpg" alt="").cart__item-img
+                    .cart__item-info
+                        .cart__item-title Medicine - Брюки Urban Uniform
+                        .cart__item-attrs s | черный
+                        .catalog__main-item-price--old 250 грн.
+                        .catalog__main-item-price.catalog__main-item-price--new 280 грн.
             - for (var i = 0; i < 5; i++)
                 li.cart__item.clearfix
                     .cart__remove-wrap

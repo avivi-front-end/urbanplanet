@@ -126,4 +126,39 @@
             font-size: 18px;
         }
     }
+
+    &__link-video-open{
+            margin: 40px 0 10px;
+            display: inline-block;
+            color: #000;
+            font-family: "BebasNeueBold",sans-serif;
+        }
+
+    &__video{
+        text-align: center;
+        &-close{
+            cursor: pointer;
+            color: red;
+            font-family: "BebasNeueBold",sans-serif;
+        }
+        &-container{
+            display: none;
+            iframe{
+                @media(max-width: 992px){
+                    width: 100%;
+                }
+                @media(max-width: 768px){
+                    height: 300px;
+                }
+                @media(max-width: 544px){
+                    height: 190px;
+                }
+            }
+            &.active{
+                display: block;
+            }
+        }
+    }
 }
+
+

@@ -32,3 +32,13 @@
 @import 'pages/story';
 @import 'pages/help';
 @import 'pages/jobs';
+@import 'pages/contact-form';
+@import 'pages/private'; //private + vacation
+
+.btn-black{
+    background: #000;
+    &:hover{
+    	opacity: .8;
+	    background: #000;
+    }
+}

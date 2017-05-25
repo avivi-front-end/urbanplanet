@@ -79,6 +79,9 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 15px;
+        @media(max-width: 450px){
+            flex-direction: column-reverse;
+        }
     }
 
     &__price-current {
@@ -175,14 +178,14 @@
 
     &__list-price {
         width: 20%;
-        text-align: right;
+        text-align: center;
         flex-shrink: 0;
 
         &--inner {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            padding-bottom: 4%;
+            justify-content: space-around;
+            padding-bottom: 3%;
         }
         @media (max-width: $screen-sm-max) {
             display: none;
@@ -191,7 +194,7 @@
 
     &__list-total {
         width: 10%;
-        text-align: right;
+        text-align: center;
         flex-shrink: 0;
 
         &--inner {
@@ -253,9 +256,9 @@
     }
 
     &__favorite {
-        background: url("../img/iconSave.png") no-repeat;
-        background-size: 14px 14px;
-        background-position: 2px 4px;
+        background: url("../img/heart.png") no-repeat;
+        background-size: 11px 11px;
+        background-position: 3px 6px;
         font-family: $ptsans;
         padding: 5px 0 5px 22px;
         text-transform: uppercase;
@@ -351,15 +354,15 @@
         }
 
         &--favorite {
-            background: url("../img/iconSave.png") no-repeat;
-            background-position: 0 3px;
-            background-size: 16px 16px;
+            background: url("../img/heart.png") no-repeat;
+            background-position: 3px 5px;
+            background-size: 11px 11px;
         }
 
         &--remove {
-            background: url("../img/iconRemove.png") no-repeat;
-            background-position: 0 4px;
-            background-size: 16px 16px;
+            background: url("../img/iconCross.png") no-repeat;
+            background-position: 3px 6px;
+            background-size: 11px 11px;
         }
 
     }
@@ -471,5 +474,22 @@
             margin-bottom: 15px;
 
         }
+    }
+}
+
+.promocode{
+    &__input{
+    text-align: left;
+    padding: 0 20px;
+    background: #e5e5e5;
+    width: 100%;
+    height: 48px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 0;
+    border: 0;
+    outline: none;
+    font-family: "PTSansRegular",sans-serif;
+    margin-bottom: 5px;
     }
 }

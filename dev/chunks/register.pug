@@ -1,33 +1,33 @@
 .register
     .container
         form#registerUser
-            .checkout__option        
+            .checkout__option
                 .checkout__form
                     .checkout__form-title ЗАРЕГИСТРИРОВАТЬСЯ
                     .checkout__form-group
-                        label(for="input-1").checkout__form-label.req Имя:          
+                        label(for="input-1").checkout__form-label.req Имя:
                         input(type="text" name="firstname").checkout__form-group-input#input-1
                     .checkout__form-group
-                        label(for="input-2").checkout__form-label.req   ФАМИЛИЯ:         
+                        label(for="input-2").checkout__form-label.req ФАМИЛИЯ:
                         input(type="text" name="lastname").checkout__form-group-input#input-2  
                     .checkout__form-group
-                        label(for="input-21").checkout__form-label Пол:          
+                        label(for="input-21").checkout__form-label Пол:
                         select#input-21.checkout__form-group-select
                             option пол
                             option Женщина
-                            option Мужчина    
+                            option Мужчина
                     .checkout__form-group
-                        label.checkout__form-label Дата рождения:       
+                        label.checkout__form-label Дата рождения:
                         .checkout__form-group-wrapper.checkout__form-group-wrapper--width
                             select#input-22.checkout__form-group-select
                                 each day in ['Дата','01','02','03','04','05','06','07','08','09','10','11','12']
-                                    option= day     
+                                    option= day
                             select#input-23.checkout__form-group-select
                                 each month in ['Месяц','01','02','03','04','05','06','07','08','09','10','11','12']
                                     option= month 
                             select#input-24.checkout__form-group-select
                                 each years in ['Год','1910','1911','1912','1913','1914','1915','1916','1917','1918','1919','1920','1921']
-                                    option= years      
+                                    option= years
                     .checkout__form-group.checkout__form-group--short
                         label(for="input-10").checkout__form-label.req   НОМЕР МОБИЛЬНОГО ТЕЛЕФОНА:   
                         input(type="number" name="phone").checkout__form-group-input#input-10     
@@ -35,31 +35,31 @@
                         label(for="input-11").checkout__form-label.req   E-MAIL:
                         input(type="text" name="email").checkout__form-group-input#input-11    
                     .checkout__form-group
-                        .checkout__info-helper Придумайте свой пароль для аккаунта (Вы должны иметь аккаунт, чтобы вступить в ANSWEAR.Club):
+                        .checkout__info-helper Придумайте свой пароль для аккаунта
                         label(for="password").checkout__form-label пароль:          
                         input(type="text" name="password")#password.checkout__form-group-input
                     .checkout__form-group
                         label(for="passwordAgain").checkout__form-label   ПОВТОРИТЕ ПАРОЛЬ:         
-                        input(type="text" name="passwordAgain").checkout__form-group-input#passwordAgain 
-                .checkout__option
-                    label.checkout__option-label
-                        input(type="checkbox" name="subscribe").checkout__checkbox.js-checkbox            
-                        span.checkout__text-icon 
-                        span.checkout__option-text Я ХОЧУ ПОЛУЧАТЬ ХОРОШИЕ РЕКЛАМНЫЕ ПРЕДЛОЖЕНИЯ НА УКАЗАННЫЙ НОМЕР МОБИЛЬНОГО ТЕЛЕФОНА"    
-                .checkout__option
-                    label.checkout__option-label
-                        input(type="checkbox" name="program").checkout__checkbox.js-checkbox            
-                        span.checkout__text-icon 
-                        span.checkout__option-text Я ХОЧУ УЧАСТВОВАТЬ В ПРОГРАММЕ ANSWEAR.CLUB (ПРАВИЛА),ПОЛУЧАТЬ ПРИГЛАШЕНИЯ НА VIP РАСПРОДАЖИ, НОЧНЫЕ ПОКУПКИ И ДРУГУЮ КОММЕРЧЕСКУЮ ИНФОРМАЦИЮ ПО ЭЛЕКТРОННОЙ ПОЧТЕ! Я ДАЮ СОГЛАСИЕ НА ОБРАБОТКУ МОИХ ПЕРСОНАЛЬНЫХ ДАННЫХ       
+                        input(type="text" name="passwordAgain").checkout__form-group-input#passwordAgain
                 .checkout__option
                     label.checkout__option-label
                         input(type="checkbox" name="rules").checkout__checkbox.js-checkbox            
                         span.checkout__text-icon 
-                        span.checkout__option-text Я СОГЛАСЕН С <a href="#">ПРАВИЛАМИ МАГАЗИНА</a>. *  
+                        span.checkout__option-text Я хочу першим(ою) отримувати інформацію про знижки та новинки. *
+                .checkout__option
+                    label.checkout__option-label
+                        input(type="checkbox" name="program").checkout__checkbox.js-checkbox            
+                        span.checkout__text-icon 
+                        span.checkout__option-text Я ХОЧУ ПРИМАТИ УЧАСТЬ У ПРОГРАМІ ЛОЯЛЬНОСТІ URBAN PLANET, ДІЗНАВАТИСЯ ПРО НОВИНКИ,АКЦІЇ ТА ЗНИЖКИ
+                .checkout__option
+                    label.checkout__option-label
+                        input(type="checkbox" name="rules").checkout__checkbox.js-checkbox            
+                        span.checkout__text-icon 
+                        span.checkout__option-text Я ПОГОДЖУЮСЬ З <a href="#">ПРАВИЛАМИ МАГАЗИНУ</a>. *
 
                 .checkout__btns        
                     .basket-bottom__btns
-                        button(type="submit").basket-bottom__btn-checkout 
+                        button(type="submit").basket-bottom__btn-checkout.btn-black 
                             span Регистрация
                         a(href="#").basket-bottom__btn-continue 
                             span Вернуться 

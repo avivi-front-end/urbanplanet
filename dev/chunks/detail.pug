@@ -1,3 +1,20 @@
+include ../chunks/quiсk-buy.pug
+.detail__speed-buy#hidden-order(style="display:none;")
+        a(href="#").header__callback-close
+        .header__callback__title Швидке замовлення
+        form#speedBuy
+            .header__callback-form-group
+                label.header__callback-label iм’я
+                input(type="text" name="name").header__callback-input
+            .header__callback-form-group
+                label.header__callback-label ТЕЛЕФОН
+                input(type="text" name="phone").header__callback-input 
+            .header__callback-form-group
+                label.header__callback-label коментар
+                textarea.header__callback-text
+            .header__callback-form-group
+                input(type="submit" value="Вiдправити").header__callback-submit
+
 .breadcrumbs
     ul.breadcrumbs__list
         li.breadcrumbs__item
@@ -33,18 +50,18 @@
                                     span Оверсайз 
                             .size-info__bottom-item 
                                 a(href="#info-3").size-info__bottom-link.js-current-category 
-                                    span Сноуборд           
-                    .size-info__inner-category-item    
+                                    span Сноуборд
+                    .size-info__inner-category-item
                         a(href="#").size-info__inner-category-link.js-inner-category
                             span Штани/шорти 
                         .size-info__bottom-wrap
                             .size-info__bottom-item
                                 a(href="#info-4").size-info__bottom-link.js-current-category 
-                                    span Всі моделі Штани/шорти     
+                                    span Всі моделі Штани/шорти
                             .size-info__bottom-item 
                                 a(href="#info-5").size-info__bottom-link.js-current-category 
                                     span Оверсайз 
-                    .size-info__inner-category-item    
+                    .size-info__inner-category-item
                         a(href="#").size-info__inner-category-link.js-inner-category 
                             span Взуття
                         .size-info__bottom-wrap
@@ -52,7 +69,7 @@
                                 a(href="#info-6").size-info__bottom-link.js-current-category 
                                     span Всі моделі Взуття    
             .size-info__top-category-item
-                a(href="#").size-info__top-category-link.js-top-category Для женского                  
+                a(href="#").size-info__top-category-link.js-top-category Для женского
         .info-main.active#info-1
             .info-main__title Всі моделі верху     
             .info-main__wrapper
@@ -208,18 +225,16 @@
                                         th.nike-cq-table-header(style='width:65px;') XXXXL
                                         td.nsg-bg--white(style='height:40px;') 147&ndash;160
                                         td.nsg-bg--white(style='height:40px;') 133&ndash;145
-                                        td.nsg-bg--white(style='height:40px;') 136&ndash;145                      
+                                        td.nsg-bg--white(style='height:40px;') 136&ndash;145
 
 .detail
     .container
-        .detail__wrapper
+        .detail__wrapper.clearfix
             .detail__left
                 .detail__mobile
-                    a(href="#").detail__mobile-brand
-                        img(src="img/detail/brand.jpg" alt="")
                     .detail__mobile-name Jack & Jones - Кофта 
                     .detail__mobile-price 869 грн
-                    
+                    .detail__mobile-alert Залишилось 1 шт. Поспішайте купити!
                 .detail__product-preview
                     a(href="1").detail__preview-link.js-go-to-slide.active
                         img(src="img/detail/detail-1-small.jpg" alt="")
@@ -231,7 +246,7 @@
                         img(src="img/detail/detail-4-small.jpg" alt="")
                     a(href="#" ).detail__preview-link.detail__preview-link--video.js-show-video
                         img(src="img/detail/detail-4-small.jpg")             
-                .detail__product-slider
+                .detail__product-slider.detailSlider
                     .detail__slider.js-product-slider
                         a(href="img/detail/detail-1.jpg" data-fancybox).detail__product-slide
                             img(src="img/detail/detail-1.jpg") 
@@ -242,16 +257,15 @@
                         a(href="img/detail/detail-4.jpg" data-fancybox).detail__product-slide
                             img(src="img/detail/detail-4.jpg")  
                     .detail__video
-                        video#productVideo(controls='true', poster='img/detail/detail-4.jpg', preload='none', width='100%', height='100%')
+                        video(controls='true', poster='img/detail/detail-4.jpg', preload='none', width='100%', height='100%')
                             source(src='video/detail.mp4', type='video/mp4')
                 .detail__product-slider-info.
-                    Рост модели на первой фотографии - 189 см. Показывает товар размера M                          
+                    Рост модели на первой фотографии - 189 см. Показывает товар размера M
             .detail__right
                 .detail__product-name-wrapper
-                    a(href="#").detail__brand
-                        img(src="img/detail/brand.jpg" alt="")
                     .detail__product-title Jack & Jones - Кофта 
                     .detail__product-price 869 грн
+                    .detail__product-alert Залишилось 1 шт. Поспішайте купити!
                 .detail__product-color
                     a(href="#").detail__product-link.active
                         img(src="img/color/1.jpg" alt="")
@@ -262,29 +276,36 @@
                         img(src="img/color/3.jpg" alt="")
 
                     a(href="#").detail__product-link
-                        img(src="img/color/4.jpg" alt="")            
+                        img(src="img/color/4.jpg" alt="")
+                .detail__product-size
+                    select.detail__product-select.js-custom-size.js-detail-size
+                        option(value="dis" disabled).disabled Выберите размер
+                        option(value="s") S - последний екземпляр
+                        option(value="m") M
+                        option(value="l") L
+                        option(value="xl").disabled XL
+                        option(value="xxl") XXL
+                    .detail__product-size-wrapper
+                        a(href="#").detail__product-size-btn.js-show-drop-select
+                            span выберите размер
+                            span.detail__size-name
+                        .detail__size-dropdown
+                            ul.detail__size-list.clearfix.js-detail-size
+                                li.detail__size-item.disabled Выберите размер
+                                li.detail__size-item S - последний екземпляр
+                                li.detail__size-item M
+                                li.detail__size-item L
+                                li.detail__size-item XL
+                .detail__speed-text Для швидкого замовлення спочатку оберіть розмір
+                a(href="#sizes" data-fancybox).detail__size-table-link Таблица размероВ
                 .detail__product-btns
-                    .detail__product-size
-                        select.detail__product-select.js-custom-size
-                            option(value="s" disabled).disabled S  
-                            option(value="m") M
-                            option(value="l") L
-                            option(value="xl") XL
-                            option(value="xxl") XXL
-                        .detail__product-size-wrapper
-                            a(href="#").detail__product-size-btn.js-show-drop-select
-                                span размер
-                                span.detail__size-name
-                            .detail__size-dropdown
-                                ul.detail__size-list.clearfix
-                                    li.detail__size-item.disabled  S
-                                    li.detail__size-item  M
-                                    li.detail__size-item.selected  L
-                                    li.detail__size-item  XL
-                    a(href="#").detail__to-cart 
-                        span В корзину
-                    //- a(href="#").detail__to-save.js-add-to-save
-                a(href="#sizes" data-fancybox).detail__size-table-link Таблица размеров    
+
+                    a(href="#").detail__to-cart.btn-black 
+                        span До кошику
+                    a(data-fancybox data-src="#hidden-order" href="javascript:;" title="текст").js-detail-btn.detail__to-cart.btn-black
+                        span Швидке замовлення
+                    a(href="#").detail__to-save.js-add-to-save
+
                 .detail__info-wrapper
                     .detail__info-item
                         a(href="#").detail__info-item-title.js-show-category.active Описание товара
@@ -367,90 +388,35 @@
                             a(href="#" data-slider="slickPrev").new-items__arrow.new-items__arrow--left.js-detail-bottom-arrows
                                 +icon('left')
                             a(href="#" data-slider="slickNext").new-items__arrow.new-items__arrow--right.js-detail-bottom-arrows
-                                +icon('right')                                                            
+                                +icon('right')
                         .new-items__slider.js-detail-bottom
-                            .new-items__slide
-                                .new-items__image
-                                    a(href="#")
-                                        img(src="img/items/new-item.jpg" alt="").new-items__main-image 
-                                    a(href="#").new-items__btn Огляд
-                                .text-center
-                                    a(href="#").new-items__name Icon    
-                                .new-items__price 500 грн   
-                                .new-items__color-wrap
-                                    span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
-                            .new-items__slide
-                                .new-items__image
-                                    a(href="#")
-                                        img(src="img/items/new-item-1.jpg" alt="").new-items__main-image  
-                                    a(href="#").new-items__btn Огляд
-                                .text-center
-                                    a(href="#").new-items__name Icon    
-                                .new-items__price 500 грн  
-                                .new-items__color-wrap
-                                    span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
-                                    span(data-href="img/items/new-item-2.jpg" style="background-color: #f3f3f3;").new-items__color.js-change-color
-                                    span(data-href="img/items/new-item-3.jpg" style="background-color: #ca4b4b;").new-items__color.js-change-color
-                                    span(data-href="img/items/new-item-4.jpg" style="background-color: #3174c3;").new-items__color.js-change-color
-                                    span(data-href="img/items/new-item-5.jpg" style="background-color: #d734e4;").new-items__color.js-change-color
-                            .new-items__slide
-                                .new-items__image
-                                    a(href="#")
-                                        img(src="img/items/new-item-2.jpg" alt="").new-items__main-image  
-                                    a(href="#").new-items__btn Огляд
-                                .text-center
-                                    a(href="#").new-items__name Icon    
-                                .new-items__price 500 грн   
-                                .new-items__color-wrap
-                                    span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
-
-                            .new-items__slide
-                                .new-items__image
-                                    a(href="#")
-                                        img(src="img/items/new-item-3.jpg" alt="").new-items__main-image  
-                                    a(href="#").new-items__btn Огляд
-                                .text-center
-                                    a(href="#").new-items__name Icon    
-                                .new-items__price 500 грн   
-                                .new-items__color-wrap
-                                    span(data-href="img/items/new-item-1.jpg" style="background-color: #3174c3;").new-items__color.js-change-color
-                            .new-items__slide
-                                .new-items__image
-                                    a(href="#")
-                                        img(src="img/items/new-item-4.jpg" alt="").new-items__main-image  
-                                    a(href="#").new-items__btn Огляд
-                                .text-center
-                                    a(href="#").new-items__name Icon    
-                                .new-items__price 500 грн   
-                                .new-items__color-wrap
-                                    span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
-                            .new-items__slide
-                                .new-items__image
-                                    a(href="#")
-                                        img(src="img/items/new-item-5.jpg" alt="").new-items__main-image  
-                                    a(href="#").new-items__btn Огляд
-                                .text-center
-                                    a(href="#").new-items__name Icon    
-                                .new-items__price 500 грн  
-                                .new-items__color-wrap
-                                    span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
-                            .new-items__slide
-                                .new-items__image
-                                    a(href="#")
-                                        img(src="img/items/new-item.jpg" alt="").new-items__main-image  
-                                    a(href="#").new-items__btn Огляд
-                                .text-center
-                                    a(href="#").new-items__name Icon    
-                                .new-items__price 500 грн   
-                                .new-items__color-wrap
-                                    span(data-href="img/items/new-item-1.jpg" style="background-color: #d734e4;").new-items__color.js-change-color
-                            .new-items__slide
-                                .new-items__image
-                                    a(href="#")
-                                        img(src="img/items/new-item-2.jpg" alt="").new-items__main-image  
-                                    a(href="#").new-items__btn Огляд
-                                .text-center
-                                    a(href="#").new-items__name Icon    
-                                .new-items__price 500 грн                    
-                                .new-items__color-wrap
-                                    span(data-href="img/items/new-item-1.jpg" style="background-color: #cacaca;").new-items__color.js-change-color
+                            .catalog__main-item
+                                .catalog__main-image-wrapper.js-other-side
+                                    a(href="#" data-other-side="img/catalog/1-back.jpg").catalog__main-item-photo
+                                        img(src="img/catalog/1.jpg" alt="" data-object-fit="cover").catalog__main-item-img
+                                    .catalog__main-info-wrapper
+                                        .catalog__main-sizes
+                                            span xs
+                                            span s
+                                            span m
+                                            span l
+                                            span xl
+                                        a(href="#quick-buy" data-fancybox).js-quick-buy.catalog__quick-buy ШВИДКА ПОКУПКА
+                                a(href="#").catalog__main-item-name Basic Tee
+                                .catalog__main-item-price--old 250 грн.
+                                .catalog__main-item-price.catalog__main-item-price--new 280 грн.
+                            -for (var i = 0; i < 8; i++)
+                                .catalog__main-item
+                                    .catalog__main-image-wrapper.js-other-side
+                                        a(href="#" data-other-side="img/catalog/1-back.jpg").catalog__main-item-photo
+                                            img(src="img/catalog/1.jpg" alt="" data-object-fit="cover").catalog__main-item-img
+                                        .catalog__main-info-wrapper
+                                            .catalog__main-sizes
+                                                span xs
+                                                span s
+                                                span m
+                                                span l
+                                                span xl
+                                            a(href="#quick-buy" data-fancybox).js-quick-buy.catalog__quick-buy ШВИДКА ПОКУПКА
+                                    a(href="#").catalog__main-item-name Basic Tee
+                                    .catalog__main-item-price 280 грн.

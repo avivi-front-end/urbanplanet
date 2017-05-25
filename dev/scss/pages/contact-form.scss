@@ -1,0 +1,39 @@
+.contact-form{
+
+
+
+    .checkout__form{
+        width: 100%;
+        padding-right: 100px;
+        border-right: 1px #e5e5e5 solid;
+        @media(max-width: 768px){
+            border :none;
+            padding-right: 0;
+        }
+        textarea{
+            height: 112px;
+        }
+    }
+
+    &__list{
+        list-style-type: none;
+        padding-bottom: 50px;
+        li{
+            color: #999;
+            margin-bottom: 5px;
+            font-size: 12px;
+            line-height: 14px;
+            position: relative;
+            font-family: "PTSansRegular",sans-serif;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__title{
+        font-family: "BebasNeueBold",sans-serif;
+        font-size: 26px;
+        font-weight: normal;
+        color: #999;
+        margin: 15px 0;
+    }
+}
