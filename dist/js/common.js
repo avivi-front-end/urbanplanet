@@ -212,6 +212,13 @@ $(function() {
                     }
                 }],
             });
+
+        },
+        afterClose	 : function(){
+            setTimeout(function(){
+                hideImg()
+            },100)
+
         }
     })
 
@@ -224,25 +231,20 @@ $(function() {
     $('.js-other-side').on('mouseover', function() {
         var $this = $(this);
         changeImg($this, 'data-other-side', 'data-img-old')
-        // var tempImg = $(this).attr('data-other-side');
-        // var oldImg = $(this).find('img').attr('src');
-        // $(this).attr('data-img-old',oldImg);
-        // $(this).addClass('active');
-        // $(this).find('img').attr('src',tempImg);
     });
 
     $('.js-other-side').on('mouseout', function() {
-        if ($(this).hasClass('active')) {
-            var $this = $(this);
-            changeImg($this, 'data-img-old', 'data-other-side')
-            $this.removeClass('active')
-            // var tempImg = $(this).attr('data-img-old');
-            // var oldImg = $(this).find('img').attr('src');
-            // $(this).attr('data-other-side',oldImg);
-            // $(this).addClass('active');
-            // $(this).find('img').attr('src',tempImg);
-        }
+
+        var $this = $(this);
+        hideImg($this);
+
     });
+
+    function hideImg(){
+        var $this = $('.js-other-side.active')
+        changeImg($this, 'data-img-old', 'data-other-side')
+        $this.removeClass('active');
+    }
 
     function changeImg($this, oldAtr, newAtr) {
         var tempImg = $this.find('.catalog__main-item-photo').attr(oldAtr);
