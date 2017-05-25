@@ -131,6 +131,23 @@
         // justify-content: space-between;
     }
 
+    &__price{
+        right: 65%;
+        position: absolute;
+        border: 2px solid red;
+        padding: 5px;
+        @media(max-width: 992px){
+            right: 45%;
+        }
+        @media(max-width: 700px){
+            right: 15%;
+        }
+        @media(max-width: 400px){
+            right: 0;
+            font-size: 13px;
+        }
+    }
+
     &__other{
         padding: 20px 0;
         max-width: 300px;
@@ -184,11 +201,15 @@
 
         &:before {
             content: '';
-            background: url("../img/arrowShow.png") 0 0 no-repeat;
+            background: url(../img/plusMinus.png) no-repeat;
+            background-position: 0 -19px;
             background-size: cover;
-            width: 13px;
-            height: 8px;
-            @include position(absolute,50% 15px null null);
+            width: 12px;
+            height: 16px;
+            position: absolute;
+            top: 50%;
+            right: 13px;
+            cursor: pointer;
             transform: translateY(-50%);
         }
 
@@ -198,7 +219,7 @@
 
         &.active {
             &:before {
-                transform: rotateZ(180deg);
+                background-position: 0 -69px;
             }
         }
         @media (max-width: $screen-sm-max) {
@@ -246,6 +267,7 @@
         padding: 30px 30px 30px 40px;
         align-items: center;
         cursor: pointer;
+        position: relative;
         @media (max-width: $screen-sm-max) {
             padding: 15px;
         }
@@ -383,8 +405,8 @@
         padding-bottom: 10px;
 
         &.active {
-            color: #be9e56;
-            border-color: #be9e56;
+            color: red;
+            border-color: red;
         }
 
         &.complete {

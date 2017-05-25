@@ -523,6 +523,16 @@
 
         &--long{
             margin-right: 20px;
+            position: relative;
+            &:after{
+                content: '';
+                display: block;
+                height: 100%;
+                left: -40px;
+                width: 40px;
+                position: absolute;
+                top: 0;
+            }
         }
 
         &:before {

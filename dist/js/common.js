@@ -48,8 +48,8 @@ $(window).on('load', function() {
 
 $(function() {
 
-    $("input[name=phone]").mask("+380 99-99-99-999");
-    $("input[name=period1], input[name=period2], input[name=period3], input[name=period4], input[name=birthdate]").mask("99/99/99");
+    $(".js-mask-phone").mask("+380 99-99-99-999");
+    $(".js-mask").mask("99/99/99");
 
     // placeholder
     //-----------------------------------------------------------------------------
@@ -186,7 +186,13 @@ $(function() {
     $('.js-blog-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        infinite: true
+        infinite: true,
+        arrows: false
+    });
+
+    $(document).on('click', '.js-blog-arrows', function(e) {
+        e.preventDefault();
+         $('.js-blog-slider').slick($(this).attr('data-slider'));
     });
 
 
@@ -696,6 +702,12 @@ var popuplPageSlide = (function() {
         $drop.fadeOut(150);
     }
 
+    $(document).mouseup(function (e){ // закрытие селекта при клике вне его
+        if (!$btn.is(e.target) && !$drop.is(e.target)) {
+            closeDrop(); // скрываем его
+        }
+    });
+
   };
 })( jQuery );
 
@@ -861,42 +873,7 @@ var changeCartDetail = (function() {
 //Forms Validate
 
 var formValidate = (function() {
-    var $loginForm = $('#login-form');
 
-    /*
-     _                 _        ______
-    | |               (_)       |  ___|
-    | |     ___   __ _ _ _ __   | |_ ___  _ __ _ __ ___
-    | |    / _ \ / _` | | '_ \  |  _/ _ \| '__| '_ ` _ \
-    | |___| (_) | (_| | | | | | | || (_) | |  | | | | | |
-    \_____/\___/ \__, |_|_| |_| \_| \___/|_|  |_| |_| |_|
-                 __/ |
-                |___/                                   */
-
-    $loginForm.on('submit', function() {
-        return $loginFormValidate.form()
-    })
-
-    var $loginFormValidate = $loginForm.validate({
-        rules: {
-            email: {
-                required: true,
-                email: true
-            },
-            password: {
-                required: true,
-            },
-        },
-        messages: {
-            email: {
-                required: 'Введите Email',
-                email: 'Введите валидный email'
-            },
-            password: {
-                required: 'Введите свой пароль',
-            },
-        }
-    });
     /*
         _____ _               __   ______
        /  ___| |             /  |  |  ___|
@@ -1645,43 +1622,6 @@ var colorSwitch = (function(){
 
 })();
 
-var video = (function(){
-    var videoBtn = $('.js-open-video');
-    var closeBtn = $('.js-close-video');
-    var videoLink = 'https://www.youtube.com/embed/0H6Wk5UaI_U';
-    var videoWrapper = $('.story__video-wrap');
-
-    videoBtn.on('click', function(e) {
-        e.preventDefault();
-        var windowWidth = $(window).outerWidth();
-        var windowHeight = $(window).outerHeight();
-        $(this).toggleClass('active')
-        if ($(this).hasClass('active')){
-            videoWrapper.html('')
-        } else {
-            videoWrapper.append('<iframe width="' + (windowWidth - 60) + '" height="' + (windowHeight - 96 - 50) + '" src="' + videoLink + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>')
-        }
-    })
-
-    function showVideo(videoWrapper){
-        var windowWidth = $(window).outerWidth();
-        var windowHeight = $(window).outerHeight();
-        setTimeout(function() {
-            videoWrapper.append('<iframe width="' + (windowWidth - 60) + '" height="' + (windowHeight - 96 - 50) + '" src="' + videoLink + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>')
-        }, 500)
-    }
-
-    /*closeBtn.on('click', function(e) {
-        e.preventDefault();
-        closeBtn.addClass('active');
-        videoBtn.removeClass('avtive');
-        setTimeout(function() {
-            videoWrapper.hide();
-            videoWrapper.empty();
-        }, 550)
-    })*/
-})();
-
 var productReturn = (function(){
     var $btn = $('.js-product-choice');
     var $inputName = $('.js-input-return');
@@ -1761,13 +1701,14 @@ var vacancyForm = (function(){
         var $this = $(this);
         $this.parent().prev().find('.vacancy-form__block').first().clone().appendTo($this.parent().prev());
         $this.parent().prev().find('.vacancy-form__block').last().find('.js-vacancy-input').val('');
+        $(".js-mask").mask("99/99/99");
     });
 
     $check.change(function(){
         if($('.js-vacancy-check').is(':checked')){
-            $('.js-vacancy-input').attr('disabled', true);
+            $('.vacancy__dis').attr('disabled', true);
         } else{
-            $('.js-vacancy-input').removeAttr('disabled');
+            $('.vacancy__dis').removeAttr('disabled');
         }
     });
 
@@ -1821,6 +1762,7 @@ var detailSize = (function(){
         $btn.removeClass('disabled');
         $text.hide();
     });
+    console.log($select.find('.detail__size-item:first-child'));
 
     $btn.addClass('disabled');
 

@@ -6,17 +6,23 @@
             a(href="#").breadcrumbs__link Блог
 .blog-inner
   .container
-    .blog-inner__slider.js-blog-slider
-      .blog-inner__slide
-        img(src="img/blog/blog-sld-1.jpg", alt="slide")
-      .blog-inner__slide
-        img(src="img/blog/blog-sld-2.jpg", alt="slide")
-      .blog-inner__slide
-        img(src="img/blog/blog-sld-3.jpg", alt="slide")
-      .blog-inner__slide
-        img(src="img/blog/blog-sld-4.jpg", alt="slide")
-      .blog-inner__slide
-        img(src="img/blog/blog-sld-5.jpg", alt="slide")
+    .blog-inner__slider-wrap
+        .blog-inner__arrows
+            a(href="#" data-slider="slickPrev").blog-inner__arrow.blog-inner__arrow_left.js-blog-arrows
+                +icon('left')
+            a(href="#" data-slider="slickNext").blog-inner__arrow.blog-inner__arrow_right.js-blog-arrows
+                +icon('right')
+        .blog-inner__slider.js-blog-slider
+          .blog-inner__slide
+            img(src="img/blog/blog-sld-1.jpg", alt="slide")
+          .blog-inner__slide
+            img(src="img/blog/blog-sld-2.jpg", alt="slide")
+          .blog-inner__slide
+            img(src="img/blog/blog-sld-3.jpg", alt="slide")
+          .blog-inner__slide
+            img(src="img/blog/blog-sld-4.jpg", alt="slide")
+          .blog-inner__slide
+            img(src="img/blog/blog-sld-5.jpg", alt="slide")
     .blog-inner__date DECEMBER 8, 2015
     .blog-inner__title ADIDAS ULTRA BOOST (MAGMA GRADIENT)
     p.blog-inner__text.

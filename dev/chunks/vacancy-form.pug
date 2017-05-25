@@ -27,7 +27,7 @@
             input(type="text" name="surname").checkout__form-group-input#input-3
         .vacancy__row
             label(for="input-4").checkout__form-label Дата народження:
-            input(type="text" name="birthdate" placeholder="дд.мм.рр").checkout__form-group-input#input-4
+            input(type="text" name="birthdate" placeholder="дд.мм.рр").checkout__form-group-input.js-mask#input-4
         .vacancy__row
             label(for="input-5").checkout__form-label Адреса за пропискою:
             select(name="region1")#input-5.checkout__form-group-select.vacancy__input
@@ -48,7 +48,7 @@
             input(type="text" name="registrationAdress2" placeholder="Адреса прописки").checkout__form-group-input.vacancy__input
         .vacancy__row
             label(for="input-7").checkout__form-label Номер телефона:
-            input(type="text" name="phone" placeholder="+380").checkout__form-group-input#input-7
+            input(type="text" name="phone" placeholder="+380").js-mask-phone.checkout__form-group-input#input-7
         .vacancy__row
             label(for="input-8").checkout__form-label Електронна пошта:
             input(type="text" name="email" placeholder="email").checkout__form-group-input#input-8
@@ -64,8 +64,8 @@
             .vacancy-form__block
                 .vacancy__row
                     label.checkout__form-label Період навчання:
-                    input(type="text" name="period1" placeholder="дд.мм.рр").js-vacancy-input.checkout__form-group-input.vacancy__input
-                    input(type="text" name="period2" placeholder="дд.мм.рр").js-vacancy-input.checkout__form-group-input.vacancy__input
+                    input(type="text" name="period1" placeholder="дд.мм.рр").js-mask.js-vacancy-input.checkout__form-group-input.vacancy__input
+                    input(type="text" name="period2" placeholder="дд.мм.рр").js-mask.js-vacancy-input.checkout__form-group-input.vacancy__input
                 .vacancy__row
                     label.checkout__form-label Форма навчання:
                     input(type="text" name="studyForm" placeholder="Вкажіть форму навчання").js-vacancy-input.checkout__form-group-input
@@ -98,8 +98,8 @@
             .vacancy-form__block
                 .vacancy__row
                     label.checkout__form-label Період праці:
-                    input(type="text" name="period3" placeholder="дд.мм.рр").vacancy__dis.js-vacancy-input.checkout__form-group-input.vacancy__input
-                    input(type="text" name="period4" placeholder="дд.мм.рр").vacancy__dis.js-vacancy-input.checkout__form-group-input.vacancy__input
+                    input(type="text" name="period3" placeholder="дд.мм.рр").js-mask.vacancy__dis.js-vacancy-input.checkout__form-group-input.vacancy__input
+                    input(type="text" name="period4" placeholder="дд.мм.рр").js-mask.vacancy__dis.js-vacancy-input.checkout__form-group-input.vacancy__input
                 .vacancy__row
                     label.checkout__form-label Місце праці:
                     input(type="text" name="workPlace").vacancy__dis.js-vacancy-input.checkout__form-group-input
