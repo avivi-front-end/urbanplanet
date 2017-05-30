@@ -14,170 +14,171 @@ include ../chunks/quiсk-buy.pug
 .catalog
     .container
         .row
-            .catalog__info-wrapper
+            .catalogWrapper
+                //- .catalog__info-wrapper
                 a(href="#" data-text="Показати фIльтри").catalog__show-filter-btn.js-show-filter.
-                    Приховати фільтри
-                .catalog__sorting
-                    .catalog__sorting-select-wrapper
-                        .catalog__sorting-item
-                            .catalog__sorting-name Фільтрувати:
-                            select.catalog__sorting-select
-                                option нові товари
-                                option ціна за збільшенням
-                                option ціна за спаданням
-                                option товари зі знижкою
-                    .catalog__sorting-item.catalog__sorting-item--count 
-                        .catalog__sorting-name ПОКАЗАТИ:
-                        select.catalog__sorting-select
-                            option 60
-                            option 180
-                            option усі
-                        .catalog__sorting-info 60 з 384
-            .catalog__wrap
-                .catalog__aside
-                    form
-                        .catalog__aside-wrapper
-                            //- .catalog__item
-                            //-     .catalog__title.catalog__open-link.js-filter-link Джинсы: 
-                            //-     .catalog__item-wrap.scroll
-                            //-         ul.catalog__list    
-                            //-             li.catalog__list-item
-                            //-                 label.catalog__param-item
-                            //-                     input(type="checkbox").catalog__input
-                            //-                     span.catalog__icon
-                            //-                     span.catalog__item-name Джинсы 
-                            .catalog__item
-                                .catalog__title.catalog__open-link.js-filter-link РозмIр: 
-                                .catalog__item-wrap.scroll
-                                    ul.catalog__list    
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name S
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name M
+                        Приховати фільтри
+                .catalog__wrap
+                    .catalog__aside
+                        form
+                            .catalog__aside-wrapper
+                                //- .catalog__item
+                                //-     .catalog__title.catalog__open-link.js-filter-link Джинсы: 
+                                //-     .catalog__item-wrap.scroll
+                                //-         ul.catalog__list    
+                                //-             li.catalog__list-item
+                                //-                 label.catalog__param-item
+                                //-                     input(type="checkbox").catalog__input
+                                //-                     span.catalog__icon
+                                //-                     span.catalog__item-name Джинсы 
+                                .catalog__item
+                                    .catalog__title.catalog__open-link.js-filter-link РозмIр: 
+                                    .catalog__item-wrap.scroll
+                                        ul.catalog__list    
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name S
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name M
 
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name L
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name XL
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name L
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name XL
 
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name XXL
-                            .catalog__item
-                                .catalog__title.catalog__open-link.js-filter-link КолIр: 
-                                .catalog__item-wrap.scroll
-                                    ul.catalog__list    
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name Сірий
-                            //- .catalog__item
-                                .catalog__title Бренд: 
-                                label.catalog__param-item
-                                    input(type="checkbox").catalog__input
-                                    span.catalog__icon
-                                    span.catalog__item-name Премиум
-                                .catalog__item-search
-                                    form
-                                        input(type='text').catalog__search-input
-                                .catalog__item-wrap.scroll
-                                    ul.catalog__list    
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name Крой: прямые
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name Крой: свободные  
-
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name Крой: скинни
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name Крой: узкие
-
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name Крой: прямые
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name Крой: свободные  
-
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name Крой: скинни
-                                        li.catalog__list-item
-                                            label.catalog__param-item
-                                                input(type="checkbox").catalog__input
-                                                span.catalog__icon
-                                                span.catalog__item-name Крой: узкие                 
-                            .catalog__item
-                                .catalog__title.catalog__open-link.js-filter-link ЦIна:
-                                .catalog__item-wrap
-                                    .price-range__wrapper
-                                        #priceRange(data-set-min="0" data-set-max="3699").price-range                   
-                                    .price-inputs
-                                        div
-                                            input(type="text").price-inputs__input.price-inputs__input--min
-                                        div    
-                                            input(type="text").price-inputs__input.price-inputs__input--max
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name XXL
+                                .catalog__item
+                                    .catalog__title.catalog__open-link.js-filter-link КолIр: 
+                                    .catalog__item-wrap.scroll
+                                        ul.catalog__list    
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name Сірий
+                                //- .catalog__item
+                                    .catalog__title Бренд: 
                                     label.catalog__param-item
                                         input(type="checkbox").catalog__input
                                         span.catalog__icon
-                                        span.catalog__item-name тільки зі знижками
-                .catalog__main
-                    .catalog__main-wrapper
-                        -for (var i = 0; i < 16; i++)
-                            .catalog__main-item
-                                .catalog__main-image-wrapper.js-other-side
-                                    a(href="#" data-other-side="img/catalog/1-back.jpg").catalog__main-item-photo
-                                        img(src="img/catalog/1.jpg" alt="" data-object-fit="cover").catalog__main-item-img
-                                    .catalog__main-info-wrapper
-                                        .catalog__main-sizes
-                                            span xs
-                                            span s
-                                            span m
-                                            span l
-                                            span xl
-                                        a(href="#quick-buy" data-fancybox).js-quick-buy.catalog__quick-buy ШВИДКА ПОКУПКА        
-                                a(href="#").catalog__main-item-name Basic Tee
-                                .catalog__main-item-price 280 грн.    
-            .catalog__info-wrapper.catalog__info-wrapper--center
-                a(href="#").catalog__show-all показати усі товари        
-            .catalog__info-wrapper.catalog__info-wrapper--center
-                .catalog__sorting
-                    .catalog__sorting-pagination
-                        a(href="#").catalog__pagination-btn.catalog__pagination-btn--prev.disabled
-                        .catalog__sorting-name.catalog__sorting-name--pagination Страница
-                        input(type="text" value="1").catalog__pagination-input
-                        .catalog__sorting-name.catalog__sorting-name--pagination из 7
-                        a(href="#").catalog__pagination-btn.catalog__pagination-btn--next
+                                        span.catalog__item-name Премиум
+                                    .catalog__item-search
+                                        form
+                                            input(type='text').catalog__search-input
+                                    .catalog__item-wrap.scroll
+                                        ul.catalog__list    
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name Крой: прямые
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name Крой: свободные  
+
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name Крой: скинни
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name Крой: узкие
+
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name Крой: прямые
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name Крой: свободные  
+
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name Крой: скинни
+                                            li.catalog__list-item
+                                                label.catalog__param-item
+                                                    input(type="checkbox").catalog__input
+                                                    span.catalog__icon
+                                                    span.catalog__item-name Крой: узкие                 
+                                .catalog__item
+                                    .catalog__title.catalog__open-link.js-filter-link ЦIна:
+                                    .catalog__item-wrap
+                                        .price-range__wrapper
+                                            #priceRange(data-set-min="0" data-set-max="3699").price-range                   
+                                        .price-inputs
+                                            div
+                                                input(type="text").price-inputs__input.price-inputs__input--min
+                                            div    
+                                                input(type="text").price-inputs__input.price-inputs__input--max
+                                        label.catalog__param-item
+                                            input(type="checkbox").catalog__input
+                                            span.catalog__icon
+                                            span.catalog__item-name тільки зі знижками
+                    .catalog__main
+                        .catalog__sorting.catalog__sorting--filter
+                            .catalog__sorting-select-wrapper
+                                .catalog__sorting-item
+                                    .catalog__sorting-name Фільтрувати:
+                                    select.catalog__sorting-select
+                                        option нові товари
+                                        option ціна за збільшенням
+                                        option ціна за спаданням
+                                        option товари зі знижкою
+                            .catalog__sorting-item.catalog__sorting-item--count 
+                                .catalog__sorting-name ПОКАЗАТИ:
+                                select.catalog__sorting-select
+                                    option 60
+                                    option 180
+                                    option усі
+                                .catalog__sorting-info 60 з 384
+                        .catalog__main-wrapper
+                            -for (var i = 0; i < 16; i++)
+                                .catalog__main-item
+                                    .catalog__main-image-wrapper.js-other-side
+                                        a(href="#" data-other-side="img/catalog/1-back.jpg").catalog__main-item-photo
+                                            img(src="img/catalog/1.jpg" alt="" data-object-fit="cover").catalog__main-item-img
+                                        .catalog__main-info-wrapper
+                                            .catalog__main-sizes
+                                                span xs
+                                                span s
+                                                span m
+                                                span l
+                                                span xl
+                                            a(href="#quick-buy" data-fancybox).js-quick-buy.catalog__quick-buy ШВИДКА ПОКУПКА        
+                                    a(href="#").catalog__main-item-name Basic Tee
+                                    .catalog__main-item-price 280 грн.    
+                        .catalog__info-wrapper.catalog__info-wrapper--center
+                            a(href="#").catalog__show-all показати усі товари        
+                        .catalog__info-wrapper.catalog__info-wrapper--center
+                            .catalog__sorting
+                                .catalog__sorting-pagination
+                                    a(href="#").catalog__pagination-btn.catalog__pagination-btn--prev.disabled
+                                    .catalog__sorting-name.catalog__sorting-name--pagination Страница
+                                    input(type="text" value="1").catalog__pagination-input
+                                    .catalog__sorting-name.catalog__sorting-name--pagination из 7
+                                    a(href="#").catalog__pagination-btn.catalog__pagination-btn--next
