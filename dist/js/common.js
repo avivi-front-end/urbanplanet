@@ -776,6 +776,7 @@ var hoverTable = (function() {
                 }
             }
         }
+        $(this).addClass('fullOrange');
     });
     $tableCell.on('mouseleave', function() {
         clearTable();
@@ -783,6 +784,7 @@ var hoverTable = (function() {
 
     function clearTable() {
         $tableRow.find('.orange').removeClass('orange');
+        $tableRow.find('.fullOrange').removeClass('fullOrange');
     }
 })();
 
