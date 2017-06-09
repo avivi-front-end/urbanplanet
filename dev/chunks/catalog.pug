@@ -21,7 +21,7 @@ include ../chunks/quiсk-buy.pug
                 .catalog__wrap
                     .catalog__aside
                         form
-                            .catalog__aside-wrapper.loadAjax
+                            .catalog__aside-wrapper
                                 //- .catalog__item
                                 //-     .catalog__title.catalog__open-link.js-filter-link Джинсы: 
                                 //-     .catalog__item-wrap.scroll
@@ -52,7 +52,7 @@ include ../chunks/quiсk-buy.pug
                                                     span.catalog__icon
                                                     span.catalog__item-name L
                                             li.catalog__list-item
-                                                label.catalog__param-item
+                                                label.catalog__param-item.disableItem
                                                     input(type="checkbox").catalog__input
                                                     span.catalog__icon
                                                     span.catalog__item-name XL
@@ -132,9 +132,9 @@ include ../chunks/quiсk-buy.pug
                                             #priceRange(data-set-min="0" data-set-max="3699").price-range                   
                                         .price-inputs
                                             div
-                                                input(type="text").price-inputs__input.price-inputs__input--min
+                                                input(type="number").price-inputs__input.price-inputs__input--min
                                             div    
-                                                input(type="text").price-inputs__input.price-inputs__input--max
+                                                input(type="number").price-inputs__input.price-inputs__input--max
                                         label.catalog__param-item
                                             input(type="checkbox").catalog__input
                                             span.catalog__icon

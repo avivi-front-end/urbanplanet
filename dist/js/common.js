@@ -471,6 +471,36 @@ var priceRange = (function() {
 
 })();
 
+$('.price-inputs__input--min').on('change', function() {
+    var range = $('#priceRange');
+    var maxVal = parseInt($('.price-inputs__input--max').val());
+    var currVal = parseInt($(this).val());
+    var minVal;
+    if(currVal >= maxVal) {
+        minVal = maxVal;
+        $(this).val(minVal);
+    } else {
+        minVal = Math.abs($(this).val());
+    }
+
+    range.slider("values", 0, minVal);
+})
+$('.price-inputs__input--max').on('change', function() {
+    var range = $('#priceRange');
+    var minVal = parseInt($('.price-inputs__input--min').val());
+    var currVal = parseInt($(this).val());
+    var maxVal;
+    if(currVal <= minVal) {
+        maxVal = minVal;
+        $(this).val(maxVal);
+        console.log('---')
+    } else {
+        maxVal = $(this).val();
+    }
+
+    range.slider("values", 1, maxVal);
+})
+
 var filter = (function(){
     var $btn = $('.js-filter-link');
     var $container = $(".catalog__item-wrap");

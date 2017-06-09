@@ -285,6 +285,15 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+
+        &.disableItem {
+            .catalog__icon {
+                background: #f7f7f7;
+            }
+            .catalog__item-name {
+                color: #b7b7b7;
+            }
+        }
     }
 
     &__title {
@@ -475,6 +484,12 @@
         max-height: 200px;
         overflow-x: hidden;
         overflow-y: auto;
+
+        .price-inputs__input {
+            -webkit-appearance: textfield;
+            -moz-appearance:    textfield;
+            appearance:         textfield;
+        }
     }
 
     &__list {
