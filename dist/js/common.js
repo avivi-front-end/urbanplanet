@@ -44,7 +44,7 @@ if (ieDetector.ieVersion == 10 || ieDetector.ieVersion == 11) {
 
 $(window).on('load', function() {
     $('.page-wrapper').css('opacity', 1);
-})
+});
 
 $(function() {
 
