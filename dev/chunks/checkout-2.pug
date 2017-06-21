@@ -212,6 +212,25 @@
                         input.checkout__data-input
                         .checkout__option-content-label НОМЕР КВАРТИРЫ/ОФИСА
                         input.checkout__data-input
+            //- .checkout__option
+            //-     label.checkout__option-label
+            //-         input(type="checkbox" name="rules").checkout__checkbox.js-checkbox            
+            //-         span.checkout__text-icon 
+            //-         span.checkout__option-text Використати бонусні кошти
+            //-         span.checkout__price 30 грн.
+        .checkout__item.checkout__item--bonus
+            form    
+                .checkout__item-title.checkout__item-title--bonus Оплата бонусами
+                .checkout__item__canBonus Вы можете оплалить до 30% суммы заказа бонусами со своего счета.
+                .checkout__item__haveBonus
+                    |Доступно
+                    span 33,33
+                .checkout__item__useBonus
+                    |Оплатить
+                    input(type='number' placeholder="Введите бонусы")
+                    span.
+                        грн. (макс 30% суммы заказа)
+                button(type="submit").checkout__item__payBonus Применить
         .checkout__item
             .checkout__item-title 
                 +icon ('credit-card')
