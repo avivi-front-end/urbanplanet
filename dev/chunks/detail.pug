@@ -233,7 +233,8 @@ include ../chunks/quiсk-buy.pug
             .detail__left
                 .detail__mobile
                     .detail__mobile-name Jack & Jones - Кофта 
-                    .detail__mobile-price 869 грн
+                    .detail__mobile-price.with-discount 869 грн
+                        span.detail__product-discount 830 грн
                     .detail__mobile-alert Залишилось 1 шт. Поспішайте купити!
                 .detail__product-preview
                     a(href="1").detail__preview-link.js-go-to-slide.active
@@ -264,7 +265,8 @@ include ../chunks/quiсk-buy.pug
             .detail__right
                 .detail__product-name-wrapper
                     .detail__product-title Jack & Jones - Кофта 
-                    .detail__product-price 869 грн
+                    .detail__product-price.with-discount 869 грн
+                        span.detail__product-discount 830 грн
                     .detail__product-alert Залишилось 1 шт. Поспішайте купити!
                 .detail__product-color
                     a(href="#").detail__product-link.active
@@ -280,11 +282,11 @@ include ../chunks/quiсk-buy.pug
                 .detail__product-size
                     select.detail__product-select.js-custom-size.js-detail-size
                         option(value="dis" disabled).disabled Выберите размер
-                        option(value="s") S - последний екземпляр
-                        option(value="m") M
-                        option(value="l") L
-                        option(value="xl").disabled XL
-                        option(value="xxl") XXL
+                        option(value="1") S - последний екземпляр
+                        option(value="2") M
+                        option(value="3") L
+                        option(value="4").disabled XL
+                        option(value="5") XXL
                     .detail__product-size-wrapper
                         a(href="#").detail__product-size-btn.js-show-drop-select
                             span выберите размер

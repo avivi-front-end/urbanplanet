@@ -106,6 +106,13 @@
         text-transform: uppercase;
         line-height: 1.2;
         font-size: 36px;
+
+        &.with-discount {
+            text-decoration: line-through;
+            .detail__product-discount {
+                display: inline-block;
+            }
+        }
     }
     &__product-name-wrapper{
 
@@ -205,6 +212,33 @@
         font-size: 36px;
         @media (max-width: $screen-sm-max){
             display: none;
+        }
+
+        &.with-discount {
+            text-decoration: line-through;
+            .detail__product-discount {
+                display: inline-block;
+                @media (max-width: $screen-md-max){
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+
+    }
+
+    &__product-discount {
+        display: none;
+        margin-left: 20px;
+        text-decoration: none;
+        font-family: $bebasBold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-size: 36px;
+        color: #b30000;
+        @media (max-width: $screen-xs-max){
+            width: 100%;
+            margin-left: 0;
         }
     }
 

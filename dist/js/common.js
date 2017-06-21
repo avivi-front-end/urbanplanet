@@ -668,7 +668,7 @@ var popuplPageSlide = (function() {
         $select.eq(0).find('option').each(function(key, value) {
             sizes0.push({
                 name: $(this).text(),
-                value: $(this).val(),
+                value: $(this).text(),
                 status: $(this).hasClass('disabled'),
                 selected: this.selected
             })
@@ -676,7 +676,7 @@ var popuplPageSlide = (function() {
         $select.eq(1).find('option').each(function(key, value) {
             sizes1.push({
                 name: $(this).text(),
-                value: $(this).val(),
+                value: $(this).text(),
                 status: $(this).hasClass('disabled'),
                 selected: this.selected
             })
@@ -696,6 +696,7 @@ var popuplPageSlide = (function() {
 
     function showSizeInButton(size) {
         $sizeName.html('' + size + '');
+        // console.log(size);
         closeDrop();
     }
 
