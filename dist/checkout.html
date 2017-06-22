@@ -249,12 +249,187 @@
     </header>
     <div class="page-body" id="page-body">
       <div class="checkout">
-        <div class="container">
-          <div class="checkout__head">
-            <form id="checkout-step-1">
+        <form class="container" id="checkout-step-1">
+          <div class="checkout__head checkout__tab checkout__tab--1 active">
+            <div class="checkout__steps">
+              <div class="checkout__steps-item active"><span class="checkout__steps-num">1.</span><span class="checkout__steps-name">Адресные данные</span></div>
+              <div class="checkout__steps-item"><span class="checkout__steps-num">2.</span><span class="checkout__steps-name">ДОСТАВКА И ОПЛАТА</span></div>
+              <div class="checkout__steps-item"><span class="checkout__steps-num">3.</span><span class="checkout__steps-name">ПОДТВЕРЖДЕНИЕ ЗАКАЗА</span></div>
+            </div>
+            <div class="checkout__cart-list">
+              <div class="cart-page__list-item cart-page__list-item--checkout">
+                <div class="cart-page__list-name cart-page__list-name--inner"><a class="cart-page__list-remove js-remove-item-cart-list" href="#"></a><a class="cart-page__list-image" href="#"><img src="img/cart/cart-1.jpg" alt=""></a>
+                  <div class="cart-page__list-name-wrap"><a class="cart-page__list-name-info" href="#">MEDICINE</a>
+                    <div class="cart-page__list-name-value">Medicine - Брюки Urban Uniform</div>
+                    <div class="cart-page__mobile-info">
+                      <div class="cart-page__list-name-value">M, Черный, 2 шт.</div>
+                    </div>
+                    <div class="cart-page__mobile-info">
+                      <div class="cart-page__mobile-price">
+                        <div class="cart-page__price-total">3 298 грн.</div>
+                      </div>
+                    </div>
+                    <div class="cart-page__mobile-info"><a class="cart-page__favorite" href="#">удалить</a></div>
+                  </div>
+                </div>
+                <div class="cart-page__list-details cart-page__list-details--inner">
+                  <div class="cart-page__list-inner">
+                    <div class="cart-page__detail-item">размер: <span> S</span></div>
+                    <div class="cart-page__detail-item">цвет: <span>Черный</span></div>
+                  </div>
+                </div>
+                <div class="cart-page__list-quantity cart-page__list-quantity--inner">
+                  <div class="cart-page__list-inner">
+                    <div class="cart-page__list-quantity-change-wrap">
+                      <input class="cart-page__input-quantity" type="text" value="1" readonly>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-page__list-total cart-page__list-total--inner">
+                  <div class="cart-page__list-total-product">1 649 грн.</div>
+                </div>
+              </div>
+              <div class="cart-page__list-item cart-page__list-item--checkout">
+                <div class="cart-page__list-name cart-page__list-name--inner"><a class="cart-page__list-remove js-remove-item-cart-list" href="#"></a><a class="cart-page__list-image" href="#"><img src="img/cart/cart-1.jpg" alt=""></a>
+                  <div class="cart-page__list-name-wrap"><a class="cart-page__list-name-info" href="#">MEDICINE</a>
+                    <div class="cart-page__list-name-value">Medicine - Брюки Urban Uniform</div>
+                    <div class="cart-page__mobile-info">
+                      <div class="cart-page__list-name-value">M, Черный, 2 шт.</div>
+                    </div>
+                    <div class="cart-page__mobile-info">
+                      <div class="cart-page__mobile-price">
+                        <div class="cart-page__price-total">3 298 грн.</div>
+                      </div>
+                    </div>
+                    <div class="cart-page__mobile-info"><a class="cart-page__favorite" href="#">удалить</a></div>
+                  </div>
+                </div>
+                <div class="cart-page__list-details cart-page__list-details--inner">
+                  <div class="cart-page__list-inner">
+                    <div class="cart-page__detail-item">размер: <span> S</span></div>
+                    <div class="cart-page__detail-item">цвет: <span>Черный</span></div>
+                  </div>
+                </div>
+                <div class="cart-page__list-quantity cart-page__list-quantity--inner">
+                  <div class="cart-page__list-inner">
+                    <div class="cart-page__list-quantity-change-wrap">
+                      <input class="cart-page__input-quantity" type="text" value="1" readonly>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-page__list-total cart-page__list-total--inner">
+                  <div class="cart-page__list-total-product">1 649 грн.</div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__top-info clearfix"><a class="checkout__your-cart js-show-small-cart" href="#">
+                <svg class="icon icon-shopping-cart ">
+                  <use xlink:href="img/svgsprite/sprite.svg#shopping-cart"></use>
+                </svg><span class="inner-text"><span>Оформить заказ</span><span class="v-hidden">Скрыть корзину</span></span><span class="checkout__your-cart-count">2</span></a>
+              <div class="basket-bottom__summary checkout__summary">
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name">Стоимость товаров:</div>
+                  <div class="basket-bottom__value"> 3 298 грн</div>
+                </div>
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name">Скидка:</div>
+                  <div class="basket-bottom__value">0 грн</div>
+                </div>
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name">Доставка</div>
+                  <div class="basket-bottom__value">0 грн</div>
+                </div>
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name basket-bottom__name--total">К оплате:</div>
+                  <div class="basket-bottom__value basket-bottom__value--total">3 298 грн.</div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__option">
+              <div class="checkout__form">
+                <div class="checkout__form-title">ДАННЫЕ КЛИЕНТА</div>
+                <div class="checkout__form-group">
+                  <label class="checkout__form-label req" for="input-1">Имя:</label>
+                  <input class="checkout__form-group-input" type="text" name="firstname" id="input-1">
+                </div>
+                <div class="checkout__form-group">
+                  <label class="checkout__form-label req" for="input-2">  ФАМИЛИЯ:</label>
+                  <input class="checkout__form-group-input" type="text" name="lastname" id="input-2">
+                </div>
+                <div class="checkout__form-group">
+                  <label class="checkout__form-label" for="input-3">НАЗВАНИЕ ФИРМЫ (ДОПОЛНИТЕЛЬНО ДЛЯ КУРЬЕРА, ЕСЛИ ВЫ ДЕЛАЕТЕ ЗАКАЗ НА РАБОТУ):</label>
+                  <input class="checkout__form-group-input" type="text" name="company" id="input-3">
+                </div>
+                <div class="checkout__form-group-wrapper">
+                  <div class="checkout__form-group">
+                    <label class="checkout__form-label" for="input-4">Номер дома:</label>
+                    <input class="checkout__form-group-input" type="text" name="num" id="input-4">
+                  </div>
+                  <div class="checkout__form-group">
+                    <label class="checkout__form-label" for="input-5">НОМЕР КВАРТИРЫ:</label>
+                    <input class="checkout__form-group-input" type="text" name="apt" id="input-5">
+                  </div>
+                </div>
+                <div class="checkout__form-group-wrapper">
+                  <div class="checkout__form-group">
+                    <label class="checkout__form-label" for="input-6">ПОЧТОВЫЙ ИНДЕКС:</label>
+                    <input class="checkout__form-group-input" type="text" name="zip" id="input-6">
+                  </div>
+                  <div class="checkout__form-group">
+                    <label class="checkout__form-label" for="input-7">ГОРОД:</label>
+                    <input class="checkout__form-group-input" type="text" name="city" id="input-7">
+                  </div>
+                </div>
+                <div class="checkout__form-group">
+                  <label class="checkout__form-label" for="input-8">  ОБЛАСТЬ:</label>
+                  <input class="checkout__form-group-input" type="text" name="region" id="input-8">
+                </div>
+                <div class="checkout__form-group checkout__form-group--short">
+                  <label class="checkout__form-label req" for="input-9">  СТРАНА:</label>
+                  <select class="checkout__form-group-select" id="input-9">
+                    <option selected>Украина</option>
+                    <option>Россия</option>
+                    <option>Белоруссия</option>
+                  </select>
+                </div>
+                <div class="checkout__form-group checkout__form-group--short">
+                  <label class="checkout__form-label req" for="input-10">  НОМЕР МОБИЛЬНОГО ТЕЛЕФОНА:</label>
+                  <input class="checkout__form-group-input" type="number" name="phone" id="input-10">
+                </div>
+                <div class="checkout__form-group checkout__form-group--short">
+                  <label class="checkout__form-label req" for="input-11">  E-MAIL:</label>
+                  <input class="checkout__form-group-input" type="text" name="email" id="input-11">
+                </div>
+                <div class="checkout__form-group checkout__form-group--short">
+                  <label class="checkout__form-label" for="input-12">  КОММЕНТАРИИ К ЗАКАЗУ (ДОПОЛНИТЕЛЬНЫЙ НОМЕР ТЕЛЕФОНА):</label>
+                  <textarea class="checkout__form-group-input" type="text" name="special_instruction" id="input-12"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__option">
+              <label class="checkout__option-label">
+                <input class="checkout__checkbox js-checkbox" type="checkbox" name="rules"><span class="checkout__text-icon"></span><span class="checkout__option-text">Я хочу першим(ою) отримувати інформацію про знижки та новинки. *</span>
+              </label>
+            </div>
+            <div class="checkout__option">
+              <label class="checkout__option-label">
+                <input class="checkout__checkbox js-checkbox" type="checkbox" name="program"><span class="checkout__text-icon"></span><span class="checkout__option-text">Я ХОЧУ ПРИМАТИ УЧАСТЬ У ПРОГРАМІ ЛОЯЛЬНОСТІ URBAN PLANET, ДІЗНАВАТИСЯ ПРО НОВИНКИ,АКЦІЇ ТА ЗНИЖКИ</span>
+              </label>
+            </div>
+            <div class="checkout__option">
+              <label class="checkout__option-label">
+                <input class="checkout__checkbox js-checkbox" type="checkbox" name="rules"><span class="checkout__text-icon"></span><span class="checkout__option-text">Я ПОГОДЖУЮСЬ З <a href="#">ПРАВИЛАМИ МАГАЗИНУ</a>. *</span>
+              </label>
+            </div>
+            <div class="checkout__btns">
+              <div class="basket-bottom__btns"><a class="basket-bottom__btn-checkout btn-black js-checkout-step-2" href="#"><span>Оформить заказ</span></a><a class="basket-bottom__btn-continue" href="#"><span>Вернуться</span></a></div>
+            </div>
+          </div>
+          <div class="checkout__tab checkout__tab--2">
+            <div class="checkout__head">
               <div class="checkout__steps">
-                <div class="checkout__steps-item active">     <span class="checkout__steps-num">1.</span><span class="checkout__steps-name">Адресные данные    </span></div>
-                <div class="checkout__steps-item"><span class="checkout__steps-num">2.</span><span class="checkout__steps-name">ДОСТАВКА И ОПЛАТА</span></div>
+                <div class="checkout__steps-item active complete"><span class="checkout__steps-num">1.</span><span class="checkout__steps-name">Адресные данные</span></div>
+                <div class="checkout__steps-item active"><span class="checkout__steps-num">2.</span><span class="checkout__steps-name">ДОСТАВКА И ОПЛАТА</span></div>
                 <div class="checkout__steps-item"><span class="checkout__steps-num">3.</span><span class="checkout__steps-name">ПОДТВЕРЖДЕНИЕ ЗАКАЗА</span></div>
               </div>
               <div class="checkout__cart-list">
@@ -265,39 +440,7 @@
                       <div class="cart-page__mobile-info">
                         <div class="cart-page__list-name-value">M, Черный, 2 шт.</div>
                       </div>
-                      <div class="cart-page__mobile-info"> 
-                        <div class="cart-page__mobile-price">
-                          <div class="cart-page__price-total">3 298 грн.</div>
-                        </div>
-                      </div>
-                      <div class="cart-page__mobile-info"><a class="cart-page__favorite" href="#">удалить</a></div>
-                    </div>
-                  </div>
-                  <div class="cart-page__list-details cart-page__list-details--inner">
-                    <div class="cart-page__list-inner">
-                      <div class="cart-page__detail-item">размер: <span> S</span></div>
-                      <div class="cart-page__detail-item">цвет: <span>Черный</span> </div>
-                    </div>
-                  </div>
-                  <div class="cart-page__list-quantity cart-page__list-quantity--inner">
-                    <div class="cart-page__list-inner">
-                      <div class="cart-page__list-quantity-change-wrap">
-                        <input class="cart-page__input-quantity" type="text" value="1" readonly>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-page__list-total cart-page__list-total--inner">
-                    <div class="cart-page__list-total-product">1 649 грн.      </div>
-                  </div>
-                </div>
-                <div class="cart-page__list-item cart-page__list-item--checkout">
-                  <div class="cart-page__list-name cart-page__list-name--inner"><a class="cart-page__list-remove js-remove-item-cart-list" href="#"></a><a class="cart-page__list-image" href="#"><img src="img/cart/cart-1.jpg" alt=""></a>
-                    <div class="cart-page__list-name-wrap"><a class="cart-page__list-name-info" href="#">MEDICINE</a>
-                      <div class="cart-page__list-name-value">Medicine - Брюки Urban Uniform</div>
                       <div class="cart-page__mobile-info">
-                        <div class="cart-page__list-name-value">M, Черный, 2 шт.</div>
-                      </div>
-                      <div class="cart-page__mobile-info"> 
                         <div class="cart-page__mobile-price">
                           <div class="cart-page__price-total">3 298 грн.</div>
                         </div>
@@ -308,7 +451,7 @@
                   <div class="cart-page__list-details cart-page__list-details--inner">
                     <div class="cart-page__list-inner">
                       <div class="cart-page__detail-item">размер: <span> S</span></div>
-                      <div class="cart-page__detail-item">цвет: <span>Черный</span> </div>
+                      <div class="cart-page__detail-item">цвет: <span>Черный</span></div>
                     </div>
                   </div>
                   <div class="cart-page__list-quantity cart-page__list-quantity--inner">
@@ -319,117 +462,275 @@
                     </div>
                   </div>
                   <div class="cart-page__list-total cart-page__list-total--inner">
-                    <div class="cart-page__list-total-product">1 649 грн.      </div>
+                    <div class="cart-page__list-total-product">1 649 грн.</div>
                   </div>
                 </div>
               </div>
-              <div class="checkout__top-info clearfix">  <a class="checkout__your-cart js-show-small-cart" href="#">
-                  <svg class="icon icon-shopping-cart ">
-                    <use xlink:href="img/svgsprite/sprite.svg#shopping-cart"></use>
-                  </svg><span class="inner-text"> <span>Оформить заказ</span><span class="v-hidden">Скрыть корзину</span></span><span class="checkout__your-cart-count">2 </span></a>
-                <div class="basket-bottom__summary checkout__summary">
-                  <div class="basket-bottom__summary-item">
-                    <div class="basket-bottom__name">Стоимость товаров:</div>
-                    <div class="basket-bottom__value"> 3 298 грн</div>
-                  </div>
-                  <div class="basket-bottom__summary-item">
-                    <div class="basket-bottom__name">Скидка:</div>
-                    <div class="basket-bottom__value">0 грн</div>
-                  </div>
-                  <div class="basket-bottom__summary-item">
-                    <div class="basket-bottom__name">Доставка</div>
-                    <div class="basket-bottom__value">0 грн</div>
-                  </div>
-                  <div class="basket-bottom__summary-item">
-                    <div class="basket-bottom__name basket-bottom__name--total">К оплате:</div>
-                    <div class="basket-bottom__value basket-bottom__value--total">3 298 грн. </div>
-                  </div>
+            </div>
+            <div class="checkout__top-info clearfix"><a class="checkout__your-cart js-show-small-cart" href="#">
+                <svg class="icon icon-shopping-cart ">
+                  <use xlink:href="img/svgsprite/sprite.svg#shopping-cart"></use>
+                </svg><span class="inner-text"><span>Оформить заказ</span><span class="v-hidden">Скрыть корзину</span></span><span class="checkout__your-cart-count">2</span></a>
+              <div class="basket-bottom__summary checkout__summary">
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name">Стоимость товаров:</div>
+                  <div class="basket-bottom__value"> 3 298 грн</div>
+                </div>
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name">Скидка:</div>
+                  <div class="basket-bottom__value">0 грн</div>
+                </div>
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name">Доставка</div>
+                  <div class="basket-bottom__value">0 грн</div>
+                </div>
+                <div class="basket-bottom__summary-item">
+                  <div class="basket-bottom__name basket-bottom__name--total">К оплате:</div>
+                  <div class="basket-bottom__value basket-bottom__value--total">3 298 грн.</div>
                 </div>
               </div>
-              <div class="checkout__option">       
-                <div class="checkout__form">
-                  <div class="checkout__form-title">ДАННЫЕ КЛИЕНТА</div>
-                  <div class="checkout__form-group">
-                    <label class="checkout__form-label req" for="input-1">Имя:          </label>
-                    <input class="checkout__form-group-input" type="text" name="firstname" id="input-1">
-                  </div>
-                  <div class="checkout__form-group">
-                    <label class="checkout__form-label req" for="input-2">  ФАМИЛИЯ:         </label>
-                    <input class="checkout__form-group-input" type="text" name="lastname" id="input-2">
-                  </div>
-                  <div class="checkout__form-group">
-                    <label class="checkout__form-label" for="input-3">НАЗВАНИЕ ФИРМЫ (ДОПОЛНИТЕЛЬНО ДЛЯ КУРЬЕРА, ЕСЛИ ВЫ ДЕЛАЕТЕ ЗАКАЗ НА РАБОТУ):</label>
-                    <input class="checkout__form-group-input" type="text" name="company" id="input-3">
-                  </div>
-                  <div class="checkout__form-group-wrapper">
-                    <div class="checkout__form-group">
-                      <label class="checkout__form-label" for="input-4">Номер дома:</label>
-                      <input class="checkout__form-group-input" type="text" name="num" id="input-4">
-                    </div>
-                    <div class="checkout__form-group">
-                      <label class="checkout__form-label" for="input-5">НОМЕР КВАРТИРЫ:</label>
-                      <input class="checkout__form-group-input" type="text" name="apt" id="input-5">
+            </div>
+            <div class="checkout__item">
+              <div class="checkout__item-title">
+                <svg class="icon icon-van ">
+                  <use xlink:href="img/svgsprite/sprite.svg#van"></use>
+                </svg>ВЫБЕРИТЕ СПОСОБ ДОСТАВКИ
+              </div>
+              <div class="checkout__option js-radio-parent">
+                <label class="checkout__radio-label">
+                  <input class="checkout__radio js-radio" type="radio" name="global[shipping]" checked><span class="checkout__option-radio-icon"></span>
+                  <div class="checkout__label-wrap">
+                    <div class="checkout__label-name">ТОЧКА ВЫДАЧИ (Укрпочта)</div>
+                    <div class="checkout__label-price">0 грн.</div>
+                    <div class="checkout__label-time">
+                      <div class="checkout__label-time-inner"><span>Расчетное время доставки:</span><strong>До 150 часов</strong><i class="info"></i></div>
                     </div>
                   </div>
-                  <div class="checkout__form-group-wrapper">
-                    <div class="checkout__form-group">
-                      <label class="checkout__form-label" for="input-6">ПОЧТОВЫЙ ИНДЕКС:</label>
-                      <input class="checkout__form-group-input" type="text" name="zip" id="input-6">
-                    </div>
-                    <div class="checkout__form-group">
-                      <label class="checkout__form-label" for="input-7">ГОРОД:</label>
-                      <input class="checkout__form-group-input" type="text" name="city" id="input-7">
-                    </div>
-                  </div>
-                  <div class="checkout__form-group">
-                    <label class="checkout__form-label" for="input-8">  ОБЛАСТЬ:   </label>
-                    <input class="checkout__form-group-input" type="text" name="region" id="input-8">
-                  </div>
-                  <div class="checkout__form-group checkout__form-group--short">
-                    <label class="checkout__form-label req" for="input-9">  СТРАНА:</label>
-                    <select class="checkout__form-group-select" id="input-9">
-                      <option selected>Украина</option>
-                      <option>Россия</option>
-                      <option>Белоруссия</option>
+                </label>
+                <div class="checkout__option-content active js-radio-content">
+                  <div class="checkout__option-form-group">
+                    <div class="checkout__option-content-label">ВЫБЕРИТЕ ПУНКТ ПОЛУЧЕНИЯ</div>
+                    <select class="checkout__option-content-select">
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                    </select>
+                    <select class="checkout__option-content-select">
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
                     </select>
                   </div>
-                  <div class="checkout__form-group checkout__form-group--short">
-                    <label class="checkout__form-label req" for="input-10">  НОМЕР МОБИЛЬНОГО ТЕЛЕФОНА:   </label>
-                    <input class="checkout__form-group-input" type="number" name="phone" id="input-10">
-                  </div>
-                  <div class="checkout__form-group checkout__form-group--short">
-                    <label class="checkout__form-label req" for="input-11">  E-MAIL:</label>
-                    <input class="checkout__form-group-input" type="text" name="email" id="input-11">
-                  </div>
-                  <div class="checkout__form-group checkout__form-group--short">
-                    <label class="checkout__form-label" for="input-12">  КОММЕНТАРИИ К ЗАКАЗУ (ДОПОЛНИТЕЛЬНЫЙ НОМЕР ТЕЛЕФОНА):</label>
-                    <textarea class="checkout__form-group-input" type="text" name="special_instruction" id="input-12"> </textarea>
+                </div>
+                <div class="checkout__option-content active js-radio-content">
+                  <div class="checkout__option-form-group">
+                    <div class="checkout__option-content-label">ИЛИ НА КАРТЕ НИЖЕ. ВЫ МОЖЕТЕ ВВЕСТИ СВОЙ АДРЕС. ВЫБОР НА КАРТЕ ПОДТВЕРДИТЕ, НАЖАВ НА ВЫБРАННОЙ ТОЧКЕ.</div>
+                    <input class="checkout__data-input">
+                    <div class="checkout__map map-wrapper" id="map"></div>
                   </div>
                 </div>
               </div>
-              <div class="checkout__option">
-                <label class="checkout__option-label">
-                  <input class="checkout__checkbox js-checkbox" type="checkbox" name="rules"><span class="checkout__text-icon"> </span><span class="checkout__option-text">Я хочу першим(ою) отримувати інформацію про знижки та новинки. *</span>
+              <div class="checkout__option js-radio-parent">
+                <label class="checkout__radio-label">
+                  <input class="checkout__radio js-radio" type="radio" name="global[shipping]"><span class="checkout__option-radio-icon"></span>
+                  <div class="checkout__label-wrap">
+                    <div class="checkout__label-name">ТОЧКА ВЫДАЧИ (DHL)</div>
+                    <div class="checkout__label-price">0 грн.</div>
+                    <div class="checkout__label-time">
+                      <div class="checkout__label-time-inner"><span>Расчетное время доставки:</span><strong>До 150 часов</strong><i class="info"></i></div>
+                    </div>
+                  </div>
                 </label>
-              </div>
-              <div class="checkout__option">
-                <label class="checkout__option-label">
-                  <input class="checkout__checkbox js-checkbox" type="checkbox" name="program"><span class="checkout__text-icon"> </span><span class="checkout__option-text">Я ХОЧУ ПРИМАТИ УЧАСТЬ У ПРОГРАМІ ЛОЯЛЬНОСТІ URBAN PLANET, ДІЗНАВАТИСЯ ПРО НОВИНКИ,АКЦІЇ ТА ЗНИЖКИ</span>
-                </label>
-              </div>
-              <div class="checkout__option">
-                <label class="checkout__option-label">
-                  <input class="checkout__checkbox js-checkbox" type="checkbox" name="rules"><span class="checkout__text-icon"> </span><span class="checkout__option-text">Я ПОГОДЖУЮСЬ З <a href="#">ПРАВИЛАМИ МАГАЗИНУ</a>. *</span>
-                </label>
-              </div>
-              <div class="checkout__btns">       
-                <div class="basket-bottom__btns">
-                  <button class="basket-bottom__btn-checkout btn-black" type="submit"> <span>Оформить заказ</span></button><a class="basket-bottom__btn-continue" href="#"> <span>Вернуться  </span></a>
+                <div class="checkout__option-content js-radio-content">
+                  <div class="checkout__option-form-group">
+                    <div class="checkout__option-content-label">ВЫБЕРИТЕ ПУНКТ ПОЛУЧЕНИЯ</div>
+                    <select class="checkout__option-content-select">
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                    </select>
+                    <select class="checkout__option-content-select">
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="checkout__option-content js-radio-content">
+                  <div class="checkout__option-form-group">
+                    <div class="checkout__option-content-label">ИЛИ НА КАРТЕ НИЖЕ. ВЫ МОЖЕТЕ ВВЕСТИ СВОЙ АДРЕС. ВЫБОР НА КАРТЕ ПОДТВЕРДИТЕ, НАЖАВ НА ВЫБРАННОЙ ТОЧКЕ.</div>
+                    <input class="checkout__data-input">
+                    <div class="checkout__map map-wrapper" id="map"></div>
+                  </div>
                 </div>
               </div>
-            </form>
+              <div class="checkout__option js-radio-parent">
+                <label class="checkout__radio-label">
+                  <input class="checkout__radio js-radio" type="radio" name="global[shipping]"><span class="checkout__option-radio-icon"></span>
+                  <div class="checkout__label-wrap">
+                    <div class="checkout__label-name">ТОЧКА ВЫДАЧИ (НОВАЯ ПОЧТА)</div>
+                    <div class="checkout__label-price">0 грн.</div>
+                    <div class="checkout__label-time">
+                      <div class="checkout__label-time-inner"><span>Расчетное время доставки:</span><strong>До 150 часов</strong><i class="info"></i></div>
+                    </div>
+                  </div>
+                </label>
+                <div class="checkout__option-content js-radio-content">
+                  <div class="checkout__option-form-group">
+                    <div class="checkout__option-content-label">ВЫБЕРИТЕ ПУНКТ ПОЛУЧЕНИЯ</div>
+                    <select class="checkout__option-content-select">
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                    </select>
+                    <select class="checkout__option-content-select">
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="checkout__option-content js-radio-content">
+                  <div class="checkout__option-form-group">
+                    <div class="checkout__option-content-label">ИЛИ НА КАРТЕ НИЖЕ. ВЫ МОЖЕТЕ ВВЕСТИ СВОЙ АДРЕС. ВЫБОР НА КАРТЕ ПОДТВЕРДИТЕ, НАЖАВ НА ВЫБРАННОЙ ТОЧКЕ.</div>
+                    <input class="checkout__data-input">
+                    <div class="checkout__map map-wrapper" id="map"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__option js-radio-parent">
+                <label class="checkout__radio-label">
+                  <input class="checkout__radio js-radio" type="radio" name="global[shipping]"><span class="checkout__option-radio-icon"></span>
+                  <div class="checkout__label-wrap">
+                    <div class="checkout__label-name">КУРЬЕР (НОВАЯ ПОЧТА)</div>
+                    <div class="checkout__label-price">0 грн.</div>
+                    <div class="checkout__label-time">
+                      <div class="checkout__label-time-inner"><span>Расчетное время доставки:</span><strong>До 150 часов</strong><i class="info"></i></div>
+                    </div>
+                  </div>
+                </label>
+                <div class="checkout__option-content js-radio-content">
+                  <div class="checkout__option-form-group">
+                    <div class="checkout__option-content-label">ВЫБЕРИТЕ ПУНКТ ПОЛУЧЕНИЯ</div>
+                    <select class="checkout__option-content-select">
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                    </select>
+                    <select class="checkout__option-content-select">
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                      <option>ВІННИЦЬКА</option>
+                      <option>ВОЛИНСЬКА</option>
+                      <option>ДНІПРОПЕТРОВСЬКА</option>
+                      <option>ДОНЕЦЬКА</option>
+                    </select>
+                    <div class="checkout__option-content-label">УЛИЦА</div>
+                    <input class="checkout__data-input">
+                    <div class="checkout__option-content-label">НОМЕР ДОМА</div>
+                    <input class="checkout__data-input">
+                    <div class="checkout__option-content-label">НОМЕР КВАРТИРЫ/ОФИСА</div>
+                    <input class="checkout__data-input">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__item checkout__item--bonus">
+              <form>
+                <div class="checkout__item-title checkout__item-title--bonus">Оплата бонусами</div>
+                <div class="checkout__item__canBonus">Вы можете оплалить до 30% суммы заказа бонусами со своего счета.</div>
+                <div class="checkout__item__haveBonus">Доступно<span>33,33</span></div>
+                <div class="checkout__item__useBonus">Оплатить
+                  <input type="number" placeholder="Введите бонусы"><span>грн. (макс 30% суммы заказа)</span>
+                </div>
+                <button class="checkout__item__payBonus" type="submit">Применить</button>
+              </form>
+            </div>
+            <div class="checkout__item">
+              <div class="checkout__item-title">
+                <svg class="icon icon-credit-card ">
+                  <use xlink:href="img/svgsprite/sprite.svg#credit-card"></use>
+                </svg>ВЫБЕРИТЕ СПОСОБ ОПЛАТЫ
+              </div>
+              <div class="checkout__option js-radio-parent">
+                <label class="checkout__radio-label">
+                  <input class="checkout__radio js-radio" type="radio" name="payment" checked><span class="checkout__option-radio-icon"></span>
+                  <div class="checkout__label-wrap">
+                    <div class="checkout__label-name">Наложений платіж</div>
+                  </div>
+                </label>
+              </div>
+              <div class="checkout__option js-radio-parent">
+                <label class="checkout__radio-label">
+                  <input class="checkout__radio js-radio" type="radio" name="payment"><span class="checkout__option-radio-icon"></span>
+                  <div class="checkout__label-wrap">
+                    <div class="checkout__label-name">LiqPay (Оплата банківською картою)</div>
+                  </div>
+                </label>
+              </div>
+              <div class="checkout__option js-radio-parent">
+                <label class="checkout__radio-label">
+                  <input class="checkout__radio js-radio" type="radio" name="payment"><span class="checkout__option-radio-icon"></span>
+                  <div class="checkout__label-wrap">
+                    <div class="checkout__label-name">оплата в терміналі ПриватБанк</div>
+                  </div>
+                </label>
+                <div class="checkout__option-content js-radio-content">
+                  <div class="checkout__option-form-group">
+                    <div class="checkout__option-content-label">Після оформлення замовлення данні для оплати будуть надіслані на вказану в замовленні електронну пошту.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__option js-radio-parent">
+                <label class="checkout__radio-label">
+                  <input class="checkout__radio js-radio" type="radio" name="payment"><span class="checkout__option-radio-icon"></span>
+                  <div class="checkout__label-wrap">
+                    <div class="checkout__label-name">приват 24</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="checkout__btns">
+              <div class="basket-bottom__btns">
+                <button class="basket-bottom__btn-checkout btn-black js-submit-checkout" type="submit"><span>Оформить заказ</span></button><a class="basket-bottom__btn-continue js-checkout-step-1" href="#"><span>Вернуться</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <div class="subscribe">

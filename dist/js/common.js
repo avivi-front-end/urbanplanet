@@ -907,6 +907,8 @@ var changeCartDetail = (function() {
 
 //Forms Validate
 
+
+
 var formValidate = (function() {
 
     /*
@@ -1580,3 +1582,19 @@ var detailSize = (function(){
     $btn.addClass('disabled');
 
 })();
+
+$(document).ready(function () {
+
+    $('.js-checkout-step-2').click(function (e) {
+        e.preventDefault;
+        $('.checkout__tab').removeClass('active');
+        $('.checkout__tab--2').addClass('active');
+    })
+
+    $('.js-checkout-step-1').click(function (e) {
+        e.preventDefault;
+        $('.checkout__tab').removeClass('active');
+        $('.checkout__tab--1').addClass('active');
+    })
+
+});
