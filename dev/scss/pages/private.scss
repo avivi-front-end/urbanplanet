@@ -95,22 +95,54 @@
         }
         &__link{
             display: block;
-            padding: 20px;
+            position: relative;
+            padding: 20px 20px 20px 45px;
             color: #000;
-            font-size: 22px;
+            font-size: 20px;
             text-decoration: none;
             background: #fff;
             font-family: $bebasBold;
             transition: 0.3s ease;
             &:hover {
-                padding-left: 25px;
+                transform: translateX(5px);
                 background: #e5e5e5;
                 transition: 0.3s ease;
             }
             &.active {
-                padding-left: 25px;
+                transform: translateX(5px);
                 background: #e5e5e5;
                 transition: 0.3s ease;
+            }
+            svg {
+                display: inline-block;
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .icon-ico-private-1 {
+                width: 20px;
+                height: 24px;
+            }
+            .icon-ico-private-2 {
+                width: 20px;
+                height: 24px;
+            }
+            .icon-ico-private-3 {
+                width: 20px;
+                height: 24px;
+            }
+            .icon-ico-private-4 {
+                width: 20px;
+                height: 24px;
+            }
+            .icon-ico-private-5 {
+                width: 20px;
+                height: 24px;
+            }
+            .icon-ico-private-6 {
+                width: 20px;
+                height: 24px;
             }
         }
         &__item{

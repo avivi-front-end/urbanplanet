@@ -258,11 +258,22 @@
             }
         }
 
-        &--login {
+        &--callback {
             &:before {
-                background: url("../img/iconAccount.png") no-repeat;
+                background: url("../img/svg/callback.svg") no-repeat;
                 background-size: cover;
                 width: 20px;
+                height: 20px;
+                @include position(absolute, 23px 0 null 0);
+                margin: auto;
+            }
+        }
+
+        &--login {
+            &:before {
+                background: url("../img/svg/login-icon.svg") no-repeat;
+                background-size: cover;
+                width: 23px;
                 height: 20px;
                 @include position(absolute, 23px 0 null 0);
                 margin: auto;
@@ -273,7 +284,7 @@
             &:before {
                 background: url("../img/svg/shopping-cart.svg") no-repeat;
                 background-size: cover;
-                width: 20px;
+                width: 21px;
                 height: 20px;
                 @include position(absolute, 23px 0 null 0);
                 margin: auto;
@@ -357,13 +368,13 @@
             fill: #fff;
 
             &.icon-van {
-                height: 40px;
-                width: 40px;
+                height: 32px;
+                width: 32px;
             }
 
             &.icon-handshake {
                 height: 38px;
-                width: 48px;
+                width: 31px;
             }
         }
 
