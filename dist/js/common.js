@@ -1416,14 +1416,23 @@ var addToSave = (function() {
 
 var showLang = (function() {
     var $btn = $('.js-show-lang');
+    var $overlay = $('.overlay');
     var $langList = $('.header__top-lang-list');
 
 
     $btn.on('click', function(e) {
         e.preventDefault();
+        $overlay.addClass('lang').show();
         $langList.slideToggle(200);
         $(this).toggleClass('active');
-    })
+    });
+
+    $overlay.on('click', function(e){
+        e.preventDefault();
+        $(this).removeClass('lang').hide();
+        $langList.slideUp(200);
+        $btn.removeClass('active');
+    });
 })();
 
 var colorSwitch = (function(){

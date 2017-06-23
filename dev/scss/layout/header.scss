@@ -392,6 +392,13 @@
         }
     }
 
+    &__top-lang {
+        z-index: 101;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
     &__top-lang-link {
         width: 60px;
         height: 30px;

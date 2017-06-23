@@ -15,7 +15,22 @@
         &:hover{
             background: #f7f7f7;
         }
+        svg {
+            position: absolute;
+            left: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 30px;
+            fill: #000;
+        }
+        .checkout__option-text {
+            @media(max-width: 768px){
+                padding-left: 30px;
+            }
+        }
     }
+
     &__option{
         width: 100%;
         padding: 0 30px;
@@ -96,9 +111,9 @@
         &__link{
             display: block;
             position: relative;
-            padding: 20px 20px 20px 45px;
+            padding: 20px 20px 20px 50px;
             color: #000;
-            font-size: 20px;
+            font-size: 18px;
             text-decoration: none;
             background: #fff;
             font-family: $bebasBold;
