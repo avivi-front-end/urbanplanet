@@ -262,6 +262,13 @@
         }
     }
 
+    &__tab {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+
     &__option-label {
         display: flex;
         padding: 30px 30px 30px 40px;

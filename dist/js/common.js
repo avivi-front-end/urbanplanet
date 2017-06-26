@@ -44,7 +44,7 @@ if (ieDetector.ieVersion == 10 || ieDetector.ieVersion == 11) {
 
 $(window).on('load', function() {
     $('.page-wrapper').css('opacity', 1);
-})
+});
 
 $(function() {
 
@@ -698,7 +698,7 @@ var popuplPageSlide = (function() {
         $select.eq(0).find('option').each(function(key, value) {
             sizes0.push({
                 name: $(this).text(),
-                value: $(this).val(),
+                value: $(this).text(),
                 status: $(this).hasClass('disabled'),
                 selected: this.selected
             })
@@ -706,7 +706,7 @@ var popuplPageSlide = (function() {
         $select.eq(1).find('option').each(function(key, value) {
             sizes1.push({
                 name: $(this).text(),
-                value: $(this).val(),
+                value: $(this).text(),
                 status: $(this).hasClass('disabled'),
                 selected: this.selected
             })
@@ -726,6 +726,7 @@ var popuplPageSlide = (function() {
 
     function showSizeInButton(size) {
         $sizeName.html('' + size + '');
+        // console.log(size);
         closeDrop();
     }
 
@@ -905,6 +906,8 @@ var changeCartDetail = (function() {
 
 
 //Forms Validate
+
+
 
 var formValidate = (function() {
 
@@ -1413,14 +1416,23 @@ var addToSave = (function() {
 
 var showLang = (function() {
     var $btn = $('.js-show-lang');
+    var $overlay = $('.overlay');
     var $langList = $('.header__top-lang-list');
 
 
     $btn.on('click', function(e) {
         e.preventDefault();
+        $overlay.addClass('lang').show();
         $langList.slideToggle(200);
         $(this).toggleClass('active');
-    })
+    });
+
+    $overlay.on('click', function(e){
+        e.preventDefault();
+        $(this).removeClass('lang').hide();
+        $langList.slideUp(200);
+        $btn.removeClass('active');
+    });
 })();
 
 var colorSwitch = (function(){
@@ -1579,3 +1591,19 @@ var detailSize = (function(){
     $btn.addClass('disabled');
 
 })();
+
+$(document).ready(function () {
+
+    $('.js-checkout-step-2').click(function (e) {
+        e.preventDefault;
+        $('.checkout__tab').removeClass('active');
+        $('.checkout__tab--2').addClass('active');
+    })
+
+    $('.js-checkout-step-1').click(function (e) {
+        e.preventDefault;
+        $('.checkout__tab').removeClass('active');
+        $('.checkout__tab--1').addClass('active');
+    })
+
+});
