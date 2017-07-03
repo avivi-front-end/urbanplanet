@@ -1437,13 +1437,10 @@ var showLang = (function() {
 
 var colorSwitch = (function(){
     var $color = $('.detail__product-link');
-
-    $color.on('click', function(e){
-        e.preventDefault();
+    $color.on('click', function(){
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
     });
-
 })();
 
 var productReturn = (function(){
@@ -1595,13 +1592,13 @@ var detailSize = (function(){
 $(document).ready(function () {
 
     $('.js-checkout-step-2').click(function (e) {
-        e.preventDefault;
+        e.preventDefault();
         $('.checkout__tab').removeClass('active');
         $('.checkout__tab--2').addClass('active');
     })
 
     $('.js-checkout-step-1').click(function (e) {
-        e.preventDefault;
+        e.preventDefault();
         $('.checkout__tab').removeClass('active');
         $('.checkout__tab--1').addClass('active');
     })
