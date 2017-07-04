@@ -1595,12 +1595,14 @@ $(document).ready(function () {
         e.preventDefault();
         $('.checkout__tab').removeClass('active');
         $('.checkout__tab--2').addClass('active');
-    })
+        $('.checkout__steps-item--2').addClass('active');
+    });
 
     $('.js-checkout-step-1').click(function (e) {
         e.preventDefault();
         $('.checkout__tab').removeClass('active');
         $('.checkout__tab--1').addClass('active');
-    })
+        $('.checkout__steps-item--2').removeClass('active');
+    });
 
 });
