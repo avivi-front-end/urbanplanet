@@ -198,20 +198,24 @@ $(function() {
 
     $('.js-quick-buy').fancybox({
         afterLoad: function() {
-            $('.js-popup-slider').slick({
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows: true,
-                swipeToSlide: true,
-                responsive: [{
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
-                }],
-            });
+            if(!$('.js-popup-slider').hasClass('slick-initialized')){
+                $('.js-popup-slider').slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    arrows: true,
+                    swipeToSlide: true,
+                    responsive: [{
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }],
+                });
+            }
+
+
 
         },
         afterClose	 : function(){
@@ -667,17 +671,19 @@ var popuplPageSlide = (function() {
         if ($(this).hasClass('disabled') || $(this).hasClass('selected')) {
             return false;
         }
-        var targetValue = $(this).attr('data-value');
-        $select.find('option[value="' + targetValue + '"]').prop('selected', true);
+        var targetValue = $(this).attr('data-value'),
+            targetVal = $(this).attr('data-name');
+
+        $(this).closest('.detail__product-size').find('select option[value="' + targetValue + '"]').prop('selected', true);
         $('.detail__size-item').removeClass('selected');
         $(this).addClass('selected');
-        showSizeInButton(targetValue);
+        showSizeInButton(targetVal);
     });
 
     $wrap.find($select).on('change', function() {
         $(this).getCustomList();
         var targetValue = $(this).find('option:selected').val();
-        showSizeInButton(targetValue);
+        showSizeInButton(targetVal);
     });
 
     $btn.on('click', function(e) {
@@ -698,7 +704,7 @@ var popuplPageSlide = (function() {
         $select.eq(0).find('option').each(function(key, value) {
             sizes0.push({
                 name: $(this).text(),
-                value: $(this).text(),
+                value: $(this).val(),
                 status: $(this).hasClass('disabled'),
                 selected: this.selected
             })
@@ -706,7 +712,7 @@ var popuplPageSlide = (function() {
         $select.eq(1).find('option').each(function(key, value) {
             sizes1.push({
                 name: $(this).text(),
-                value: $(this).text(),
+                value: $(this).val(),
                 status: $(this).hasClass('disabled'),
                 selected: this.selected
             })
@@ -715,12 +721,12 @@ var popuplPageSlide = (function() {
         $.each(sizes0, function(key) {
             var tempClassDisabled = this.status ? 'disabled' : '';
             var tempClassSelectd = this.selected ? 'selected' : '';
-            $selectList.eq(0).append('<li class="detail__size-item ' + tempClassDisabled + tempClassSelectd + '" data-value="' + this.value + '">' + this.name + '</li>');
+            $selectList.eq(0).append('<li class="detail__size-item ' + tempClassDisabled + tempClassSelectd + '" data-value="' + this.value + '" data-name="' + this.name + '">' + this.name + '</li>');
         });
         $.each(sizes1, function(key) {
             var tempClassDisabled = this.status ? 'disabled' : '';
             var tempClassSelectd = this.selected ? 'selected' : '';
-            $selectList.eq(1).append('<li class="detail__size-item ' + tempClassDisabled + tempClassSelectd + '" data-value="' + this.value + '">' + this.name + '</li>');
+            $selectList.eq(1).append('<li class="detail__size-item ' + tempClassDisabled + tempClassSelectd + '" data-value="' + this.value + '" data-name="' + this.name + '">' + this.name + '</li>');
         });
     }
 
